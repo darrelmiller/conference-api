@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "Agile"
+  },
+  {
+    "id": 2,
+    "name": "Architecture"
+  },
+  {
+    "id": 3,
+    "name": "Cloud"
+  },
+  {
+    "id": 4,
+    "name": "Database"
+  },
+  {
+    "id": 5,
+    "name": "Design"
+  },
+  {
+    "id": 6,
+    "name": "Devops"
+  },
+  {
+    "id": 7,
+    "name": "Fun"
+  },
+  {
+    "id": 8,
+    "name": "Microsoft"
+  },
+  {
+    "id": 9,
+    "name": "Misc"
+  },
+  {
+    "id": 10,
+    "name": "Mobile"
+  },
+  {
+    "id": 11,
+    "name": "Programming Languages"
+  },
+  {
+    "id": 12,
+    "name": "Security"
+  },
+  {
+    "id": 13,
+    "name": "Techniques"
+  },
+  {
+    "id": 14,
+    "name": "Testing"
+  },
+  {
+    "id": 15,
+    "name": "Tools"
+  },
+  {
+    "id": 16,
+    "name": "UX"
+  },
+  {
+    "id": 17,
+    "name": "Web"
+  }
+]

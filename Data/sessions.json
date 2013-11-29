@@ -1,0 +1,782 @@
+[
+  {
+    "id": 100,
+    "dayno": 1,
+    "title": "Keynote with Dan North - Jackstones: the Journey to Mastery",
+    "speakerId": 17
+  },
+  {
+    "id": 101,
+    "dayno": 1,
+    "title": "\r\n\t\t\tAsync in C# 5\r\n\t\t",
+    "speakerId": 6
+  },
+  {
+    "id": 102,
+    "dayno": 1,
+    "title": "\r\n\t\t\tIntroducing Visual Studio 2013\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 103,
+    "dayno": 1,
+    "title": "\r\n\t\t\tCleaning up Code Smell\r\n\t\t",
+    "speakerId": 23
+  },
+  {
+    "id": 104,
+    "dayno": 1,
+    "title": "\r\n\t\t\tASP.NET Web API 2: HTTP Services for the Modern Web and Mobile Applications\r\n\t\t",
+    "speakerId": 94
+  },
+  {
+    "id": 105,
+    "dayno": 1,
+    "title": "\r\n\t\t\tEventStore - an introduction to a DSD for event sourcing and notifications\r\n\t\t",
+    "speakerId": 91
+  },
+  {
+    "id": 106,
+    "dayno": 1,
+    "title": "\r\n\t\t\tData-Bind everything!\r\n\t\t",
+    "speakerId": 34
+  },
+  {
+    "id": 107,
+    "dayno": 1,
+    "title": "\r\n\t\t\tMaking Magic: Combining Data, Information, Services and Programming, at Internet-Scale\r\n\t\t",
+    "speakerId": 2
+  },
+  {
+    "id": 108,
+    "dayno": 1,
+    "title": "\r\n\t\t\tSimple.Web 101\r\n\t\t",
+    "speakerId": 41
+  },
+  {
+    "id": 109,
+    "dayno": 1,
+    "title": "\r\n\t\t\tTen cool things we can do with popular JVM Languages\r\n\t\t",
+    "speakerId": 23
+  },
+  {
+    "id": 110,
+    "dayno": 1,
+    "title": "\r\n\t\t\tRx and the TPL: Cats and Dogs Living Together??\r\n\t\t",
+    "speakerId": 87
+  },
+  {
+    "id": 111,
+    "dayno": 1,
+    "title": "\r\n\t\t\tScripting your web API development using scriptcs\r\n\t\t",
+    "speakerId": 88
+  },
+  {
+    "id": 112,
+    "dayno": 1,
+    "title": "\r\n\t\t\tThe Development Landscape Is Moving Extremely Fast! Hereâ€™s How To Move Faster.\r\n\t\t",
+    "speakerId": 19
+  },
+  {
+    "id": 113,
+    "dayno": 1,
+    "title": "\r\n\t\t\tECMAScript 6: whatâ€™s next for JavaScript?\r\n\t\t",
+    "speakerId": 9
+  },
+  {
+    "id": 114,
+    "dayno": 1,
+    "title": "\r\n\t\t\tIntroduction to Windows Azure Part I\r\n\t\t",
+    "speakerId": 1
+  },
+  {
+    "id": 115,
+    "dayno": 1,
+    "title": "\r\n\t\t\tDoing data science with F#\r\n\t\t",
+    "speakerId": 43
+  },
+  {
+    "id": 116,
+    "dayno": 1,
+    "title": "\r\n\t\t\tI want to develop for SharePoint, but I donâ€™t know where to start\r\n\t\t",
+    "speakerId": 15
+  },
+  {
+    "id": 117,
+    "dayno": 1,
+    "title": "\r\n\t\t\tAdopting Continuous Delivery\r\n\t\t",
+    "speakerId": 8
+  },
+  {
+    "id": 118,
+    "dayno": 1,
+    "title": "\r\n\t\t\tThe missing link â€“ hypermedia in Web API.\r\n\t\t",
+    "speakerId": 95
+  },
+  {
+    "id": 119,
+    "dayno": 1,
+    "title": "\r\n\t\t\tCQRS with Erlang\r\n\t\t",
+    "speakerId": 86
+  },
+  {
+    "id": 120,
+    "dayno": 1,
+    "title": "\r\n\t\t\tCallable entities in ECMAScript 6\r\n\t\t",
+    "speakerId": 9
+  },
+  {
+    "id": 121,
+    "dayno": 1,
+    "title": "\r\n\t\t\tIntroduction to Windows Azure Part II\r\n\t\t",
+    "speakerId": 1
+  },
+  {
+    "id": 122,
+    "dayno": 1,
+    "title": "\r\n\t\t\tDefending .NET/C# Applications - Layered Security\r\n\t\t",
+    "speakerId": 98
+  },
+  {
+    "id": 123,
+    "dayno": 1,
+    "title": "\r\n\t\t\tTo Estimate or Not to Estimate â€“ is that the question?\r\n\t\t",
+    "speakerId": 24
+  },
+  {
+    "id": 124,
+    "dayno": 1,
+    "title": "\r\n\t\t\tThe Lean Enterprise\r\n\t\t",
+    "speakerId": 8
+  },
+  {
+    "id": 125,
+    "dayno": 1,
+    "title": "\r\n\t\t\tAPI Client library V2\r\n\t\t",
+    "speakerId": 95
+  },
+  {
+    "id": 126,
+    "dayno": 1,
+    "title": "\r\n\t\t\tA good SharePoint development machine\r\n\t\t",
+    "speakerId": 15
+  },
+  {
+    "id": 127,
+    "dayno": 1,
+    "title": "\r\n\t\t\tSemantics matter\r\n\t\t",
+    "speakerId": 6
+  },
+  {
+    "id": 128,
+    "dayno": 1,
+    "title": "\r\n\t\t\tLearning from Noda Time: a case study in API design and open source (good, bad and ugly)\r\n\t\t",
+    "speakerId": 6
+  },
+  {
+    "id": 129,
+    "dayno": 1,
+    "title": "\r\n\t\t\tWindows Azure Essentials\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 130,
+    "dayno": 1,
+    "title": "\r\n\t\t\tTesting of Mobile Apps with Calabash and Xamarin Test Cloud\r\n\t\t",
+    "speakerId": 99
+  },
+  {
+    "id": 131,
+    "dayno": 1,
+    "title": "\r\n\t\t\tAsynchrony in Node.js, let me count the\r\n\t\t",
+    "speakerId": 88
+  },
+  {
+    "id": 132,
+    "dayno": 1,
+    "title": "\r\n\t\t\tASP.NET and OWIN - Better Together\r\n\t\t",
+    "speakerId": 94
+  },
+  {
+    "id": 133,
+    "dayno": 1,
+    "title": "\r\n\t\t\tHerding Code Live\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 134,
+    "dayno": 1,
+    "title": "\r\n\t\t\tAn Introduction to Nancy\r\n\t\t",
+    "speakerId": 29
+  },
+  {
+    "id": 135,
+    "dayno": 1,
+    "title": "\r\n\t\t\tAgile Team Interactions Workshop\r\n\t\t",
+    "speakerId": 4
+  },
+  {
+    "id": 136,
+    "dayno": 1,
+    "title": "\r\n\t\t\tNDC Cage Match: Dynamic vs. Static with Gary Bernhardt and Jon Skeet.\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 137,
+    "dayno": 1,
+    "title": "\r\n\t\t\tThrow away those training wheels, JavaScript without the frameworks\r\n\t\t",
+    "speakerId": 90
+  },
+  {
+    "id": 138,
+    "dayno": 1,
+    "title": "\r\n\t\t\tHidden Complexity: Inside the Simple code\r\n\t\t",
+    "speakerId": 41
+  },
+  {
+    "id": 139,
+    "dayno": 1,
+    "title": "\r\n\t\t\tWhy Agile doesn&#39;t scale - and what you can do about it\r\n\t\t",
+    "speakerId": 17
+  },
+  {
+    "id": 140,
+    "dayno": 1,
+    "title": "\r\n\t\t\tDemocratizing event processing at all scales and platforms with Reactive Extensions (Rx)\r\n\t\t",
+    "speakerId": 93
+  },
+  {
+    "id": 141,
+    "dayno": 1,
+    "title": "\r\n\t\t\tAdvanced techniques to implement, customize and manage a Nancy application\r\n\t\t",
+    "speakerId": 39
+  },
+  {
+    "id": 200,
+    "dayno": 2,
+    "title": "\r\n\t\t\tBuild Real World Cloud Apps using Windows Azure Part I\r\n\t\t",
+    "speakerId": 1
+  },
+  {
+    "id": 201,
+    "dayno": 2,
+    "title": "\r\n\t\t\tModern Architecture patterns for the cloud\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 202,
+    "dayno": 2,
+    "title": "\r\n\t\t\tA deep dive into the ASP.NET Web API runtime architecture\r\n\t\t",
+    "speakerId": 36
+  },
+  {
+    "id": 203,
+    "dayno": 2,
+    "title": "\r\n\t\t\tFull Text Searching &amp; Ranking with ElasticSearch and C#\r\n\t\t",
+    "speakerId": 60
+  },
+  {
+    "id": 204,
+    "dayno": 2,
+    "title": "\r\n\t\t\tThe Hitchhikers guide to Object Orientated JavaScript\r\n\t\t",
+    "speakerId": 75
+  },
+  {
+    "id": 205,
+    "dayno": 2,
+    "title": "\r\n\t\t\tWindows Phone 8 Networking: HTTP, Bluetooth and NFC\r\n\t\t",
+    "speakerId": 74
+  },
+  {
+    "id": 206,
+    "dayno": 2,
+    "title": "\r\n\t\t\tjQuery Mobile and ASP.NET MVC\r\n\t\t",
+    "speakerId": 14
+  },
+  {
+    "id": 207,
+    "dayno": 2,
+    "title": "\r\n\t\t\tBuild Real World Cloud Apps using Windows Azure Part II\r\n\t\t",
+    "speakerId": 1
+  },
+  {
+    "id": 208,
+    "dayno": 2,
+    "title": "\r\n\t\t\tOWASP Top Ten 2013\r\n\t\t",
+    "speakerId": 72
+  },
+  {
+    "id": 209,
+    "dayno": 2,
+    "title": "\r\n\t\t\tPragmatic ASP.NET Web API Solutions - beyond ValuesController\r\n\t\t",
+    "speakerId": 59
+  },
+  {
+    "id": 210,
+    "dayno": 2,
+    "title": "\r\n\t\t\tYou Thought You Understood Multithreading\r\n\t\t",
+    "speakerId": 92
+  },
+  {
+    "id": 211,
+    "dayno": 2,
+    "title": "\r\n\t\t\tWrite massively-parallel GPU code for the browser with WebGL\r\n\t\t",
+    "speakerId": 84
+  },
+  {
+    "id": 212,
+    "dayno": 2,
+    "title": "\r\n\t\t\tBuilding for Windows 8 and Windows Phone 8 with .NET and MVVM\r\n\t\t",
+    "speakerId": 73
+  },
+  {
+    "id": 213,
+    "dayno": 2,
+    "title": "\r\n\t\t\tSecrets of Awesome JavaScript API Design\r\n\t\t",
+    "speakerId": 79
+  },
+  {
+    "id": 214,
+    "dayno": 2,
+    "title": "\r\n\t\t\tThe Reasonable Expectations of your new CTO.\r\n\t\t",
+    "speakerId": 12
+  },
+  {
+    "id": 215,
+    "dayno": 2,
+    "title": "\r\n\t\t\tBattle of the Mocking Frameworks\r\n\t\t",
+    "speakerId": 68
+  },
+  {
+    "id": 216,
+    "dayno": 2,
+    "title": "\r\n\t\t\tSecuring ASP.NET Web API (v2)\r\n\t\t",
+    "speakerId": 7
+  },
+  {
+    "id": 217,
+    "dayno": 2,
+    "title": "\r\n\t\t\tAngularJS â€“ an Introduction for Windows developers\r\n\t\t",
+    "speakerId": 97
+  },
+  {
+    "id": 218,
+    "dayno": 2,
+    "title": "\r\n\t\t\tStop Hiring Devops Experts (And Start Growing Them)\r\n\t\t",
+    "speakerId": 8
+  },
+  {
+    "id": 219,
+    "dayno": 2,
+    "title": "\r\n\t\t\tReactive meta-programming with drones\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 220,
+    "dayno": 2,
+    "title": "\r\n\t\t\tAutomating Testing in the big, bad Enterprise World\r\n\t\t",
+    "speakerId": 80
+  },
+  {
+    "id": 221,
+    "dayno": 2,
+    "title": "\r\n\t\t\tFunctional Programming:  What?  Why? When?\r\n\t\t",
+    "speakerId": 12
+  },
+  {
+    "id": 222,
+    "dayno": 2,
+    "title": "\r\n\t\t\tScala for C# Developers\r\n\t\t",
+    "speakerId": 47
+  },
+  {
+    "id": 223,
+    "dayno": 2,
+    "title": "\r\n\t\t\tA technical Introduction to OAuth2, OpenID Connect and JSON Web Tokens: The Security Stack for modern Applications\r\n\t\t",
+    "speakerId": 7
+  },
+  {
+    "id": 224,
+    "dayno": 2,
+    "title": "\r\n\t\t\tSoftware Project Design\r\n\t\t",
+    "speakerId": 32
+  },
+  {
+    "id": 225,
+    "dayno": 2,
+    "title": "\r\n\t\t\tHybrid &amp; powerful mobile apps with PhoneGap &amp; AngularJS\r\n\t\t",
+    "speakerId": 59
+  },
+  {
+    "id": 226,
+    "dayno": 2,
+    "title": "\r\n\t\t\tZeroMQ - A Whole Bunch of Awesome [C# Edition]\r\n\t\t",
+    "speakerId": 62
+  },
+  {
+    "id": 227,
+    "dayno": 2,
+    "title": "\r\n\t\t\tCreating Killer Windows Phone Apps\r\n\t\t",
+    "speakerId": 74
+  },
+  {
+    "id": 228,
+    "dayno": 2,
+    "title": "\r\n\t\t\tWEB API Panel Debate\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 229,
+    "dayno": 2,
+    "title": "\r\n\t\t\tInternals of security in ASP.NET\r\n\t\t",
+    "speakerId": 89
+  },
+  {
+    "id": 230,
+    "dayno": 2,
+    "title": "\r\n\t\t\tWindows 8.1 Apps with JavaScript 101\r\n\t\t",
+    "speakerId": 72
+  },
+  {
+    "id": 231,
+    "dayno": 2,
+    "title": "\r\n\t\t\tActor based programming using Orleans\r\n\t\t",
+    "speakerId": 66
+  },
+  {
+    "id": 232,
+    "dayno": 2,
+    "title": "\r\n\t\t\tArchitecting, designing and coding for change: Applying the Life Preserver to build adaptable software\r\n\t\t",
+    "speakerId": 70
+  },
+  {
+    "id": 233,
+    "dayno": 2,
+    "title": "\r\n\t\t\tC++ style\r\n\t\t",
+    "speakerId": 67
+  },
+  {
+    "id": 234,
+    "dayno": 2,
+    "title": "\r\n\t\t\tAngularJS DIrectives And The Computer Science Of JavaScript\r\n\t\t",
+    "speakerId": 40
+  },
+  {
+    "id": 235,
+    "dayno": 2,
+    "title": "\r\n\t\t\tIdentity management in ASP.NET\r\n\t\t",
+    "speakerId": 89
+  },
+  {
+    "id": 236,
+    "dayno": 2,
+    "title": "\r\n\t\t\tTesting in AngularJS\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 237,
+    "dayno": 2,
+    "title": "\r\n\t\t\tYes, you can! Tooling and Debugging for JavaScript\r\n\t\t",
+    "speakerId": 97
+  },
+  {
+    "id": 238,
+    "dayno": 2,
+    "title": "\r\n\t\t\tHow I Learned to Stop Worrying and Love Flexible Scope\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 239,
+    "dayno": 2,
+    "title": "\r\n\t\t\tProgramming Diversity\r\n\t\t",
+    "speakerId": 18
+  },
+  {
+    "id": 240,
+    "dayno": 2,
+    "title": "\r\n\t\t\tDomain driven design with the F# type system\r\n\t\t",
+    "speakerId": 63
+  },
+  {
+    "id": 241,
+    "dayno": 2,
+    "title": "\r\n\t\t\tRapid Problem Solving Workshop\r\n\t\t",
+    "speakerId": 4
+  },
+  {
+    "id": 242,
+    "dayno": 2,
+    "title": "\r\n\t\t\tFrom audience member to speaker.. Managing technical presentations\r\n\t\t",
+    "speakerId": 50
+  },
+  {
+    "id": 243,
+    "dayno": 2,
+    "title": "\r\n\t\t\tPutting the Microsoft Design Language to work\r\n\t\t",
+    "speakerId": 64
+  },
+  {
+    "id": 244,
+    "dayno": 2,
+    "title": "\r\n\t\t\tF# in Finance\r\n\t\t",
+    "speakerId": 10
+  },
+  {
+    "id": 245,
+    "dayno": 2,
+    "title": "\r\n\t\t\tWhat&#39;s wrong with my site? Lean DevOps for Azure\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 246,
+    "dayno": 2,
+    "title": "\r\n\t\t\tZen of Architecture\r\n\t\t",
+    "speakerId": 32
+  },
+  {
+    "id": 247,
+    "dayno": 2,
+    "title": "\r\n\t\t\tTest Your Javascript...with the Help of D&amp;D\r\n\t\t",
+    "speakerId": 65
+  },
+  {
+    "id": 300,
+    "dayno": 3,
+    "title": "\r\n\t\t\tKnocking it out of the park, with Knockout.JS\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 301,
+    "dayno": 3,
+    "title": "\r\n\t\t\tThe C Word--Continuous\r\n\t\t",
+    "speakerId": 45
+  },
+  {
+    "id": 302,
+    "dayno": 3,
+    "title": "\r\n\t\t\tAgile software architecture sketches\r\n\t\t",
+    "speakerId": 69
+  },
+  {
+    "id": 303,
+    "dayno": 3,
+    "title": "\r\n\t\t\tSecuring a modern JavaScript based single page web application\r\n\t\t",
+    "speakerId": 46
+  },
+  {
+    "id": 304,
+    "dayno": 3,
+    "title": "\r\n\t\t\tPreCrime - The Future of Policing in the Era of Austerity\r\n\t\t",
+    "speakerId": 38
+  },
+  {
+    "id": 305,
+    "dayno": 3,
+    "title": "\r\n\t\t\tGetting Agile with Scrum\r\n\t\t",
+    "speakerId": 11
+  },
+  {
+    "id": 306,
+    "dayno": 3,
+    "title": "\r\n\t\t\tHunting ASP.NET Performance Bugs\r\n\t\t",
+    "speakerId": 37
+  },
+  {
+    "id": 307,
+    "dayno": 3,
+    "title": "\r\n\t\t\tASP.NET SignalR 2.0 (and beyond)\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 308,
+    "dayno": 3,
+    "title": "\r\n\t\t\tNative Cross Platform Mobile Development with Xamarin 1\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 309,
+    "dayno": 3,
+    "title": "\r\n\t\t\tBDD for financial calculations: Excel vs. Given-When-Then, or both?\r\n\t\t",
+    "speakerId": 49
+  },
+  {
+    "id": 310,
+    "dayno": 3,
+    "title": "\r\n\t\t\tIt&#39;s a Kind of Magic\r\n\t\t",
+    "speakerId": 51
+  },
+  {
+    "id": 311,
+    "dayno": 3,
+    "title": "\r\n\t\t\tThe tale about tiles\r\n\t\t",
+    "speakerId": 27
+  },
+  {
+    "id": 312,
+    "dayno": 3,
+    "title": "\r\n\t\t\tAgile Estimating\r\n\t\t",
+    "speakerId": 11
+  },
+  {
+    "id": 313,
+    "dayno": 3,
+    "title": "\r\n\t\t\tFile -&gt; new project to deploy in 10 minutes with TeamCity and Octopus Deploy\r\n\t\t",
+    "speakerId": 48
+  },
+  {
+    "id": 314,
+    "dayno": 3,
+    "title": "\r\n\t\t\tThe Future of C#\r\n\t\t",
+    "speakerId": 25
+  },
+  {
+    "id": 315,
+    "dayno": 3,
+    "title": "\r\n\t\t\tNuts and bolts of writing OWIN middleware\r\n\t\t",
+    "speakerId": 33
+  },
+  {
+    "id": 316,
+    "dayno": 3,
+    "title": "\r\n\t\t\tDoing SPA with MVC &amp; Knockout.JS\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 317,
+    "dayno": 3,
+    "title": "\r\n\t\t\tThe Birth &amp; Death of JavaScript\r\n\t\t",
+    "speakerId": 28
+  },
+  {
+    "id": 318,
+    "dayno": 3,
+    "title": "\r\n\t\t\tAdvanced Topics in Agile Planning\r\n\t\t",
+    "speakerId": 11
+  },
+  {
+    "id": 319,
+    "dayno": 3,
+    "title": "\r\n\t\t\tBuild It So You Can Ship It!\r\n\t\t",
+    "speakerId": 45
+  },
+  {
+    "id": 320,
+    "dayno": 3,
+    "title": "\r\n\t\t\tNDC Cage Match: Testing! NodeJS vs. C# and .NET with Rob Ashton and Jeremy Miller\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 321,
+    "dayno": 3,
+    "title": "\r\n\t\t\tAuthentication Middleware for OWIN\r\n\t\t",
+    "speakerId": 33
+  },
+  {
+    "id": 322,
+    "dayno": 3,
+    "title": "\r\n\t\t\tKinect\r\n\t\t",
+    "speakerId": 52
+  },
+  {
+    "id": 323,
+    "dayno": 3,
+    "title": "\r\n\t\t\tObject Oriented Design in the Wild\r\n\t\t",
+    "speakerId": 13
+  },
+  {
+    "id": 324,
+    "dayno": 3,
+    "title": "\r\n\t\t\tMaking 3D games with Monogame\r\n\t\t",
+    "speakerId": 85
+  },
+  {
+    "id": 325,
+    "dayno": 3,
+    "title": "\r\n\t\t\tUser Stories for Agile Requirements\r\n\t\t",
+    "speakerId": 11
+  },
+  {
+    "id": 326,
+    "dayno": 3,
+    "title": "\r\n\t\t\tMongoDB for the C# developer\r\n\t\t",
+    "speakerId": 81
+  },
+  {
+    "id": 327,
+    "dayno": 3,
+    "title": "\r\n\t\t\tUsing ASP.NET SignalR... in anger\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 328,
+    "dayno": 3,
+    "title": "\r\n\t\t\tNative Cross Platform Mobile Development with Xamarin 2\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 329,
+    "dayno": 3,
+    "title": "\r\n\t\t\tVagrant, the ability to think about production deployments from day 1 of development\r\n\t\t",
+    "speakerId": 54
+  },
+  {
+    "id": 330,
+    "dayno": 3,
+    "title": "\r\n\t\t\tWhere is the work hiding?\r\n\t\t",
+    "speakerId": 55
+  },
+  {
+    "id": 331,
+    "dayno": 3,
+    "title": "\r\n\t\t\tPeople, Process, Tools â€“ The Essence of DevOps\r\n\t\t",
+    "speakerId": 53
+  },
+  {
+    "id": 332,
+    "dayno": 3,
+    "title": "\r\n\t\t\tScaling Agile to Work with a Distributed Team\r\n\t\t",
+    "speakerId": 11
+  },
+  {
+    "id": 333,
+    "dayno": 3,
+    "title": "\r\n\t\t\tAgile development with Team Foundation Server 2013\r\n\t\t",
+    "speakerId": 0
+  },
+  {
+    "id": 334,
+    "dayno": 3,
+    "title": "\r\n\t\t\tLessons from a Polyglot Programme\r\n\t\t",
+    "speakerId": 3
+  },
+  {
+    "id": 335,
+    "dayno": 3,
+    "title": "\r\n\t\t\tBDD all the way down\r\n\t\t",
+    "speakerId": 56
+  },
+  {
+    "id": 336,
+    "dayno": 3,
+    "title": "\r\n\t\t\tExploring the C# scripting experience with scriptcs\r\n\t\t",
+    "speakerId": 57
+  },
+  {
+    "id": 337,
+    "dayno": 3,
+    "title": "\r\n\t\t\tDemystifying the Reactive Extensions\r\n\t\t",
+    "speakerId": 58
+  },
+  {
+    "id": 338,
+    "dayno": 3,
+    "title": "\r\n\t\t\tBitcoin and The Future of Cryptocurrency\r\n\t\t",
+    "speakerId": 77
+  },
+  {
+    "id": 339,
+    "dayno": 3,
+    "title": "\r\n\t\t\tRelease Management with Visual Studio 2013 â€“ InRelease\r\n\t\t",
+    "speakerId": 35
+  }
+]
