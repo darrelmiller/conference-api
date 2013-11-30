@@ -18,7 +18,7 @@ namespace ConferenceWebApi.Controllers
         }
 
 
-        [Route("", Name = Links.GetAllDays)]
+        [Route("", Name = Links.AllDays)]
         public HttpResponseMessage Get()
         {
 
@@ -31,9 +31,9 @@ namespace ConferenceWebApi.Controllers
                     var item = new Item();
 
                     item.Data.Add(new Data { Name = "Day", Value = i.ToString() });
-                    item.Links.Add(Request.ResolveLink<SessionsLink>(Links.GetSessionsByDay, new { dayid = i }).ToCJLink());
-                    item.Links.Add(Request.ResolveLink<SessionsLink>(Links.GetSpeakersByDay, new { dayid = i }).ToCJLink());
-                    item.Links.Add(Request.ResolveLink<TopicsLink>(Links.GetTopicsByDay, new { dayid = i }).ToCJLink());
+                    item.Links.Add(Request.ResolveLink<SessionsLink>(Links.SessionsByDay, new { dayid = i }).ToCJLink());
+                    item.Links.Add(Request.ResolveLink<SessionsLink>(Links.SpeakersByDay, new { dayid = i }).ToCJLink());
+                //    item.Links.Add(Request.ResolveLink<TopicsLink>(Links.TopicsByDay, new { dayid = i }).ToCJLink());
                     daysCollection.Items.Add(item);
                   
             }

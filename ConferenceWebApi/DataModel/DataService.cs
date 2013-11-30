@@ -14,6 +14,9 @@ namespace ConferenceWebApi.DataModel
 
         public DataService()
         {
+            ConferenceStart = DateTime.Parse("2013/11/04");
+            ConferenceEnd = DateTime.Parse("2013/11/06");
+
             TopicRepository = new TopicRepository(LoadJsonArray("topics.json"));
             SessionRepository = new SessionRepository(LoadJsonArray("sessions.json"));
             SpeakerRepository = new SpeakerRepository(LoadJsonArray("speakers.json"));

@@ -95,6 +95,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SpeakerController.cs" />
     <Compile Include="Controllers\SpeakersController.cs" />
+    <Compile Include="Controllers\TopicsController.cs" />
     <Compile Include="DataModel\DataService.cs" />
     <Compile Include="DataModel\SessionRepository.cs" />
     <Compile Include="DataModel\SpeakerRepository.cs" />

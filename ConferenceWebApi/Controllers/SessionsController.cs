@@ -20,7 +20,7 @@ namespace ConferenceWebApi.Controllers
             _dataService = dataService;
         }
 
-        [Route("", Name = Links.GetAllSessions)]
+        [Route("", Name = Links.AllSessions)]
          public HttpResponseMessage Get()
          {
              
@@ -34,8 +34,8 @@ namespace ConferenceWebApi.Controllers
 
        
 
-        [Route("", Name = Links.GetSessionsBySpeaker)]
-        public HttpResponseMessage GetEventsBySpeaker(int speakerId)
+        [Route("", Name = Links.SessionsBySpeaker)]
+        public HttpResponseMessage GetSessionsBySpeaker(int speakerId)
         {
             var events = _dataService.SessionRepository.GetAll().Where(e => e.SpeakerId == speakerId);
             var eventsCollection = GetCollection(events);
@@ -47,21 +47,21 @@ namespace ConferenceWebApi.Controllers
         }
 
 
-        [Route("", Name = Links.GetSessionsByDay)]
-        public HttpResponseMessage GetEventsByDay(int dayno)
+        [Route("", Name = Links.SessionsByDay)]
+        public HttpResponseMessage GetSessionsByDay(int dayno)
         {
             
-            var events = _dataService.SessionRepository.GetAll().Where(e => e.Dayno == dayno);
-            var eventsCollection = GetCollection(events);
+            var sessions = _dataService.SessionRepository.GetSessionsByDay(dayno).ToList();
+            var collection = GetCollection(sessions);
 
             return new HttpResponseMessage()
             {
-                Content = new CollectionJsonContent(eventsCollection)
+                Content = new CollectionJsonContent(collection)
             };
         }
 
-        [Route("", Name = Links.GetSessionsByTopic)]
-        public HttpResponseMessage GetEventsByTopic(int topicid)
+        [Route("", Name = Links.SessionsByTopic)]
+        public HttpResponseMessage GetSessionsByTopic(int topicid)
         {
             var events = _dataService.SessionRepository.GetAll().Where(e => true);
             var eventsCollection = GetCollection(events);
@@ -81,9 +81,17 @@ namespace ConferenceWebApi.Controllers
             {
                 var item = new Item();
 
-                item.Data.Add(new Data { Name = "Title", Value = session.Title });              
-                item.Links.Add(Request.ResolveLink<SessionLink>(Links.GetSessionById, new { id = session.Id }).ToCJLink());
-                item.Links.Add(Request.ResolveLink<SpeakerLink>(Links.GetSpeakerById, new { id = session.SpeakerId }).ToCJLink());
+                item.Data.Add(new Data { Name = "Title", Value = session.Title });
+                if (session.SpeakerId != 0)
+                {
+                    item.Data.Add(new Data
+                        {
+                            Name = "Speaker",
+                            Value = _dataService.SpeakerRepository.Get(session.SpeakerId).Name
+                        });
+                }
+                item.Links.Add(Request.ResolveLink<SessionLink>(Links.SessionById, new { id = session.Id }).ToCJLink());
+                item.Links.Add(Request.ResolveLink<SpeakerLink>(Links.SpeakerById, new { id = session.SpeakerId }).ToCJLink());
                 eventsCollection.Items.Add(item);
             }
             return eventsCollection;

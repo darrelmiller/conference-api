@@ -20,7 +20,7 @@ namespace ConferenceWebApi.Controllers
              _dataService = dataService;
          }
 
-         [Route("{id}",Name = Links.GetSpeakerById)]
+         [Route("{id}",Name = Links.SpeakerById)]
         public HttpResponseMessage GetSpeaker(int id)
         {
 
@@ -30,7 +30,7 @@ namespace ConferenceWebApi.Controllers
             {
                 Content = new StringContent(speakerInfo.Name + Environment.NewLine + speakerInfo.Bio)
             };
-            response.Headers.AddLinkHeader(Request.ResolveLink<SessionsLink>(Links.GetSessionsBySpeaker, new { speakerInfo.Id }));
+            response.Headers.AddLinkHeader(Request.ResolveLink<SessionsLink>(Links.SessionsBySpeaker, new { speakerId = speakerInfo.Id }));
             response.Headers.AddLinkHeader(new IconLink() { Target = new Uri(speakerInfo.ImageUrl) });
             return response;
         }

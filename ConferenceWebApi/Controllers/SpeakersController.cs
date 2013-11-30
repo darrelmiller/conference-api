@@ -5,6 +5,7 @@ using ConferenceWebApi.DataModel;
 using ConferenceWebApi.Tools;
 using ConferenceWebPack;
 using WebApiContrib.CollectionJson;
+using System.Linq;
 
 namespace ConferenceWebApi.Controllers
 {
@@ -19,7 +20,7 @@ namespace ConferenceWebApi.Controllers
             _dataService = dataService;
         }
 
-        [Route("", Name = Links.GetAllSpeakers)]
+        [Route("", Name = Links.AllSpeakers)]
         public HttpResponseMessage Get()
         {
 
@@ -33,6 +34,19 @@ namespace ConferenceWebApi.Controllers
         }
 
 
+        [Route("", Name = Links.SpeakersByDay)]
+        public HttpResponseMessage Get(int dayno)
+        {
+
+            var speakers = _dataService.SessionRepository.GetSessionsByDay(dayno).Select(s => s.SpeakerId).Distinct().Select(s => _dataService.SpeakerRepository.Get(s));
+            var speakersCollection = GetCollection(speakers);
+
+            return new HttpResponseMessage()
+            {
+                Content = new CollectionJsonContent(speakersCollection)
+            };
+        }
+
 
 
         private  Collection GetCollection(IEnumerable<Speaker> speakers)
@@ -43,8 +57,8 @@ namespace ConferenceWebApi.Controllers
             {
                 var item = new Item();
 
-                item.Data.Add(new Data {Name = "Title", Value = speaker.Name});
-                item.Links.Add(Request.ResolveLink<SpeakerLink>(Links.GetSpeakerById,new {speaker.Id}).ToCJLink());
+                item.Data.Add(new Data {Name = "Name", Value = speaker.Name});
+                item.Links.Add(Request.ResolveLink<SpeakerLink>(Links.SpeakerById,new {speaker.Id}).ToCJLink());
                 eventsCollection.Items.Add(item);
             }
             return eventsCollection;

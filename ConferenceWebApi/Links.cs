@@ -3,29 +3,29 @@
     public static class Links
     {
 
-        public const string GetAllDays = "GetAllDays";
-        public const string GetAllSpeakers = "GetAllSpeakers";
-        public const string GetAllTopics = "GetAllTopics";
-        public const string GetAllSessions = "GetAllSessions";
-        public const string GetAllReviews = "GetAllReviews";
+        public const string AllDays = "AllDays";
+        public const string AllSpeakers = "AllSpeakers";
+        public const string AllTopics = "AllTopics";
+        public const string AllSessions = "AllSessions";
+        public const string GetAllReviews = "AllReviews";
       
-        public const string GetSpeakerById = "GetSpeakerById";
-        public const string GetTopicById = "GetTopicById";
-        public const string GetSessionById = "GetSessionById";
-        public const string GetReviewById = "GetReviewById";
+        public const string SpeakerById = "SpeakerById";
+        public const string TopicById = "TopicById";
+        public const string SessionById = "SessionById";
+        public const string ReviewById = "ReviewById";
 
-        public const string GetSessionsBySpeaker = "GetSessionsBySpeaker";
-        public const string GetSessionsByDay = "GetSessionsByDay";
-        public const string GetSessionsByTopic = "GetSessionsByTopic";
+        public const string SessionsBySpeaker = "SessionsBySpeaker";
+        public const string SessionsByDay = "SessionsByDay";
+        public const string SessionsByTopic = "SessionsByTopic";
 
-        public const string GetSpeakersByTopic = "GetSpeakersByTopic";
-        public const string GetSpeakersByDay = "GetSpeakersByDay";
+        public const string SpeakersByTopic = "SpeakersByTopic";
+        public const string SpeakersByDay = "SpeakersByDay";
 
-        public const string GetTopicsBySession = "GetTopicsBySession";
-        public const string GetTopicsByDay = "GetTopicsByDay";
+        public const string TopicsBySession = "TopicsBySession";
+        public const string TopicsByDay = "TopicsByDay";
         
-        public const string GetReviewsBySession = "GetReviewsBySession";
-        public const string GetReviewsBySpeaker = "GetReviewsBySpeaker";
+        public const string ReviewsBySession = "ReviewsBySession";
+        public const string ReviewsBySpeaker = "ReviewsBySpeaker";
         
         public const string DocsByResourceClass = "DocsByResourceClass";
     }

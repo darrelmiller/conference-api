@@ -15,10 +15,11 @@ namespace ConferenceWebApi.Controllers
         {
             var home = new HomeDocument();
 
-            home.AddResource(Request.ResolveLink<SessionsLink>(Links.GetSessionsByDay,null,"{?dayno}"));
-            home.AddResource(Request.ResolveLink<SessionLink>(Links.GetSessionById, new { id = "[id]" }));
-            home.AddResource(Request.ResolveLink<SpeakersLink>(Links.GetAllSpeakers));
-            home.AddResource(Request.ResolveLink<SpeakerLink>(Links.GetSpeakerById, new { id = "[id]" }));
+            home.AddResource(Request.ResolveLink<DaysLink>(Links.AllDays));
+            home.AddResource(Request.ResolveLink<SessionsLink>(Links.SessionsByDay,null,"{?dayno}"));
+            home.AddResource(Request.ResolveLink<SessionLink>(Links.SessionById, new { id = "[id]" }));
+            home.AddResource(Request.ResolveLink<SpeakersLink>(Links.AllSpeakers));
+            home.AddResource(Request.ResolveLink<SpeakerLink>(Links.SpeakerById, new { id = "[id]" }));
 
           
             return new HttpResponseMessage() {

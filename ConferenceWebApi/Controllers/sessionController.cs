@@ -7,7 +7,7 @@ using Tavis;
 
 namespace ConferenceWebApi.Controllers
 {
-   [Route("session/{id}", Name = Links.GetSessionById)]
+   [Route("session/{id}", Name = Links.SessionById)]
     public class SessionController : ApiController
     {
         private readonly DataService _dataService;
@@ -26,7 +26,7 @@ namespace ConferenceWebApi.Controllers
                 {
                     Content = new StringContent(eventInfo.Title)
                 };
-            response.Headers.AddLinkHeader(Request.ResolveLink<SpeakerLink>(Links.GetSpeakerById, new { id = eventInfo.SpeakerId}));
+            response.Headers.AddLinkHeader(Request.ResolveLink<SpeakerLink>(Links.SpeakerById, new { id = eventInfo.SpeakerId}));
             return response;
         }
 
