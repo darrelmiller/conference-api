@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
 using System.Web.Http;
 using Microsoft.Owin.Hosting;
 using Owin;
@@ -18,30 +15,24 @@ namespace ndc
 
             string uri = String.Format("http://{0}:1001/", Environment.MachineName);
 
-            var server = WebApp.Start(uri, builder =>
+            using (WebApp.Start(uri, builder =>
+                {
+                    var config = new HttpConfiguration();
+                    ConferenceWebApi.WebApiConfig.Register(config);
+                    builder.UseWebApi(config);
+                })
+                )
             {
-                var config = new HttpConfiguration();
-                Program.Configure(config);
-                builder.UseWebApi(config);
-            });
 
-            Console.WriteLine("Started Owin HttpListener on " + uri);
-            Console.ReadLine();
-            server.Dispose();
+                Console.WriteLine("Started Owin HttpListener on " + uri);
+                Console.ReadLine();
+
+            }
+            
         }
 
-        public static void Configure(HttpConfiguration config)
-        {
-            
-            config.MessageHandlers.Add(new DescribedByHandler());
-            config.MessageHandlers.Add(new HeadMessageHandler());
-            config.MapHttpAttributeRoutes();
-            
-    
-            config.EnableSystemDiagnosticsTracing();
-
-        }
+       
     }
 
- 
+   
 }
