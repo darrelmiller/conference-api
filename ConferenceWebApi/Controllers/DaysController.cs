@@ -33,7 +33,7 @@ namespace ConferenceWebApi.Controllers
                     item.Data.Add(new Data { Name = "Day", Value = i.ToString() });
                     item.Links.Add(Request.ResolveLink<SessionsLink>(Links.SessionsByDay, new { dayid = i }).ToCJLink());
                     item.Links.Add(Request.ResolveLink<SessionsLink>(Links.SpeakersByDay, new { dayid = i }).ToCJLink());
-                //    item.Links.Add(Request.ResolveLink<TopicsLink>(Links.TopicsByDay, new { dayid = i }).ToCJLink());
+                //TODO:    item.Links.Add(Request.ResolveLink<TopicsLink>(Links.TopicsByDay, new { dayid = i }).ToCJLink());
                     daysCollection.Items.Add(item);
                   
             }

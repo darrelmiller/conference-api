@@ -19,14 +19,14 @@ namespace ConferenceWebApi.Controllers
 
        public HttpResponseMessage Get(int id)
         {
-            var eventInfo = _dataService.SessionRepository.Get(id);
+            var session = _dataService.SessionRepository.Get(id);
 
-
+           // TODO: Show assigned topics
             var response = new HttpResponseMessage()
                 {
-                    Content = new StringContent(eventInfo.Title)
+                    Content = new StringContent(session.Title)
                 };
-            response.Headers.AddLinkHeader(Request.ResolveLink<SpeakerLink>(Links.SpeakerById, new { id = eventInfo.SpeakerId}));
+            response.Headers.AddLinkHeader(Request.ResolveLink<SpeakerLink>(Links.SpeakerById, new { id = session.SpeakerId}));
             return response;
         }
 

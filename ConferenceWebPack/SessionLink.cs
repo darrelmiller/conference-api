@@ -5,7 +5,7 @@ using Tavis.IANA;
 
 namespace ConferenceWebPack
 {
-    [LinkRelationType("http://tavis.net/rels/event")]
+    [LinkRelationType("http://tavis.net/rels/session")]
     public class SessionLink : Link
     {
         public SessionLink() 

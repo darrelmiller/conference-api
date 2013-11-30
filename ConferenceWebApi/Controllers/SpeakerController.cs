@@ -30,6 +30,9 @@ namespace ConferenceWebApi.Controllers
             {
                 Content = new StringContent(speakerInfo.Name + Environment.NewLine + speakerInfo.Bio)
             };
+
+             // TODO:  Add topics they are presenting on
+             // TODO: Add hal variant
             response.Headers.AddLinkHeader(Request.ResolveLink<SessionsLink>(Links.SessionsBySpeaker, new { speakerId = speakerInfo.Id }));
             response.Headers.AddLinkHeader(new IconLink() { Target = new Uri(speakerInfo.ImageUrl) });
             return response;

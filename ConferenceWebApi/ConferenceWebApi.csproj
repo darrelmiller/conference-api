@@ -97,8 +97,13 @@
     <Compile Include="Controllers\SpeakersController.cs" />
     <Compile Include="Controllers\TopicsController.cs" />
     <Compile Include="DataModel\DataService.cs" />
+    <Compile Include="DataModel\Review.cs" />
+    <Compile Include="DataModel\Session.cs" />
     <Compile Include="DataModel\SessionRepository.cs" />
+    <Compile Include="DataModel\SessionTopic.cs" />
+    <Compile Include="DataModel\Speaker.cs" />
     <Compile Include="DataModel\SpeakerRepository.cs" />
+    <Compile Include="DataModel\Topic.cs" />
     <Compile Include="DataModel\TopicRepository.cs" />
     <Compile Include="Links.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
