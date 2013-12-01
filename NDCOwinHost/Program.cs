@@ -20,8 +20,7 @@ namespace ndc
                     var config = new HttpConfiguration();
                     ConferenceWebApi.WebApiConfig.Register(config);
                     builder.UseWebApi(config);
-                })
-                )
+                }))
             {
 
                 Console.WriteLine("Started Owin HttpListener on " + uri);

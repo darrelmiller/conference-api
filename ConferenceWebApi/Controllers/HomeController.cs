@@ -20,7 +20,8 @@ namespace ConferenceWebApi.Controllers
             home.AddResource(Request.ResolveLink<SessionLink>(Links.SessionById, new { id = "[id]" }));
             home.AddResource(Request.ResolveLink<SpeakersLink>(Links.AllSpeakers));
             home.AddResource(Request.ResolveLink<SpeakerLink>(Links.SpeakerById, new { id = "[id]" }));
-
+            //TODO: Add SessionsByKeyword
+            //TODO: Add SpeakersByName
           
             return new HttpResponseMessage() {
                     Content = new HomeContent(home)
