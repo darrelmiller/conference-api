@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceClientConsole", "ConferenceClientConsole\ConferenceClientConsole.csproj", "{500DA1E6-50CC-4F7E-B60C-9EBA725B686A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceClientLib", "ConferenceClientLib\ConferenceClientLib.csproj", "{B09723B7-A3B2-4B88-B295-23465ECB4477}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceWebPack", "ConferenceWebPack\ConferenceWebPack.csproj", "{18B4CA0F-D309-49FF-B700-5A4AB2924271}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{500DA1E6-50CC-4F7E-B60C-9EBA725B686A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500DA1E6-50CC-4F7E-B60C-9EBA725B686A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500DA1E6-50CC-4F7E-B60C-9EBA725B686A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500DA1E6-50CC-4F7E-B60C-9EBA725B686A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09723B7-A3B2-4B88-B295-23465ECB4477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09723B7-A3B2-4B88-B295-23465ECB4477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09723B7-A3B2-4B88-B295-23465ECB4477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09723B7-A3B2-4B88-B295-23465ECB4477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B4CA0F-D309-49FF-B700-5A4AB2924271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B4CA0F-D309-49FF-B700-5A4AB2924271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B4CA0F-D309-49FF-B700-5A4AB2924271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B4CA0F-D309-49FF-B700-5A4AB2924271}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

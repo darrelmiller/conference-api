@@ -46,6 +46,20 @@ namespace ConferenceWebApi.Controllers
             };
         }
 
+        [Route("", Name = Links.SessionsBySpeakerName)]
+        public HttpResponseMessage GetSessionsBySpeakerName(string speakerName)
+        {
+            var speaker = _dataService.SpeakerRepository.GetAll().FirstOrDefault(s => s.Name == speakerName);
+            if (speaker == null) return Request.RespondNotFound("Unknown speaker - " + speakerName);
+
+            var sessions = _dataService.SessionRepository.GetAll().Where(e => e.SpeakerId == speaker.Id);
+            var collection = GetCollection(sessions);
+
+            return new HttpResponseMessage()
+            {
+                Content = new CollectionJsonContent(collection)
+            };
+        }
 
         [Route("", Name = Links.SessionsByDay)]
         public HttpResponseMessage GetSessionsByDay(int dayno)

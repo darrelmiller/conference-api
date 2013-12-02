@@ -17,9 +17,11 @@
         public const string SessionsBySpeaker = "SessionsBySpeaker";
         public const string SessionsByDay = "SessionsByDay";
         public const string SessionsByTopic = "SessionsByTopic";
+        public const string SessionsBySpeakerName = "SessionsBySpeakerName";
 
         public const string SpeakersByTopic = "SpeakersByTopic";
         public const string SpeakersByDay = "SpeakersByDay";
+        public const string SpeakersByName = "SpeakersByName";
 
         public const string TopicsBySession = "TopicsBySession";
         public const string TopicsByDay = "TopicsByDay";

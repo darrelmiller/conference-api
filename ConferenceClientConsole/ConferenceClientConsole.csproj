@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1EBD2C58-17FB-4473-9D61-C5F84664B141}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{500DA1E6-50CC-4F7E-B60C-9EBA725B686A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConferenceWebApi</RootNamespace>
-    <AssemblyName>ConferenceWebApi</AssemblyName>
+    <RootNamespace>ConferenceClientConsole</RootNamespace>
+    <AssemblyName>ConferenceClientConsole</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,20 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.2.0.2\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity">
-      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity.Configuration">
-      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Owin">
-      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,90 +42,57 @@
     <Reference Include="System.Net.Http.Extensions">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Primitives">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
-    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.Owin">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.0.0\lib\net45\System.Web.Http.Owin.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tavis.Home, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Tavis.Home.0.5.8\lib\portable-win+net40+sl40+wp71\Tavis.Home.dll</HintPath>
-    </Reference>
     <Reference Include="Tavis.Link">
       <HintPath>..\packages\Tavis.Link.0.5.0\lib\portable-win+net40+sl40+wp71\Tavis.Link.dll</HintPath>
     </Reference>
     <Reference Include="Tavis.UriTemplates">
       <HintPath>..\packages\Tavis.UriTemplates.0.4\lib\Net35\Tavis.UriTemplates.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.WebApi">
-      <HintPath>..\packages\Unity.WebAPI.5.1\lib\net45\Unity.WebApi.dll</HintPath>
-    </Reference>
-    <Reference Include="WebApiContrib.CollectionJson">
+    <Reference Include="WebApiContrib.CollectionJson, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WebApiContrib.CollectionJson.0.1.2.0\lib\4.0\WebApiContrib.CollectionJson.dll</HintPath>
     </Reference>
+    <Reference Include="WebApiContrib.Formatting.CollectionJson.Client, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebApiContrib.Formatting.CollectionJson.Client.0.1.2.0\lib\net40\WebApiContrib.Formatting.CollectionJson.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit">
+      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\DaysController.cs" />
-    <Compile Include="Controllers\DocsController.cs" />
-    <Compile Include="Controllers\SessionController.cs" />
-    <Compile Include="Controllers\SessionsController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SpeakerController.cs" />
-    <Compile Include="Controllers\SpeakersController.cs" />
-    <Compile Include="Controllers\TopicsController.cs" />
-    <Compile Include="DataModel\DataService.cs" />
-    <Compile Include="DataModel\Review.cs" />
-    <Compile Include="DataModel\Session.cs" />
-    <Compile Include="DataModel\SessionRepository.cs" />
-    <Compile Include="DataModel\SessionTopic.cs" />
-    <Compile Include="DataModel\Speaker.cs" />
-    <Compile Include="DataModel\SpeakerRepository.cs" />
-    <Compile Include="DataModel\Topic.cs" />
-    <Compile Include="DataModel\TopicRepository.cs" />
-    <Compile Include="Links.cs" />
+    <Compile Include="Step3.cs" />
+    <Compile Include="Step4.cs" />
+    <Compile Include="Step2.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tools\CollectionJsonContent.cs" />
-    <Compile Include="Tools\DescribedByHandler.cs" />
-    <Compile Include="Tools\HeadMessageHandler.cs" />
-    <Compile Include="Tools\HttpRequestMessageExtensions.cs" />
-    <Compile Include="Tools\LinkExtensions.cs" />
-    <Compile Include="Tools\Repository.cs" />
-    <Compile Include="Tools\ResponseFactory.cs" />
-    <Compile Include="WebApiConfig.cs" />
+    <Compile Include="Step1.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DataModel\sessions.json" />
+    <None Include="App.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DataModel\speakers.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="DataModel\topics.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="docs\resources\event.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\ConferenceClientLib\ConferenceClientLib.csproj">
+      <Project>{B09723B7-A3B2-4B88-B295-23465ECB4477}</Project>
+      <Name>ConferenceClientLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConferenceWebPack\ConferenceWebPack.csproj">
-      <Project>{18b4ca0f-d309-49ff-b700-5a4ab2924271}</Project>
+      <Project>{18B4CA0F-D309-49FF-B700-5A4AB2924271}</Project>
       <Name>ConferenceWebPack</Name>
     </ProjectReference>
   </ItemGroup>
