@@ -13,6 +13,9 @@ using WebApiContrib.Formatting.CollectionJson.Client;
 
 namespace ConferenceClientLib.Gen1
 {
+    /// <summary>
+    /// The Classic Wrapper API
+    /// </summary>
     public class ConferenceApi
     {
 
@@ -73,7 +76,6 @@ namespace ConferenceClientLib.Gen1
             }
         }
 
-
         public async Task<List<SessionDTO>> GetSessionsBySpeakerName(string speakerName)
         {
             using (var httpClient = CreateHttpClient())
@@ -93,6 +95,7 @@ namespace ConferenceClientLib.Gen1
                 return sessions;
             }
         }
+
         private HttpClient CreateHttpClient()
         {
             var client = new HttpClient();

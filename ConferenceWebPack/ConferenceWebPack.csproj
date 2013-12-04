@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
     <Compile Include="DaysLink.cs" />
     <Compile Include="HomeLink.cs" />
     <Compile Include="SessionLink.cs" />

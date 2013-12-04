@@ -19,6 +19,10 @@ namespace ConferenceClientLib.Gen2
     //   derived HttpClient
     //   Extension methods
 
+
+    /// <summary>
+    /// The smart wrapper
+    /// </summary>
     public class ConferenceApi
     {
         private const string AllSessions = "sessions";
