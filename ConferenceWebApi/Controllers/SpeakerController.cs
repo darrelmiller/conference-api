@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Web.Http;
 using ConferenceWebApi.DataModel;
 using ConferenceWebApi.Tools;
 using ConferenceWebPack;
+using Newtonsoft.Json.Linq;
 using Tavis;
 using Tavis.IANA;
 
@@ -26,16 +28,41 @@ namespace ConferenceWebApi.Controllers
 
             var speakerInfo = _dataService.SpeakerRepository.Get(id);
 
-            var response = new HttpResponseMessage()
-            {
-                Content = new StringContent(speakerInfo.Name + Environment.NewLine + speakerInfo.Bio)
-            };
+            var response = Request.RespondOk();
 
-             // TODO:  Add topics they are presenting on
-             // TODO: Add hal variant
-            response.Headers.AddLinkHeader(Request.ResolveLink<SessionsLink>(Links.SessionsBySpeaker, new { speakerId = speakerInfo.Id }));
-            response.Headers.AddLinkHeader(new IconLink() { Target = new Uri(speakerInfo.ImageUrl) });
+             if (Request.Headers.Accept.Contains(new MediaTypeWithQualityHeaderValue("application/hal+json")))
+             {
+                 response.Content = CreateHalContent(speakerInfo);
+             }
+             else
+             {
+                 response.Content = new StringContent(speakerInfo.Name + Environment.NewLine + speakerInfo.Bio);
+                 response.Headers.AddLinkHeader(Request.ResolveLink<SessionsLink>(Links.SessionsBySpeaker, new { speakerId = speakerInfo.Id }));
+                 response.Headers.AddLinkHeader(new IconLink() { Target = new Uri(speakerInfo.ImageUrl) });
+             }
+
             return response;
         }
+
+         private HttpContent CreateHalContent(Speaker speakerInfo)
+         {
+             dynamic jspeaker = new JObject();
+             jspeaker.name = speakerInfo.Name;
+             jspeaker.bio = speakerInfo.Bio;
+             
+             dynamic links = new JObject();
+             
+             dynamic iconLink = new JObject();
+             iconLink.href = speakerInfo.ImageUrl;
+             links.icon = iconLink;
+
+             dynamic sessionsLink = new JObject();
+             sessionsLink.href = Request.ResolveLink<SessionsLink>(Links.SessionsBySpeaker, new { speakerId = speakerInfo.Id }).Target;
+             links[LinkHelper.GetLinkRelationTypeName<SessionsLink>()] = sessionsLink;
+
+             jspeaker["_links"] = links;
+             
+            return new DynamicHalContent(jspeaker);
+         }
     }
 }

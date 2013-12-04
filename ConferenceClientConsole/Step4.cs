@@ -7,24 +7,34 @@ using System.Text;
 using System.Threading.Tasks;
 using ConferenceClientLib.Gen2;
 using ConferenceWebPack;
+using Tavis;
+using Tavis.Home;
 using Xunit;
+
 
 namespace ConferenceClientConsole
 {
     public class Step4
     {
+        private HttpClient _client;
+        
+        public Step4()
+        {
+            _client = new HttpClient();
+           
+        }
         [Fact]
         public async Task GetAllSpeakers()
         {
+            var homeLink = new HomeLink() { Target = new Uri("http://birch:1001/") };
+            var response = await _client.SendAsync(homeLink.CreateRequest());
+            var homeDocument = await homeLink.ParseResponse(response);
+ 
+            var speakersLink = homeDocument.GetResource(LinkHelper.GetLinkRelationTypeName<SpeakersLink>()) as SpeakersLink;
+            
+            var speakersResponse = await _client.SendAsync(speakersLink.CreateRequest());
 
-            var client = new HttpClient();
-            var link = new SpeakersLink()
-            {
-                
-            };
-
-
-            var request =  link.CreateRequest();
+           var collection = speakersLink.ParseResponse(speakersResponse);
 
         }
 

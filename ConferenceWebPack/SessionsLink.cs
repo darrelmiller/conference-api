@@ -14,7 +14,7 @@ namespace ConferenceWebPack
                 {
                     h.AddMethod(HttpMethod.Get);
                  });
-            this.AddHint<FormatsHint>(h => h.AddMediaType("application/collection+json"));
+            this.AddHint<FormatsHint>(h => h.AddMediaType("application/vnd.collection+json"));
         }
     }
 }

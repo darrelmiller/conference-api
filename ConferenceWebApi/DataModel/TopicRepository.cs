@@ -22,4 +22,24 @@ namespace ConferenceWebApi.DataModel
         }
 
     }
+
+    public class SessionTopicRepository : Repository<SessionTopic>
+    {
+
+        public SessionTopicRepository(JArray jarray)
+        {
+            int i = 1;
+            foreach (dynamic jObject in jarray)
+            {
+                _Entities.Add(i++, new SessionTopic()
+                {
+                    SessionId = jObject.sessionId,
+                    TopicId = jObject.topicId
+
+                });
+            }
+
+        }
+
+    }
 }

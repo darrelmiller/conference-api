@@ -23,18 +23,16 @@ namespace ConferenceClientLib.Gen3
 
     public class ConferenceApi
     {
-        private const string AllSessions = "sessions";
-        private const string AllSpeakers = "speakers";
-        private const string SessionsBySpeaker = "sessions?speakerId={speakerid}";
-        private const string SessionsBySpeakerName = "sessions?speakerName={speakername}";
+        private string AllSessions = "sessions";
+        private string AllSpeakers = "speakers";
+        private string SessionsBySpeaker = "sessions?speakerId={speakerid}";
+        private string SessionsBySpeakerName = "sessions?speakerName={speakername}";
 
         private readonly HttpClient _HttpClient;
         private HomeDocument _homeDocument;
         public ConferenceApi(HttpClient client)
         {
             _HttpClient = ConfigureHttpClient(client);
-
-            
         }
 
         public async static Task<ConferenceApi> CreateConferenceApi(HttpClient client)
@@ -48,12 +46,14 @@ namespace ConferenceClientLib.Gen3
         {
             var response = await _HttpClient.GetAsync("/");
             _homeDocument = HomeDocument.Parse(await response.Content.ReadAsStreamAsync());
+            AllSpeakers = _homeDocument.GetResource(LinkHelper.GetLinkRelationTypeName<SpeakersLink>()).Target.OriginalString;
+            AllSessions = _homeDocument.GetResource(LinkHelper.GetLinkRelationTypeName<SessionsLink>()).Target.OriginalString;
+
         } 
 
         public async Task<List<SpeakerDTO>> GetAllSpeakers()
         {
-            var speakersLink = _homeDocument.GetResource(LinkHelper.GetLinkRelationTypeName<SpeakersLink>());
-            var response = await _HttpClient.GetAsync(speakersLink.Target);
+            var response = await _HttpClient.GetAsync(AllSpeakers);
             response.EnsureSuccessStatusCode();
 
             var readDocument = await response.Content.ReadAsAsync<ReadDocument>(new[] { new CollectionJsonFormatter() });

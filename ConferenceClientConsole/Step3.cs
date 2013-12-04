@@ -24,7 +24,7 @@ namespace ConferenceClientConsole
         {
             var api = await ConferenceApi.CreateConferenceApi(_httpClient);
             var speakers = await api.GetAllSpeakers();
-
+            Assert.True(speakers.Count > 0);
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace ConferenceClientConsole
 
             var api = new ConferenceApi(_httpClient);
             var sessions = await api.GetAllSessions();
-
+            Assert.True(sessions.Count > 0);
         }
        
         [Fact]
@@ -45,18 +45,19 @@ namespace ConferenceClientConsole
 
         }
 
-        [Fact]
-        public async Task MakeMultipleRequests()
-        {
+        // Can't access this resource as there already exists a Sessions link rel in Home. 
+        //[Fact]
+        //public async Task MakeMultipleRequests()
+        //{
 
-            var api = new ConferenceApi(_httpClient);
-            var speakers = await api.GetAllSpeakers();
-            foreach (var speakerDto in speakers)
-            {
-                var sessions = await api.GetSessionsBySpeakerName(speakerDto.Name);    
-            }
+        //    var api = new ConferenceApi(_httpClient);
+        //    var speakers = await api.GetAllSpeakers();
+        //    foreach (var speakerDto in speakers)
+        //    {
+        //        var sessions = await api.GetSessionsBySpeakerName(speakerDto.Name);    
+        //    }
             
 
-        }
+        //}
     }
 }

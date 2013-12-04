@@ -43,261 +43,261 @@
   },
   {
     "id": 8,
+    "name": "Craig Dunn",
+    "bio": "\r\n                            Craig Dunn&nbsp;is a developer evangelist &amp; technical writer at Xamarin. He fell in love with the very early betas of MonoTouch, blogged, tweeted, wrote a book and used it on large mobile projects in the wild. Craig joined Xamarin from Sydney before succumbing to the lure of the Bay area. He loves iOS and Android equally, as long as they're running Xamarin apps. You can find Craig on Twitter as @ConceptDev\r\n                            \r\n                        ",
+    "image_url": "http://www.ndc-london.com//images/Speakers/Craig Dunn 324-2.jpg"
+  },
+  {
+    "id": 9,
     "name": "Jez Humble",
     "bio": "\r\n                            Jez Humble is a Principal at ThoughtWorks, and co-author of the Jolt Award winning Continuous Delivery, published in Martin Fowler&rsquo;s Signature Series (Addison Wesley, 2010). He has worked as a software developer, product manager, consultant and trainer across a wide variety of domains and technologies. His focus is on helping organisations deliver valuable, high-quality software frequently and reliably through implementing effective engineering practices.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Jez Humble.jpg"
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Axel Rauschmayer",
     "bio": "\r\n                            Dr. Axel Rauschmayer specializes in JavaScript and web technologies. He blogs, edits JavaScript Weekly, teaches web development and organizes the JavaScript user group in Munich\r\nAxel has been programming since 1985, developing web applications since 1995 and held his first talk on Ajax in 2006. In 1999, he was technical manager at a German internet startup that later expanded internationally. He has done extensive research into programming language design and has followed the state and the future of JavaScript for years.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Axel Rauschmayer 324_2.jpg"
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "Phillip Trelford",
     "bio": "\r\n                            Phil Trelford is a Software Developer and Architect at Trayport, a market leading supplier of energy trading systems. He's a regular speaker, trainer, blogger, open source author, co-organizer of the London F# Meetup and Microsoft MVP.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Phillip Trelford 324.jpg"
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "Mike Cohn",
     "bio": "\r\n                            Mike Cohn is a highly&ndash;respected and sought after trainer who is in demand for agile and Scrum training around the globe. He is the author of three very popular agile books; has written numerous articles for magazines, journals, and websites; writes an influential blog; was a co&ndash;founder and past chairperson of the non&ndash;profit Agile Alliance; and also co&ndash;founded and served on the board of directors of the non&ndash;profit Scrum Alliance.\r\n                            Mike has been an active participant on Scrum projects since 1995&hellip; and not just as a consultant. At four different companies, Mike was VP of Development where agile was instrumental to the company&rsquo;s success. Three of those companies were startups and the other was a Fortune 40 company. Mike has the hands on experience to make his training and coaching relevant to the real business world; it&rsquo;s not just theoretical with him. And his teaching style includes hands&ndash;on experiences for his participants.\r\nMike has more than fifteen years of experience with Scrum, working in domains from banking to aerospace to video game development&mdash;with companies ranging in size from 1 to 400,000. To get a first&ndash;hand look at how Mike relates to an audience, check out this&nbsp;video of Mike presenting at Google.\r\nVisit Mike Cohns blog:&nbsp;Scrum Training Agile Training from Scrummaster Mike Cohn\r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Mike Cohn.jpg"
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "Robert C. Martin",
     "bio": "\r\n                            Robert C. Martin has been a software professional since 1970. In the last 35 years, he has worked in various capacities on literally hundreds of software projects.\r\n&nbsp;\r\nHe has authored \"landmark\" books on Agile Programming, Extreme Programming, UML, Object&ndash;Oriented Programming, and C++ Programming. He has published dozens of articles in various trade journals. Today, he is one of the software industrys leading authorities on Agile software development and is a regular speaker at international conferences and trade shows. He is a former editor of the C++ Report and currently writes a monthly Craftsman column for Software Development magazine.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Robert C Martin.jpg"
   },
   {
-    "id": 13,
+    "id": 14,
+    "name": "Jafar Husain",
+    "bio": "\r\n                            Jafar Husain is a Technical Lead at Netflix. He has been working and the software industry for 16 years, and has developed software for GE and Microsoft. He specializes in building web servers and user interfaces using Functional Reactive programming, and was the first user of the Reactive Extensions Framework. He also developed \"Falkor\", a RESTful data access framework that powers most Netflix clients. A highly-rated speaker, he has spoken about reactive programming at Qcon, YOW, and Channel 9. He has also authored interactive training software to help developers learn about functional reactive programming.\r\n                            \r\n                        ",
+    "image_url": "http://www.ndc-london.com//images/Speakers/Jafar_324.jpg"
+  },
+  {
+    "id": 15,
     "name": "Jessica Kerr",
     "bio": "\r\n                            Thirteen years into a career in Java development, Jessica Kerr discovered functional programming, twitter, and conferences. Now she is excited to share with the programming community her passion for git, Scala, F#, and the whole world. When she is not coding or blogging or reading about cognitive science, you might find her traipsing through the woods with her 5-year-old daughter. She has a hobby of acquiring tastes -- just see if you can find a food that she won't eat.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Jessica Kerr3 256.jpg"
   },
   {
-    "id": 14,
+    "id": 16,
     "name": "Scott Allen",
     "bio": "\r\n                            K. Scott Allen is the founder of OdeToCode LLC and a software consultant who lives near Baltimore, MD. Scott has 20 years of commercial software development experience across a wide range of technologies.\r\n&nbsp;\r\nHe has delivered software products for embedded devices, Windows desktop, web, and mobile platforms. He has developed web services for Fortune 50 companies and firmware for startups. Scott is also a speaker at international conferences, the co&ndash;author of Professional ASP.NET MVC 3, and he delivers classroom training and mentoring to companies around the world.\r\n                            He has delivered software products for embedded devices, Windows desktop, web, and mobile platforms. He has developed web services for Fortune 50 companies and firmware for startups. Scott is also a speaker at international conferences, the co&ndash;author of Professional ASP.NET MVC 3, and he delivers classroom training and mentoring to companies around the world.\r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Scott Allen London.jpg"
   },
   {
-    "id": 15,
+    "id": 17,
     "name": "Sahil Malik",
     "bio": "\r\n                            Sahil Malik, the founder and principal of Winsmarts.com has been a Microsoft trainer and consultant for the past many years. Having authored more than 10 books, trained and spoken at conferences all across the world, delivered solutions for many high profile clients, he brings with him invaluable practical experience. For his community contributions, Sahil has been awarded the Microsoft MVP award for the past many years. You will find his trainings devoid of marketing, and deeply rooted in solid knowledge and expertise that is easy to grasp and understand.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Sahil NDC London 324.jpg"
   },
   {
-    "id": 16,
+    "id": 18,
     "name": "David Fowler",
     "bio": "\r\n                            David Fowler was born and raised in Barbados. He attended university in Florida (Florida Tech), where he had 2 internships at MSFT before joining full time in 2008.\r\n&nbsp;\r\nDavid has worked on several projects including ASP.NET WebForms and ASP.NET WebPage. He wrote the git server for Azure deployments (kudu) and was one of the creators of NuGet, and SignalR. He is a senior developer on the ASP.NET team&nbsp;currently working full time on SignalR.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/David Fowler1 324.jpg"
   },
   {
-    "id": 17,
+    "id": 19,
     "name": "Dan North",
     "bio": "\r\n                            Dan writes software and coaches teams and organisations in Agile and Lean methods. He believes in putting people first and writing simple, pragmatic software.\r\n                            Dan writes software and coaches teams and organisations in Agile and Lean methods. He believes in putting people first and writing simple, pragmatic software.\r\n&nbsp;\r\nHe believes most software problems come back to communication and feedback, which is why he puts so much emphasis on \"getting the words right\", and why he is so interested in systems thinking, communication and how people learn. He has been working in the IT industry for over 20 years, and he occasionally blogs at&nbsp;dannorth.net.\r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Dan North 324.jpg"
   },
   {
-    "id": 18,
+    "id": 20,
     "name": "Ashe Dryden",
     "bio": "\r\n                            Ashe Dryden is an indie ruby developer living in Madison, WI. She's been involved with the web in some form or another over the course of the past 12 years. Ashe is an outspoken educator for diversity, inclusiveness, and empathy. She's currently writing a book on increasing diversity within companies. When she isn't discussing technology or it&rsquo;s intersection with culture, she's cycling, tweeting, playing board games, debating the social implications of Star Trek episodes, being that awkward girl at the party, and waiting for her next burrito fix.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Ashe Dryden.jpg"
   },
   {
-    "id": 19,
+    "id": 21,
     "name": "Jon Galloway",
     "bio": "\r\n                            Jon works at Microsoft as an Community Program Manager focused on ASP.NET MVC. He's co&ndash;author of Wrox Professional MVC 3, wrote the MVC Music Store tutorial, helped organize mvcConf, and travelled the world in 2010 teaching MVC classes for the Web Camps tour.\r\n&nbsp;\r\nJon previously worked at Vertigo Software, where he worked on several Microsoft conference websites (PDC08, MIX09, WPC09), built the video player for a very large scale online sports event which happens every March, and lead a team which created several keynote demos for MIX08. Prior to that, he's worked in a wide range of web development shops, from scrappy startups to Fortune 500 financial companies. He's part of the Herding Code podcast (http:&frasl;&frasl;herdingcode.com), Twitters as @jongalloway and blogs at http:&frasl;&frasl;weblogs.asp.net&frasl;jgalloway\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Jon Galloway Web.jpg"
   },
   {
-    "id": 20,
+    "id": 22,
     "name": "John Azariah",
     "bio": "\r\n                            For over 20 years John Azariah has worked on high-profile projects for leading global software companies, including Oracle Corporation (NASDAQ: ORCL), where he helped develop several versions of Oracle Forms, and Microsoft Corporation (NASDAQ: MSFT), where he worked on Microsoft Excel, Project and SharePoint Server, and for which he was awarded a US patent.\r\nJohn is currently a Senior Application Architect at MYOB, Australia, where he designs and leads the development and technical delivery of their flagship cloud-based accounting application.\r\nIn 2003, John founded BrightSword Technologies Pte Ltd, Singapore &ndash; an ISO 9001 organization &ndash; where he still serves on their technical advisory board and actively contributes in the development of their open-source and shared-library projects. He was responsible for driving the company's innovation in code-generation technology, and consulted with several clients worldwide to design and architect solutions.\r\nHe is active in the Melbourne .NET and Azure communities, and speaks frequently on computer science, software engineering, cloud computing, and other trends in technology and architecture. He is a regular technical speaker in such forums as TechEd Australia and DDD Melbourne, and was a guest speaker at Scott Guthrie's lock-note presentation of TechEd Australia 2013.\r\nJohn holds a Bachelor&rsquo;s Degree in Computer Science and Chemistry from Dartmouth College, NH, USA.&nbsp;\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/John Azariah 324.jpg"
   },
   {
-    "id": 21,
+    "id": 23,
     "name": "Damian Edwards",
     "bio": "\r\n                            Damian Edwards is a Senior Program Manager on the ASP.NET team, responsible for the core ASP.NET runtime and Web Forms. He's also an active open source participant, as the creator of the Web Forms MVP and SignalR open source ASP.NET projects, as well as various jQuery plugins.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Damian Edwards.jpg"
   },
   {
-    "id": 22,
+    "id": 24,
     "name": "Michele Bustamante",
     "bio": "\r\n                            Michele Leroux Bustamante is Managing Partner at Solliance (solliance.net), and founder of Snapboard (snapboard.com) a tool for professionals to organize and share content. She is also Microsoft Regional Director and a Microsoft MVP. Michele has over 20 years speclializing in scalable and secure end-to-end system design, identity and access management, and cloud computing technologies - for companies of all sizes. Michele shares her experiences through presentations and keynotes all over the world, and has been publishing regularly in technology journals her entire career. Blog:michelebusta.com&nbsp;Twitter&nbsp;@michelebusta\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Michele Bustamante 324.jpg"
   },
   {
-    "id": 23,
+    "id": 25,
     "name": "Venkat Subramaniam",
     "bio": "\r\n                            Venkat has been in the training and consulting business since 1996. He's a well recognized international speaker and appears frequently in international conference. He's done extensive training and consulting in US, Canada, Europe, and Asia.\r\n                            Prior to starting his own company, Venkat worked in various positions, from Programmer Analyst to Systems Architect, at organizations like Halliburton, Raytheon, and Invensys. Venkat has trained thousands of software professionals around the world. He is also an adjunct professor at the University of Houston.\r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Venkat Subramaniam.jpg"
   },
   {
-    "id": 24,
+    "id": 26,
     "name": "Marit Rossnes",
     "bio": "\r\n                            Marit is a Project Manager at Bekk Consulting, a Norwegian IT consultancy based in Oslo. She has lead several software development projects in Norway's largest companies in &nbsp;private and public sectors. Marit has studied&nbsp;Technology Management at the Norwegian University of Science and Technology and at MIT Sloan School of Management. She now completes her degree writing a thesis about contractual completeness and &nbsp;the role of estimates in software development projects. &nbsp;\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Marit Rossness 324.jpg"
   },
   {
-    "id": 25,
+    "id": 27,
     "name": "Mads Torgersen",
     "bio": "\r\n                            Mads Torgersen is the program manager for the C# language design and specification, and is also on the VB and TypeScript language design teams.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Mads Torgersen 324.jpg"
   },
   {
-    "id": 26,
+    "id": 28,
     "name": "Nicole Herskowitz",
     "bio": "\r\n                            With over twelve years at Microsoft, Nicole currently leads product marketing for Visual Studio and the .NET Framework. She joined the Visual Studio business over five years ago to run global sales strategy and execution. Nicole started her career at Microsoft on the Office division serving in a variety of roles including product management, product planning and sales strategy for Microsoft Office, SharePoint and Project. She was responsible for launching Office 2007 in EMEA and the first version of Microsoft Project Server globally. Prior to joining Microsoft, Nicole worked in product management at a startup delivering hosted CRM offerings for small businesses. Nicole started her career as a consultant for Arthur Andersen Business Consulting. She holds an MBA at the University of Michigan and lived in London for almost seven years while fulfilling a commitment at Microsoft. In her spare time, Nicole enjoys yoga and running and spending time with her two young daughters.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Nicole Herskowitz 324.jpg"
   },
   {
-    "id": 27,
+    "id": 29,
     "name": "Gill Cleeren",
     "bio": "\r\n                            Gill Cleeren is Microsoft RegionalDirector, Silverlight MVP, Pluralsight trainer and Telerik MVP. He lives inBelgium where he works as .NET architect at Ordina. Gill has given manysessions, webcasts and trainings on new as well as existing technologies, such asSilverlight, ASP.NET and WPF at conferences including TechEd, TechDays,DevDays, NDC Oslo, SQL Server Saturday Switserland, Silverlight Roadshow inSweden, Telerik RoadShow UK&hellip; Gill has written 2 books: &ldquo;Silverlight4 Data and Services Cookbook&rdquo;andSilverlight5 Data and Services Cookbookand is author of many articles for magazines and websites. You can find hisblog atwww.snowball.be.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Gill Cleeren 324.jpg"
   },
   {
-    "id": 28,
+    "id": 30,
     "name": "Gary Bernhardt",
     "bio": "\r\n                            Gary Bernhardt is a creator and destroyer of software compelled to understand both sides of heated software debates: Vim and Emacs; Python and Ruby; Git and Mercurial. He runs Destroy All Software, which publishes advanced screencasts for serious developers covering Unix, Ruby, OO design, and TDD.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/gary_bernhardt 324.png"
   },
   {
-    "id": 29,
+    "id": 31,
     "name": "Mathew McLoughlin",
     "bio": "\r\n                            Mathew McLoughlin is a developer with a love of all things .NET. He has a passion for all new technologies in particular Nancy. He belives in using the right tool for the right job and not everything needs to come from the Microsoft stack.\r\nIn the last view years he has worked mainly on a large scale web application with a strong focus on real time data.\r\nHe can be found at mat-mcloughlin.github.net\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Matthew McLoughlin 324.jpg"
   },
   {
-    "id": 30,
+    "id": 32,
     "name": "David Carmona",
     "bio": "\r\n                            David Carmona is the Director of Product Marketing for Visual Studio and .NET. He is responsible for marketing developer tools and services, programming languages and runtimes designed for a broad base of software developers and development teams, including the Visual Studio line of products and services and the .NET Framework. David has more than two decades of experience in the technology industry where he began his career as a software engineer. He joined Microsoft more than 12 years ago and has had several business management roles both internationally and in Redmond that have centered around his passion: software development.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/David Carmona 324.jpg"
   },
   {
-    "id": 31,
-    "name": "Rob Conery",
-    "bio": "\r\n                            I am the co&ndash;founder of Tekpub.com, an online video learning resource for developers of all shapes and sizes. I also am one of the annoying voices you hear on This Developer's Life &ndash; a podcast I do with Scott Hanselman.\r\n                            I have a number of Open Source projects, including Massive (the first MicroORM), SubSonic &ndash; an ActiveRecord&ndash;y clone, Manatee (migrations with JSON), Sugar &ndash; a set of helper libraries, and a few others.\r\n&nbsp;\r\nI worked on the ASP.NET team for a short while helping to promote application building with ASP.NET MVC. Prior to that I was an independent consultant, sleazy dot&ndash;com entrepreneur and data&ndash;mining wonk. I live in Hawaii with my two shiney daughters and wonderfully beautiful, patient wife.\r\n                        ",
-    "image_url": "http://www.ndc-london.com//images/Speakers/Rob Conery.jpg"
-  },
-  {
-    "id": 32,
+    "id": 33,
     "name": "Juval Lowy",
     "bio": "\r\n                            Juval L&ouml;wy is the founder of IDesignand a master software architect specializing in system and project design. Juval has mentored hundreds of architects across the globe, sharing his insights, techniques, and breakthroughs, in&nbsp;architecture,&nbsp;project design, development process, and technology.&nbsp;\r\n                            Juval is Microsoft&rsquo;s Regional Director for the Silicon Valley and has participated in the Microsoft internal strategicdesign reviews for C#, WCF and related technologies. Juval is a frequent speaker at the major international software development&nbsp;conferences. Juval published several bestsellers, and his latest book is the third edition of&nbsp;Programming WCF Services&nbsp;(O'Reilly 2010). Juval published numerous&nbsp;articles, regarding almost every aspect of modern software development and architecture. Microsoft recognized Juval as a Software Legend as one of the world's top experts and industry leaders.\r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Juval Lowy.jpg"
   },
   {
-    "id": 33,
+    "id": 34,
     "name": "Louis Dejardin",
     "bio": "\r\n                            \r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/louis dejardin 324.jpg"
   },
   {
-    "id": 34,
+    "id": 35,
     "name": "Stuart Lodge",
     "bio": "\r\n                            Stuart works as founder, salesman, project manager, developer, and tea-maker for Cirrious. He&rsquo;s been coding 30 years; made the software that powers UK digital radio; eats, drinks and sleeps on his keyboard; but still doesn&rsquo;t know how to use a command line. A late comer to Mvvm, C#, and to open source, Stuart can be found endlessly talking about data-binding, ViewModels, portable class libraries and long distance triathlons. Bruce Willis once pointed at him and laughed.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Stuart Lodge 324.png"
   },
   {
-    "id": 35,
+    "id": 36,
     "name": "Colin Beales",
     "bio": "\r\n                            Colin Beales works in the Developer and Platform Evangelism Group at Microsoft in the UK as a technical specialist covering development tools, specializing in the full Application Lifecycle Management tooling of Team Foundation Server and Visual Studio. Colin joined Microsoft in 1996 working in the Visual C++ team, before working with COM(+) teams. Following this Colin joined Microsoft Consultancy Services specializing in .NET development and application architecture. In his latter years of consulting, Colin worked with many customers and partners as an Application Lifecycle Management specialist and Agile coach working with Team Foundation Server. Outside of his work at Microsoft, Colin co-founded The Test Factory, the online assessment platform. He can be found in his social time watching football at Brighton and Hove Albion.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Colin Beales 324.png"
   },
   {
-    "id": 36,
+    "id": 37,
     "name": "Pedro F&#233;lix",
     "bio": "\r\n                            Pedro is a learner, developer and teacher.\r\nPedro F&eacute;lix is a professor at ISEL, the engineering school of the Lisbon Polytechnic School, and a member of the CCISEL R&amp;D center. He is also an independent consultant, currently working with the Service Delivery Broker team at SAPO.\r\nPedro started his professional career in the mid&ndash;90s, developing and teaching about embedded systems using the x86 assembly and C languages. Since then, he has been climbing up the stack until reaching the Web. Currently, his main interests are on the area of Web APIs, namely: architectural styles, programming models and execution infrastructures, identity management and access control.Pedro is a member of the Web API advisory board and co&ndash;author of the upcoming book \"Designing Evolvable Web APIs with ASP.NET\", to be published by O'Reilly in 2013.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Pedro Felix oktaset.jpg"
   },
   {
-    "id": 37,
+    "id": 38,
     "name": "Tiberiu Covaci",
     "bio": "\r\n                            Since 2003 Tiberiu is training and mentoring developers and architects around the world to understand the .NET Framework and the technologies built on top of it. He works closely with Microsoft, both as Author and Technology Reviewer for the Microsoft .NET Official Curriculum courses. He is a member of the MCT Advisory Council, Telerik Insider, ASP Insider, INETA Speaker, IASA Speaker, and INETA Country Lead. He is interested in technologies like multi-core and async programming, ASP.NET, SPA, new programming languages and trends. For his community contributions he was awarded the MVP title by Microsoft and Telerik.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Tiberiu Covaci 324.jpg"
   },
   {
-    "id": 38,
+    "id": 39,
     "name": "Gary Short",
     "bio": "\r\n                            Head of Data Science for Black Marble. Interested in Hadoop, Pig, Hive, Map Reduce Patterns, UCINet, R, NLTK and Social Network Analysis.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Gary Short 324.jpg"
   },
   {
-    "id": 39,
+    "id": 40,
     "name": "Damian Hickey",
     "bio": "\r\n                            \r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Damian Hickey 324.jpg"
   },
   {
-    "id": 40,
+    "id": 41,
     "name": "Burke Holland",
     "bio": "\r\n                            Burke Holland&nbsp;is a web developer living in Nashville, TN. He enjoys working with and meeting developers who are building mobile apps with jQuery / HTML5 and loves to hack on social API's. Burke works for Telerik as a Developer Advocate focusing on Kendo UI. Burke is&nbsp;@burkeholland&nbsp;on Twitter.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Burke Holland 324.jpg"
   },
   {
-    "id": 41,
+    "id": 42,
     "name": "Mark Rendle",
     "bio": "\r\n                            Mark is the founder and CEO of Oort Corporation, a new company building cloud-based software for people who build cloud-based software. Oort's first product,Zudio, a web-based Windows Azure Storage toolkit, launched in April 2013. Mark has been a Windows Azure Development MVP for three years.\r\nIn his spare time, Mark work's on the&nbsp;Simple.Data&nbsp;not-an-ORM and&nbsp;Simple.Web&nbsp;projects, and wanders the world speaking at conferences and user groups. Or he just geeks out learning new programming languages and frameworks; in 2013 he's working a lot with TypeScript and AngularJS.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Mark Rendle 324.png"
   },
   {
-    "id": 42,
+    "id": 43,
     "name": "Miguel Castro",
     "bio": "\r\n                            Miguel Castro is an architect, developer, and trainer with over 28 years of experience in the software industry. He&rsquo;s a Microsoft MVP, member of the INETA Speakers Bureau, and ASP Insider. With a Microsoft background that goes all the way back to VB 1.0 (and QuickBasic in fact).\r\n                            Miguel speaks regularly at numerous user groups, code camps, and conferences in the US and abroad. He has also been featured on several technology talk shows on numerous occasions and is also a PluralSight author. He specializes in architecture and development consulting and training using Microsoft technologies. Miguel is also a regular author with CoDe Magazine and the proud father of a very computer savvy 9-year-old girl.\r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Miguel Castro.jpg"
   },
   {
-    "id": 43,
+    "id": 44,
     "name": "Tomas Petricek",
     "bio": "\r\n                            Tomas is a long-time F# enthusiast, Microsoft MVP and author of a book Real-World Functional Programming (http://manning.com/petricek). He leads functional programming and F# courses in London and New York and contributed to the development of F# as an intern and contractor at Microsoft Research in Cambridge. He is a PhD student at University of Cambridge, working on functional programming languages.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Tomas Petricek 324_v2.jpg"
   },
   {
-    "id": 44,
+    "id": 45,
     "name": "Geoff Watts",
     "bio": "\r\n                            Geoff is one of the most experienced Scrum trainers and coaches in the world and always tries to have fun in what he does. He regularly runs highly-interactive and entertaining training courses in Oslo and also offers practical advice and help through his coaching services - either organisationally, at a team level or one-to-one.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Geoff Watts 324.jpg"
   },
   {
-    "id": 45,
+    "id": 46,
     "name": "Brian A. Randell",
     "bio": "\r\n                            Brian A. Randell is a Partner with MCW Technologies LLC. For more than 20 years, he has been building software solutions and teaching Microsoft technologies to developers as well as consulting worldwide for companies small and large&mdash;including Fortune 100 companies like Microsoft. In early 2010, he toured the world prepping Microsoft employees and Microsoft partners for the Visual Studio 2010 launch. In 2012, he and his team built some of the first training content &amp; demos for Microsoft using Visual Studio 2012, Team FoundationServer 2012, and Windows 8. He's currently a Visual Studio ALM MVP and when not working enjoys spending time with his wife and two children.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Slider_Pictures/Brian A Randell 324.png"
   },
   {
-    "id": 46,
+    "id": 47,
     "name": "Erlend Oftedal",
     "bio": "\r\n                            Erlend is a developer and security guy from Bekk Consulting AS in Oslo, Norway. He is the chapter lead of the OWASP Norway Chapter, and has presented at conferences like NDC Oslo, OWASP AppSec EU and JavaZone.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Erlend Oftedal 324.jpg"
   },
   {
-    "id": 47,
+    "id": 48,
     "name": "James Hughes",
     "bio": "\r\n                            James works as a Technical Architect at an Irish software company, Kainos, where he tries hard to make sure all developers are using the right tools for the right job and that they are suitably enthused about technology through his role as Developer Evangilist. When James is not working, organising hackathons and generally being opinionated James likes to talk about himself in the third person, attempt to blog about technical things on http:&frasl;&frasl;yobriefca.se and troll Twitter as @kouphax\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/James Hughes 324.jpg"
   },
   {
-    "id": 48,
+    "id": 49,
     "name": "Tomas Jansson",
     "bio": "\r\n                            Tomas has been on a journey for almost two decades. Starting of in the late 90s he started off with C and assembler in high school which was also present during the years at the Chalmers University of Technology in Gothenburg together with Haskell and Java. After graduating from Chalmers he was lured into the world of SAP and ABAP for half a year before moving on to perl development before finally ending up in the .NET world. C# and .NET is Tomas primary tools today but he is curious to different technologies, languages and how they can improve his overall development skills.\r\nAs of today Tomas is working as a manager and the group lead of the .NET group at Bekk Consulting AS in Oslo, Norway. He is also the assistant lead in the Norwegian .NET User Group in Oslo. Tomas has speaking experience from NDC Oslo, Microsoft Techdays, Trondheim Developer Conference and multiple user group presentations.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/tomas_jansson 324.png"
   },
   {
-    "id": 49,
+    "id": 50,
     "name": "G&#225;sp&#225;r Nagy",
     "bio": "\r\n                            G&aacute;sp&aacute;r is an agile developer coach with more than 10 years of experience in enterprise software development. Currently he works for TechTalk as leading software architect. He is an approved trainer in the Certified Scrum Developer program of Scrum Alliance.\r\nHis current focus lies on making BDD common sense on the .NET platform, in which he is also leading the open source project SpecFlow. This is also the central topic of his PhD research at E&ouml;tv&ouml;s Lor&aacute;nd University, Budapest.\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Gaspar Nagy 324.jpg"
-  },
-  {
-    "id": 50,
-    "name": "Niall Merrigan",
-    "bio": "\r\n                            Niall is an Irish guy who managed to end up in Norway. He works in Capgemini Stavanger, and is also an Microsoft ASP.NET MVP, Friend Of RedGate and enthuastic (shouts a lot) about rugby.\r\nBy day he writes code and by night he sleeps and sometimes dreams of more code.\r\n                            \r\n                        ",
-    "image_url": "http://www.ndc-london.com//images/Speakers/Niall Merrigan 324.jpg"
   },
   {
     "id": 51,
@@ -326,7 +326,7 @@
   {
     "id": 55,
     "name": "Marcin Floryan",
-    "bio": "\r\n                            \r\n                            \r\n                        ",
+    "bio": "\r\n                            I continually learn to develop better software and to develop software better, to help others do it and to share that knowledge. I like to share my passion and enthusiasm by speaking publicly to communities small and large and occasionally writing some thoughts at&nbsp;http://marcin.floryan.pl/\r\n                            \r\n                        ",
     "image_url": "http://www.ndc-london.com//images/Speakers/Mark Floryan 324.png"
   },
   {

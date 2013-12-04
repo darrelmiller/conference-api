@@ -16,16 +16,17 @@ namespace ConferenceWebApi.Controllers
             var home = new HomeDocument();
 
             home.AddResource(Request.ResolveLink<DaysLink>(Links.AllDays));
-            home.AddResource(Request.ResolveLink<SessionsLink>(Links.SessionsByDay,null,"{?dayno}"));
+
+            home.AddResource(Request.ResolveLink<SessionsLink>(Links.SessionsByDay, null, "{?dayno}"));    // ,keyword,speakername
             home.AddResource(Request.ResolveLink<SessionLink>(Links.SessionById, new { id = "[id]" }));
+
             home.AddResource(Request.ResolveLink<SpeakersLink>(Links.AllSpeakers));
             home.AddResource(Request.ResolveLink<SpeakerLink>(Links.SpeakerById, new { id = "[id]" }));
-            //TODO: Add SessionsByKeyword
-            //TODO: Add SpeakersByName
+
+            home.AddResource(Request.ResolveLink<TopicsLink>(Links.AllTopics));
+            
           
-            return new HttpResponseMessage() {
-                    Content = new HomeContent(home)
-                };
+            return Request.RespondOk(new HomeContent(home));
         }
     }
 

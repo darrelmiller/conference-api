@@ -27,7 +27,7 @@ namespace ConferenceWebApi.Tools
             return response;
         }
 
-        public static HttpResponseMessage RespondOk(this HttpRequestMessage request, HttpContent content)
+        public static HttpResponseMessage RespondOk(this HttpRequestMessage request, HttpContent content = null)
         {
             var response = new HttpResponseMessage(HttpStatusCode.OK)
             {

@@ -18,7 +18,9 @@ namespace ConferenceWebApi.DataModel
                         Id = session.id,
                         Dayno = session.dayno,
                         Title = session.title,
-                        SpeakerId = session.speakerId
+                        SpeakerId = session.speakerId,
+                        Description = session.description,
+                        TimeslotDescription = session.timeslots
                     });
             }
             

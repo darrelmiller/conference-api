@@ -11,7 +11,7 @@ namespace ConferenceWebApi.DataModel
         public SessionRepository SessionRepository { get; private set; }
         public SpeakerRepository SpeakerRepository { get; private set; }
         public TopicRepository TopicRepository { get; private set; }
-
+        public SessionTopicRepository SessionTopicRepository { get; private set; }
         public DataService()
         {
             ConferenceStart = DateTime.Parse("2013/11/04");
@@ -20,6 +20,7 @@ namespace ConferenceWebApi.DataModel
             TopicRepository = new TopicRepository(LoadJsonArray("topics.json"));
             SessionRepository = new SessionRepository(LoadJsonArray("sessions.json"));
             SpeakerRepository = new SpeakerRepository(LoadJsonArray("speakers.json"));
+            SessionTopicRepository = new SessionTopicRepository(LoadJsonArray("sessiontopics.json"));
         }
 
         private JArray LoadJsonArray(string jsonDataFile)

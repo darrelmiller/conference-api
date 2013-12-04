@@ -33,6 +33,18 @@ namespace ConferenceWebApi.Controllers
             };
         }
 
+        [Route("", Name = Links.TopicsBySession)]
+        public HttpResponseMessage Get(int sessionId)
+        {
+
+            var sessionTopics = _dataService.SessionTopicRepository.GetAll().Where(st => st.SessionId == sessionId);
+
+            var topics = sessionTopics.Select(st => _dataService.TopicRepository.Get(st.TopicId));
+
+            var topicsCollection = GetCollection(topics);
+
+            return Request.RespondOk(new CollectionJsonContent(topicsCollection));
+        }
 
         //[Route("", Name = Links.TopicsByDay)]
         //public HttpResponseMessage Get(int dayno)
@@ -58,7 +70,7 @@ namespace ConferenceWebApi.Controllers
                 var item = new Item();
 
                 item.Data.Add(new Data { Name = "Title", Value = topic.Name });
-                item.Links.Add(Request.ResolveLink<TopicLink>(Links.TopicById, new { topic.Id }).ToCJLink());
+                item.Links.Add(Request.ResolveLink<SessionsLink>(Links.SessionsByTopic, new { topicid = topic.Id }).ToCJLink());
                 eventsCollection.Items.Add(item);
             }
             return eventsCollection;

@@ -3,780 +3,1040 @@
     "id": 100,
     "dayno": 1,
     "title": "Keynote with Dan North - Jackstones: the Journey to Mastery",
-    "speakerId": 17
+    "description": "It takes time to become really good at something. Time, commitment and a genuine passion. If you're not having fun the learning is a chore, if you are then it hardly feels like learning at all, at least not like the thing they made you do in school. Craftsmanship is about making that commitment and then figuring out how to see it through.  Using examples of mastery from various fields and a thirty year paper-folding habit, Dan describes some of the many facets of craftsmanship and tries to figure out exactly what the craft is that we programmers do.",
+    "timeslots": "04 December 2013 09:00 - 10:00",
+    "speakerId": 19
   },
   {
     "id": 101,
     "dayno": 1,
     "title": "\r\n\t\t\tAsync in C# 5\r\n\t\t",
+    "description": "C# 5 has one big feature... asynchronous functions, aka \"async/await\". It's ever so exciting, whether you're writing client code which needs to have a responsive UI without turning your code into spaghetti, or server code where you really don't want to start 100,000 threads just because you've got a high traffic web server which needs to perform long-running tasks. In this talk I'll demonstrate what async functions look like, then dive into how they work under the hood. Be warned: once you've used C# 5, all other asynchronous code will look atrocious.",
+    "timeslots": "04 December 2013 10:20 - 11:20",
     "speakerId": 6
   },
   {
     "id": 102,
     "dayno": 1,
     "title": "\r\n\t\t\tIntroducing Visual Studio 2013\r\n\t\t",
+    "description": "See how Visual Studio supports you in the transformational journey of devices and services, and enable you to accelerate your release cadence. This session will introduce the vision for Visual Studio 2013 and the key capabilities included in this release for application lifecycle and application development.",
+    "timeslots": "04 December 2013 10:20 - 11:20",
     "speakerId": 0
   },
   {
     "id": 103,
     "dayno": 1,
     "title": "\r\n\t\t\tCleaning up Code Smell\r\n\t\t",
-    "speakerId": 23
+    "description": "Projects often start out simple, but soon become complex and turn into a lose cannon. Organizations are struggling to maintain and evolve software. Poor code quality is a significant part of that problem. Improving the quality of code is critical to success of enterprise projects. In this presentation we will discuss ways to identify code smell. We will discuss several code smells and how to clean them up. We will also discuss proactive ways to avoid smells in the first place.",
+    "timeslots": "04 December 2013 10:20 - 11:20",
+    "speakerId": 25
   },
   {
     "id": 104,
     "dayno": 1,
     "title": "\r\n\t\t\tASP.NET Web API 2: HTTP Services for the Modern Web and Mobile Applications\r\n\t\t",
+    "description": "ASP.NET Web API 2 makes it easier than ever to build HTTP services using .NET that can reach any client including browsers and mobile devices. In this presentation I will show you how to easily route requests to your action methods using attribute routing. I'll show you how easy it now is to unit test your Web API controllers. I'll show you how to write portable Web API client code and build rich OData services. You will see how you can now host your Web APIs on any OWIN capable host alongside any OWIN based framework. Lastly I will show how you can secure access to your Web APIs using CORS and OAuth 2.0.",
+    "timeslots": "04 December 2013 10:20 - 11:20",
     "speakerId": 94
   },
   {
     "id": 105,
     "dayno": 1,
     "title": "\r\n\t\t\tEventStore - an introduction to a DSD for event sourcing and notifications\r\n\t\t",
+    "description": "Ever thought about using event sourcing to enable CQRS (Command Query Responsibility Segregation), or did you just want an easy manner of creating an audit trail or a notification system?\nEventStore (http://geteventstore.com/) is an open source DSD (Domain Specific Database) engine designed just for that, driven forward by Greg Young (https://twitter.com/gregyoung and http://codebetter.com/gregyoung/).\nBy concentrating on creating a read only store of idempotent events, supporting AtomPub in XML and JSON for reading data, and with JavaScript used to create projections (think indices) on the events being persisted, the guys at EventStore have created a highly robust, fast and scalable solution to a host of everyday problems for which a RDBMS like SQL Server and mySQL is overkill.\nThis is for people who want to find out what EventStore provides, the installation options, how you get data in and out, and why it's a fantastic solution if you have the right sort of problem.",
+    "timeslots": "04 December 2013 10:20 - 11:20",
     "speakerId": 91
   },
   {
     "id": 106,
     "dayno": 1,
     "title": "\r\n\t\t\tData-Bind everything!\r\n\t\t",
-    "speakerId": 34
+    "description": "An in-depth look at the fun we've had extending data-binding in MvvmCross.\nIn this hour, we'll quickly skip over the basics, look inside how it's built, and then spend most of our time touring through some of the 'advanced' techniques we've experimented with in building MvvmCross. No live coding, but plenty of code demos including animations, internationalisation, custom controls, custom binding, validation, multi-binding, field-binding, method-binding, maps and more.",
+    "timeslots": "04 December 2013 10:20 - 11:20",
+    "speakerId": 35
   },
   {
     "id": 107,
     "dayno": 1,
     "title": "\r\n\t\t\tMaking Magic: Combining Data, Information, Services and Programming, at Internet-Scale\r\n\t\t",
+    "description": "Simplify your data access, simplify your life, by magic.\nThe modern web and enterprise is information rich, but our programming languages are information sparse, especially our strongly typed ones. \"Information Rich Programming\" (IRP) is an exciting direction for language design and implementation, and the innovative and open F# language is leading the way in this area. In this talk, we'll give an overview of the challenges of strongly-typed IRP against web data markets, web ontologies, databases, services and enterprise data schema. Are information spaces \"just\" libraries? Can we gives types to \"everything\", and if so, should we? What does it mean for future languages? We'll demonstrate what F# 3.0 specifically offers in the area of IRP, but also look at how information-richness makes us reconsider programming language and tooling design more generally, and take a look at the themes that recur in this kind of work.",
+    "timeslots": "04 December 2013 11:40 - 12:40",
     "speakerId": 2
   },
   {
     "id": 108,
     "dayno": 1,
     "title": "\r\n\t\t\tSimple.Web 101\r\n\t\t",
-    "speakerId": 41
+    "description": "A high-speed introduction to a fast, light, non-blocking .NET/Mono web framework. Founded on the principle that MVC is a \"broken\" pattern, Simple.Web applies the SOLID design principles to web application development, and makes building web applications an experience of the deepest joy. Simple.Web makes keeping your code clean, and building real REST/HATEOAS APIs, as easy as falling off an extremely wobbly log while wearing clown shoes. Or your money back!*\n* Money-back guarantee may be** a lie.\n** Is definitely.",
+    "timeslots": "04 December 2013 11:40 - 12:40",
+    "speakerId": 42
   },
   {
     "id": 109,
     "dayno": 1,
     "title": "\r\n\t\t\tTen cool things we can do with popular JVM Languages\r\n\t\t",
-    "speakerId": 23
+    "description": "Languages offer a lot more than syntax and compilers. They often have supporting libraries and special facilities that set them apart from other languages. Some languages offer special compiler support for a particular construct, like tail call optimization, for example. Others provide interesting library support or capabilities. In this presentation we will dive into 10 cool things we can do with different languages on the JVM, to improve our productivity and ease development. If mixing languages is an option on your projects, you will have ten more reasons to move forward after this presentation.",
+    "timeslots": "04 December 2013 11:40 - 12:40",
+    "speakerId": 25
   },
   {
     "id": 110,
     "dayno": 1,
     "title": "\r\n\t\t\tRx and the TPL: Cats and Dogs Living Together??\r\n\t\t",
+    "description": "Asynchronous programming is all the rage these days, with good reason. Withthe introduction of async/await in C# 5.0, writing truly non-blocking code hasgone from a giant headache, to something we should be doing all the time.However, two technologies have emerged from Microsoft, the Task ParallelLibrary, and the less common but emerging technology, the Reactive Extensionsfor .NET. Which should developers be using? Does Task&lt;T&gt; and async/awaitreplace Rx?In fact, the best answer is, \"Use both!\" This talk will describe how Task&lt;T&gt;and Rx's IObservable can be used together to produce truly elegant,functional, and far more testable code than using either technology inisolation. Through plenty of code examples, we'll see how to use Rx to testand mock Task&lt;T&gt; methods, how to write LINQ'y async code, and when to use RxZen Nature and when to use Task Zen Nature.",
+    "timeslots": "04 December 2013 11:40 - 12:40",
     "speakerId": 87
   },
   {
     "id": 111,
     "dayno": 1,
     "title": "\r\n\t\t\tScripting your web API development using scriptcs\r\n\t\t",
+    "description": "What if I could show you how to author web APIs really fast and in any text editor of your choice, would you believe me? Scriptcs is a new OSS tool that provides a lightweight scripting experience for C#, one that lets you write apps in a simple editor like Sublime Text. It also works great for authoring and consuming web APIs. Come to this talk and we&rsquo;ll look at scriptcs, and how it can greatly simplify your web api development. Though our focus will be web API, we will also touch on how the same approach can work for other frameworks like Nancy and Simple Web.",
+    "timeslots": "04 December 2013 11:40 - 12:40",
     "speakerId": 88
   },
   {
     "id": 112,
     "dayno": 1,
     "title": "\r\n\t\t\tThe Development Landscape Is Moving Extremely Fast! Hereâ€™s How To Move Faster.\r\n\t\t",
-    "speakerId": 19
+    "description": "Keeping up with today&rsquo;s development world is a really tough challenge. How can you keep up, let alone master anything? Learn how to keep up - and have fun doing it - with a three part approach: mental models, the right development tools, and efficient systems for learning new information.",
+    "timeslots": "04 December 2013 11:40 - 12:40",
+    "speakerId": 21
   },
   {
     "id": 113,
     "dayno": 1,
     "title": "\r\n\t\t\tECMAScript 6: whatâ€™s next for JavaScript?\r\n\t\t",
-    "speakerId": 9
+    "description": "The next version of JavaScript is called ECMAScript 6 (the current one is ECMAScript 5). This version will be a standard by the end of 2014, but you can already use it now, on current engines. This talk explains how to do that, after giving a thorough tour of the new language features: block-scoped variables, arrow functions, better parameter handling, classes, modules and more. We will also look at the goals and the design process for ECMAScript 6.",
+    "timeslots": "04 December 2013 11:40 - 12:40",
+    "speakerId": 10
   },
   {
     "id": 114,
     "dayno": 1,
     "title": "\r\n\t\t\tIntroduction to Windows Azure Part I\r\n\t\t",
+    "description": "This two part talk will provide an overview of Windows Azure &ndash; including a quick tour (with lots and lots of demos) of its features, and how you can take advantage of it to build great applications in the cloud.  This talk provides a great way to learn more about how to get started with Microsoft&rsquo;s Cloud Platform, and leave understanding how you can take advantage of its capabilities.",
+    "timeslots": "04 December 2013 13:40 - 14:40",
     "speakerId": 1
   },
   {
     "id": 115,
     "dayno": 1,
     "title": "\r\n\t\t\tDoing data science with F#\r\n\t\t",
-    "speakerId": 43
+    "description": "The ability to take data, understand it, visualize it and extract useful information from it is becoming a hugely important skill. How can you turn all those logs, histories of purchases and trades or open government data, into useful information that help your business make money?\nIn this talk, we&rsquo;ll look at doing data science using F#. The F# language is perfectly suited for this task &ndash; type providers integrate external data directly into the language &ndash; your language suddenly _understands_ CSV, XML, JSON, REST services and other sources. The interactive development style makes it easy to explore data and test your algorithms as you&rsquo;re writing them. Rich set of libraries for working with data frames, time series and for visualization gives you all the tools you need. And finally &ndash; F# easily integrates with statistical environments like R and Matlab, giving you access to the industry standard libraries.",
+    "timeslots": "04 December 2013 13:40 - 14:40",
+    "speakerId": 44
   },
   {
     "id": 116,
     "dayno": 1,
     "title": "\r\n\t\t\tI want to develop for SharePoint, but I donâ€™t know where to start\r\n\t\t",
-    "speakerId": 15
+    "description": "SharePoint is interesting, but I don't know where to start. This session, is for you, the aspiring SharePoint developer. I will walk you through the fundamental building blocks for how to move from zero to hero.\nSpecific topics in this session will include core programming skills, investing in the right areas to optimize your learning curve, free resources and tools to help you get started, tips and tricks to get you on your way, and more.\nIf you're looking to get started, but need some help in your journey then make sure you check out this session!",
+    "timeslots": "04 December 2013 13:40 - 14:40",
+    "speakerId": 17
   },
   {
     "id": 117,
     "dayno": 1,
     "title": "\r\n\t\t\tAdopting Continuous Delivery\r\n\t\t",
-    "speakerId": 8
+    "description": "While keeping software production ready throughout its lifecycle and optimizing your delivery process for shorter cycle times might seem like a good idea to you, the rest of your organization might not share your excitement. In this talk, I share stories from companies who have attempted to adopt continuous delivery and discusses the organizational, architectural and process factors that led to the success &ndash; or failure &ndash; of these initiatives.",
+    "timeslots": "04 December 2013 13:40 - 14:40",
+    "speakerId": 9
   },
   {
     "id": 118,
     "dayno": 1,
     "title": "\r\n\t\t\tThe missing link â€“ hypermedia in Web API.\r\n\t\t",
+    "description": "Web API provides a foundation for building HTTP based distributed systems. However the support forgenerating hypermedia based responses is minimal. This talk will try and fill the gap by providing practical examples of hypermedia use in ASP.NET Web API.",
+    "timeslots": "04 December 2013 13:40 - 14:40",
     "speakerId": 95
   },
   {
     "id": 119,
     "dayno": 1,
     "title": "\r\n\t\t\tCQRS with Erlang\r\n\t\t",
+    "description": "Erlang is an industry-proven functional programming language with unmatched sweet-spots in fault-tolerance, concurrency, and distribution. RabbitMQ, CouchDB. Facebook Chat, Opcode Chef, and WhatsApp are written in Erlang, and more than half of the world's mobile phone traffic is driven by Erlang. Erlang is also opensource, and cross-platform.\nCQRS is an architectural pattern that separates commands (which mutate state) from queries (which return values). With CQRS the &ldquo;read&rdquo; data store and the &ldquo;write&rdquo; data store can be on different severs, can use different storage engines, and can be scaled independently. CQRS is often linked with the Event Sourcing pattern which models state as a series of events (past tense verbs) rather than a single &ldquo;latest&rdquo; value. What works for an accountant&rsquo;s ledger (and for Git) can work for our &ldquo;write&rdquo; store too. Given a series of events, we can deal with concurrency and collisions more intelligently than &ldquo;last guy wins&rdquo;. We can also define varied service level agreements for our commands and our queries.\nCQRS promotes distribution, concurrency and eventual consistency which is dandy until we attempt to code an implementation with conventional tools like C# or Java. Lucky for us, Erlang is unconventional in all the right ways. Many of the ideas of CQRS dovetail perfectly with the sweet-spots of Erlang.In this session we will dive into CQRS, and explore a sample implementation written in Erlang. We will spotlight a few areas where CQRS with Erlang shines.",
+    "timeslots": "04 December 2013 13:40 - 14:40",
     "speakerId": 86
   },
   {
     "id": 120,
     "dayno": 1,
     "title": "\r\n\t\t\tCallable entities in ECMAScript 6\r\n\t\t",
-    "speakerId": 9
+    "description": "In ECMAScript 5, functions do triple duty: they are normal functions, methods and constructors. This is confusing, can lead to functions being used incorrectly and shadows &ldquo;this&rdquo; in normal functions.\nECMAScript 6 fixes the aforementioned problems by introducing more &ldquo;callable entities&rdquo;: arrow functions, classes, method definitions, generator functions and generator methods.\nThis talk explains how these callable entities work and how they fix the problems.",
+    "timeslots": "04 December 2013 13:40 - 14:40",
+    "speakerId": 10
   },
   {
     "id": 121,
     "dayno": 1,
     "title": "\r\n\t\t\tIntroduction to Windows Azure Part II\r\n\t\t",
+    "description": "This two part talk will provide an overview of Windows Azure &ndash; including a quick tour (with lots and lots of demos) of its features, and how you can take advantage of it to build great applications in the cloud.  This talk provides a great way to learn more about how to get started with Microsoft&rsquo;s Cloud Platform, and leave understanding how you can take advantage of its capabilities.",
+    "timeslots": "04 December 2013 15:00 - 16:00",
     "speakerId": 1
   },
   {
     "id": 122,
     "dayno": 1,
     "title": "\r\n\t\t\tDefending .NET/C# Applications - Layered Security\r\n\t\t",
+    "description": "This speech will look at what a .NET developer should know about and plan for when building a defensible application. I will show how common aspects of software development can inevitably create secure or unsecure systems, and how proper data flow and defendable segmentation can be the cornerstone of good security. This will show how an application&rsquo;s design can drastically impact the security of production systems and networks.I will cover some code level tactics for building secure applications but this speech will focus on high-level planning, life-cycle, process, practice, and design.",
+    "timeslots": "04 December 2013 15:00 - 16:00",
     "speakerId": 98
   },
   {
     "id": 123,
     "dayno": 1,
     "title": "\r\n\t\t\tTo Estimate or Not to Estimate â€“ is that the question?\r\n\t\t",
-    "speakerId": 24
+    "description": "There is a lot of hype on not estimating these days. In this talk, I will try to dig deeper into the topic. What is wrong with estimates? And if estimation is not a productive practise, where does that leave us? Do we need to acquire a new set of skills to manage our projects; not based on cost and size, but rather built on a thourough understanding of business value.",
+    "timeslots": "04 December 2013 15:00 - 16:00",
+    "speakerId": 26
   },
   {
     "id": 124,
     "dayno": 1,
     "title": "\r\n\t\t\tThe Lean Enterprise\r\n\t\t",
-    "speakerId": 8
+    "description": "Large organizations are notoriously bad at disruptive innovation involving software. This is due both to organizational barriers and a lack of good engineering practices. In this presentation Jez will take a scientific approach to innovation in software development, using examples from organizations such as Amazon and HP. He will also discuss cultural and organizational issues, and provide a concise definition of devops.\nJez will begin by discussing the fundamentals of innovation, using the lean startup methodology. He will then tackle organizational barriers to innovation: traditional project management practices, silos between departments, and reporting structures. Good engineering practices are crucial to rapid delivery of high quality software, and so Jez will discuss the importance of continuous delivery to teams working on strategic software projects. Finally he will discuss how compliance and governance can be managed effectively while still delivering valuable software.",
+    "timeslots": "04 December 2013 15:00 - 16:00",
+    "speakerId": 9
   },
   {
     "id": 125,
     "dayno": 1,
     "title": "\r\n\t\t\tAPI Client library V2\r\n\t\t",
+    "description": "Many web APIs provide client libraries to help developers become productive as quickly as possible. Unfortunately, the common approach to the client library is to provide a procedural wrapper around the API. Often this negates any benefits of the loose coupling of the HTTP api because now the client developer is tightly coupled to the client library. Changes to the client library can become amaintenance headache.\nThis talk will demonstrate how to build client libraries that make your API just as easy to access without hiding it behind a procedural faÃ§ade. This approach will allow client devs thechance to upgrade to new versions of client libraries on their own schedule or take advantage of new features without waiting for you to release a new version of the client library. It also enables you to provide client developers with default response handling behaviors they can choose to use orreplace with their own. As an added benefit, this approach is highly compatible with the use of hypermedia so can ease the path when introducing hypermedia into your API.",
+    "timeslots": "04 December 2013 15:00 - 16:00",
     "speakerId": 95
   },
   {
     "id": 126,
     "dayno": 1,
     "title": "\r\n\t\t\tA good SharePoint development machine\r\n\t\t",
-    "speakerId": 15
+    "description": "You&rsquo;re going to need it, if you dabble with SharePoint or want to take a dive. But you can get started without a huge investment in a hefty laptop. I work as a SharePoint developer, and over many years I have collected a bag of tricks that make my SharePoint life very productive. This session walks you through the various setups and tips and tricks I&rsquo;ve had to use to be a productive SharePoint developer. And yes I&rsquo;m jealous of your macbook.",
+    "timeslots": "04 December 2013 15:00 - 16:00",
+    "speakerId": 17
   },
   {
     "id": 127,
     "dayno": 1,
     "title": "\r\n\t\t\tSemantics matter\r\n\t\t",
+    "description": "I've always been pedantic around things like terminology, but in the last few years I've become almost obsessed with the meaning of data - partly because I've seen how much trouble we get ourselves into when we use it inappropriately.\nIn this session I'll explore some examples (mostly from Stack Overflow) of where a failure to consider the meaning of data carefully enough has caused problems, see what a rich type system can do for you, and imagine what might happen if we actually went overboard on the idea. What's the sweet spot, and how can it be applied right now?",
+    "timeslots": "04 December 2013 15:00 - 16:00",
     "speakerId": 6
   },
   {
     "id": 128,
     "dayno": 1,
-    "title": "\r\n\t\t\tLearning from Noda Time: a case study in API design and open source (good, bad and ugly)\r\n\t\t",
-    "speakerId": 6
+    "title": "\r\n\t\t\tHerding Code Live - The Lightning Round\r\n\t\t",
+    "description": "Join us for a live recording of Herding Code featuring a Lightning Round with some special guests and questions from our listeners.",
+    "timeslots": "04 December 2013 16:20 - 17:20",
+    "speakerId": 0
   },
   {
     "id": 129,
     "dayno": 1,
     "title": "\r\n\t\t\tWindows Azure Essentials\r\n\t\t",
+    "description": "Windows Azure is jam packed with features to choose from for building web applications and services that scale &ndash; but there are a core set of choices and features that are applicable to most scenarios. This session will get you up to speed on the essential features developers should be aware of, and how to apply them in practical scenarios. You&rsquo;ll learn how to choose between web sites and cloud services, and learn other practical tips for building Azure apps such as storing content, sending email, working with queues and choosing the right technology, and collecting important metrics for visibility into application health.",
+    "timeslots": "04 December 2013 16:20 - 17:20",
     "speakerId": 0
   },
   {
     "id": 130,
     "dayno": 1,
     "title": "\r\n\t\t\tTesting of Mobile Apps with Calabash and Xamarin Test Cloud\r\n\t\t",
+    "description": "This talk serves as an introduction to the automated UI-testing technology Calabash and to Xamarin Test Cloud, a service that provides cloud-based access to hundreds of mobile devices for automated testing purposes. You'll learn about the benefits of automated UI testing on mobile apps, and see how easy it is to get started with UI testing using Calabash. Calabash is free, open-source and supports BDD (Behaviour Driven Developent) via the Cucumber tool.\nWhile Calabash is very useful on its own, its power is only fully realized when tests are run frequently on large sets of devices with different screen-sizes, resolutions and operating system versions. In a short live demo, you'll see how you can tap into this full potential with Xamarin Test Cloud.\nAfter attending this talk you'll have an understanding of why automated UI testing is useful, an understanding of Calabash and practical knowledge on how to use it. Last but not least, you'll get an overview of what Xamarin Test Cloud offers as a mobile cloud-testing service.\nNote: While this talk uses a Xamarin app as the sample project, Xamarin Test Cloud and Calabash supports all native and hybrid mobile apps independent of technology was used to build it. Hence, familiarity with Xamarin is not needed to attend this talk.",
+    "timeslots": "04 December 2013 16:20 - 17:20",
     "speakerId": 99
   },
   {
     "id": 131,
     "dayno": 1,
     "title": "\r\n\t\t\tAsynchrony in Node.js, let me count the\r\n\t\t",
+    "description": "The first thing you learn after hello world in node.js, is you will be writing A LOT of async code, you have no choice. The next thing you learn is there a zillion different ways to do it. The core platform gives you callbacks and events, but then there are a slew of add on approaches. Now with generators in ES6 we have even more options on the table. In this talk we&rsquo;ll look at common patterns and modules for async in node and guidelines or using them. ",
+    "timeslots": "04 December 2013 16:20 - 17:20",
     "speakerId": 88
   },
   {
     "id": 132,
     "dayno": 1,
     "title": "\r\n\t\t\tASP.NET and OWIN - Better Together\r\n\t\t",
+    "description": "ASP.NET now has first-class support for OWIN, the Open Web Interface for .NET. OWIN defines a standard interface between .NET web servers and web applications enabling OWIN based applications to run on any OWIN capable host. In this presentation you will learn the what and why of OWIN and how OWIN is now deeply integrated with the ASP.NET pipeline. You'll learn how you can easily host OWIN based components inside of ASP.NET or in your own process. I'll show you how you can take advantage of existing Microsoft OWIN components to handle security, diagnostics, servicing static content and running a variety of OWIN based frameworks. Lastly I will show you how you can create your own OWIN middleware and participate in the OWIN ecosystem",
+    "timeslots": "04 December 2013 16:20 - 17:20",
     "speakerId": 94
   },
   {
     "id": 133,
     "dayno": 1,
-    "title": "\r\n\t\t\tHerding Code Live\r\n\t\t",
-    "speakerId": 0
+    "title": "\r\n\t\t\tLearning from Noda Time: a case study in API design and open source (good, bad and ugly)\r\n\t\t",
+    "description": "Several years ago, just after complaining how dates and times are too hard in front of hundreds of people, I felt I really ought to put my money (or at least my time) where my mouth was, and make things easier. And so, Noda Time was born.\nIn this talk I&rsquo;ll give a brief description of the problem space, why a new library was needed, and some of the features that I think make for a good API. I&rsquo;ll also dive into some of the areas I&rsquo;ve learned more about while working on Noda Time &ndash; documentation, collaboration, performance, continuous integration, refactoring&hellip; all the details of a healthy open source project, basically.\nEven if I can&rsquo;t persuade you to use Noda Time by the end of the session, I hope I&rsquo;ll be able to shed some light on my own thought processes when it comes to API design, and some of the very real issues raised by real world library development.",
+    "timeslots": "04 December 2013 16:20 - 17:20",
+    "speakerId": 6
   },
   {
     "id": 134,
     "dayno": 1,
     "title": "\r\n\t\t\tAn Introduction to Nancy\r\n\t\t",
-    "speakerId": 29
+    "description": "For those of you who haven't heard of it, Nancy is a lightweight framework for building HTTP based services. Basically it's an alternative to ASP.NET MVC and WebAPI. In this talk I'm going to give a quick introduction into the framework showing you how to create a basic CRUD application going over the basics of:\n&bull; Routing and route arguments &bull; Model binding and validation &bull; View engine and how to return views. &bull; Content negotiation &bull; Dependency injection &bull; Testing\nI'll then finish up by showing you how to integrate Nancy into an existing ASP.NET Application.",
+    "timeslots": "04 December 2013 16:20 - 17:20",
+    "speakerId": 31
   },
   {
     "id": 135,
     "dayno": 1,
-    "title": "\r\n\t\t\tAgile Team Interactions Workshop\r\n\t\t",
+    "title": "\r\n\t\t\tAgile Team Interactions Workshop - Room 8\r\n\t\t",
+    "description": "The most important factor of an Agile team is the teams ability to communicate effectively. Understanding how to interact with your internal and external team can make or break the agile process.\nThis interactive workshop will have you doing exercises on active listening, learning from failure, accepting and adding to the teams ideas, being more self ware and more.\nThe workshop is in Room 8",
+    "timeslots": "04 December 2013 16:20 - 17:20",
     "speakerId": 4
   },
   {
     "id": 136,
     "dayno": 1,
     "title": "\r\n\t\t\tNDC Cage Match: Dynamic vs. Static with Gary Bernhardt and Jon Skeet.\r\n\t\t",
+    "description": "Do you like languages \"designed for developer happiness\"? Or do you find the structure and speed of a statically-typed and compiled language like C# more compelling? In this Cage Match, Jon Skeet (of StackOverflow fame) will go up against Gary Bernhardt (Rubyist, Pythonista, creator of the wonderful WAT! video) as we run these languages through their paces. We might even make them change sides&hellip; putting Gary in front of Visual Studio and Skeet in front of Vim&hellip;",
+    "timeslots": "04 December 2013 17:40 - 18:40",
     "speakerId": 0
   },
   {
     "id": 137,
     "dayno": 1,
     "title": "\r\n\t\t\tThrow away those training wheels, JavaScript without the frameworks\r\n\t\t",
+    "description": "Backbone, Ember, Angular, Knockout... the question always seems to be \"which\", rather than \"why\" - and over the past few years this hasn't changed much despite the server-side JS ecosystem tending away from frameworks.\nLet's look at some patterns for building client side applications in JavaScript without frameworks (even without jQuery!), and some tooling that can help us do this. We'll dive into aspects of testing and how to manage these code-bases across a large team in such a way that we don't have to resort to crutches like frameworks or alternative languages.\nDemonstrations will include the use of package managers, build systems and sensible JavaScript to get the job done fast and well.",
+    "timeslots": "04 December 2013 17:40 - 18:40",
     "speakerId": 90
   },
   {
     "id": 138,
     "dayno": 1,
     "title": "\r\n\t\t\tHidden Complexity: Inside the Simple code\r\n\t\t",
-    "speakerId": 41
+    "description": "In this talk, I'll introduce some of the internal code that drives the Simple.Data library and the Simple.Web framework*. I'll share some neat coding tricks and techniques that I learned while building the packages; discuss some of the architectural and design decisions; and show how to build add-ons and plug-ins to extend them for your specific requirements.\n* If you like, I'll explain the difference between a framework and a library, too.",
+    "timeslots": "04 December 2013 17:40 - 18:40",
+    "speakerId": 42
   },
   {
     "id": 139,
     "dayno": 1,
     "title": "\r\n\t\t\tWhy Agile doesn&#39;t scale - and what you can do about it\r\n\t\t",
-    "speakerId": 17
+    "description": "Agile doesn't scale. There, I said it. Actually people have been telling me that for over ten years, and I've just refused to believe them, but they were right. Does that mean you can't deliver large-scale programmes using agile methods? Not at all. But to scale you need something else, something substantively different, something the Agile Manifesto and the existing team-scale agile methods don't even have an opinion about.\nI have seen a handful of successful large-scale deliveries across multiple agile teams, multiple locations and multiple timezones. At this scale the challenges start to look uncomfortably like those of traditional programmes, and involve phrases like delivery assurance, governance and portfolio management. They just approach them differently.\nWhat made them work? The challenge is getting large numbers of people to think in the same direction. Shared guiding principles, a clear vision and a common understanding enable what I call contextual consistency. I believe this one lever is the single greatest enabler of technology delivery at scale, and is at the heart of the thing we call empowerment. In this talk I will explain why.",
+    "timeslots": "04 December 2013 17:40 - 18:40",
+    "speakerId": 19
   },
   {
     "id": 140,
     "dayno": 1,
     "title": "\r\n\t\t\tDemocratizing event processing at all scales and platforms with Reactive Extensions (Rx)\r\n\t\t",
-    "speakerId": 93
+    "description": "In today&rsquo;s world of connected cloud-centric applications with rich user experiences, the need for asynchronous and event programming is bigger than ever. We need libraries which can support this need for all of our runtimes, whether it is .NET, JavaScript, C++, Ruby, Python PHP or any JVM language.\nWith the C# and Visual Basic language features added to .NET 4.5, an imperative approach to sequential composition and orchestration of asynchronous operations has been introduced. Come and learn how the Reactive Extensions (Rx) complement this feature set, adding the notion of multi-value asynchronous observable sequences with full-fledged LINQ support. In addition, with JavaScript and the notion of promises, we will sketch out how RxJS plays in the world of asynchronous computations.\nIn this demo-intensive session, we will sketch out the asynchronous and event programming landscape, and dive into the unique role played by Rx. After explaining the design philosophy of Rx, rooted in the deep duality between enumerable and observable sequences, we will cover the rich set of query operators that enable complex event processing. Next, the synergy between Rx and the existing asynchronous solutions such as Tasks in .NET and Promises in JavaScript.\nDemocratizing asynchronous and event-based processing starts today in your language of choice!",
+    "timeslots": "04 December 2013 17:40 - 18:40",
+    "speakerId": 0
   },
   {
     "id": 141,
     "dayno": 1,
     "title": "\r\n\t\t\tAdvanced techniques to implement, customize and manage a Nancy application\r\n\t\t",
-    "speakerId": 39
+    "description": "OK now you have seen an introduction, let's have a look at some advanced techniques to implement, customize and manage a Nancy application. This talk will cover:\n\nDependency injection\nAuthentication and authorization\nContent Negotiation\nValidation\nExtending and overriding\nLogging and Diagnostics\nError handling and Custom Status Code Handling\nCombining Nancy with Signalr via OWIN\n",
+    "timeslots": "04 December 2013 17:40 - 18:40",
+    "speakerId": 40
   },
   {
     "id": 200,
     "dayno": 2,
     "title": "\r\n\t\t\tBuild Real World Cloud Apps using Windows Azure Part I\r\n\t\t",
+    "description": "This two part talk will explore how to build real world cloud applications using Windows Azure.  The talk will cover key patterns of cloud computing including:\n\nAutomating Everything\nSource Control Best Practices\nContinuous Integration/Delivery\nEnterprise Identity and SSO Integration\nWeb Development Best Practices\nData Storage Options\nData Storage Partitioning Approaches\nUsing unstructured Blob storage\nDesigning to survive failures\nMonitoring and Diagnostics\nTransient Fault Handling\nDistributed Caching\nUsing the Queue Centric Work Pattern\n\nWe&rsquo;ll discuss each of the above cloud patterns in the talk, and then demonstrate how to really use them by walking through real code that shows how to leverage them within a Windows Azure application.",
+    "timeslots": "05 December 2013 09:00 - 10:00",
     "speakerId": 1
   },
   {
     "id": 201,
     "dayno": 2,
     "title": "\r\n\t\t\tModern Architecture patterns for the cloud\r\n\t\t",
+    "description": "Traditional web applications have typically followed a layered architecture; Presentation, Service, Business and Data Access Layers over a relational database. While such applications often have a great deal of capability, there are practical limitations on how well they grow, evolve and scale in a dynamically scalable environment like the cloud.\nCome and watch John Azariah and Mahesh Krishnan share their practical experiences of how Modern Architectural Patterns such as CQRS, Event Sourcing and Eventual consistency combine with NoSQL databases amongst other things to address issues such as reliability, flexibility and scalability in modern real-world cloud applications. John and Mahesh will also cover topics such as Queue Centric Workflow, and Map-reduce; and how they all fit in when creating cloud applications.\nThis exciting talk will showcase a real-world social application, written using these patterns running on the Azure platform..",
+    "timeslots": "05 December 2013 09:00 - 10:00",
     "speakerId": 0
   },
   {
     "id": 202,
     "dayno": 2,
     "title": "\r\n\t\t\tA deep dive into the ASP.NET Web API runtime architecture\r\n\t\t",
-    "speakerId": 36
+    "description": "HTTP is a protocol that operates by exchanging messages, where the server task is to produce responses for each received request. In ASP.NET Web API this involves defining controllers and actions. However, the lifetime of a request involves much more than simply running an action.\nIn this session, we take a deep dive into the Web API runtime architecture, describing what happens internally since a request is received until a response is produced. We aim to provide the knowledge required not only to understand Web API's behavior but also to extend it.\nEmphasis is given to the most problematic areas for newcomers, such as model binding and formatters, and also to the more recent additions, such as attribute routing, action results, authentication filters and OWIN hosting.",
+    "timeslots": "05 December 2013 09:00 - 10:00",
+    "speakerId": 37
   },
   {
     "id": 203,
     "dayno": 2,
     "title": "\r\n\t\t\tFull Text Searching &amp; Ranking with ElasticSearch and C#\r\n\t\t",
+    "description": "What&rsquo;s full text search and and why is it useful? What&rsquo;s ElasticSearch got that Solr or Lucene don&rsquo;t? Full text search is extremely useful for parsing documents with fast, efficient searches with relevance ranking. Imagine being able to &ldquo;Google&rdquo; your own error logs? We'll go far beyond the typical select where like '% syntax in relational databases and make ElasticSearch give us relevant, searchable logging and indexing. Topics will cover installing ElasticSearch, some basic configuration, saving documents, and most importantly, searching for results using the excellent NEST ElasticSearch .NET client library. We'll also explore ElasticSearch's easy sharding and clustering model.",
+    "timeslots": "05 December 2013 09:00 - 10:00",
     "speakerId": 60
   },
   {
     "id": 204,
     "dayno": 2,
     "title": "\r\n\t\t\tThe Hitchhikers guide to Object Orientated JavaScript\r\n\t\t",
+    "description": "TypeScript is a new language that makes producing Object Orientated JavaScript 89% less ridiculous*. If you have a large JavaScript project you'll know that it can become unwieldy really fast. There is nothing elegant about the Syntactical sugar we apply to JavaScript to make it behave like were an Object Orientated Language, Typescript changes that, we write our code in TypeScript and when we compile it we get 100% pure JavaScript as an output. In this hour long session Martin Beeby from Microsoft will take you through the basics of the language by building a JavaScript project and demonstrating the incredible productivity increases that can be achieved * This statistic is 99.9% plucked out of the air.",
+    "timeslots": "05 December 2013 09:00 - 10:00",
     "speakerId": 75
   },
   {
     "id": 205,
     "dayno": 2,
     "title": "\r\n\t\t\tWindows Phone 8 Networking: HTTP, Bluetooth and NFC\r\n\t\t",
+    "description": "Take a lightning tour of the many Windows Phone 8 connectivity options for developers. There are more than ever before: HTTP networking APIs, NFC and Bluetooth including &lsquo;tap to connect&rsquo; with Windows 8 slates, WCF and OData services, are just the tip of the iceberg. Store data in the cloud. Share state between Windows Phone 8 app and the Windows 8 version of your app. See some real practical demos, such as how to connect the Windows Phone 8 emulator to services running on your development PC, how to implement compression with HTTP networking and how you can handle credentials when accessing services that require user authentication.",
+    "timeslots": "05 December 2013 09:00 - 10:00",
     "speakerId": 74
   },
   {
     "id": 206,
     "dayno": 2,
     "title": "\r\n\t\t\tjQuery Mobile and ASP.NET MVC\r\n\t\t",
-    "speakerId": 14
+    "description": "jQuery Mobile is a JavaScript framework for building touch-optimized sites targeting smartphone and tablet devices. In this session we'll take an existing ASP.NET MVC application and improve the mobile experience using jQuery Mobile. Along the way we'll see how the widgets, events, API, and navigation features of jQuery Mobile work, and also see some pitfalls to avoid.",
+    "timeslots": "05 December 2013 09:00 - 10:00",
+    "speakerId": 16
   },
   {
     "id": 207,
     "dayno": 2,
     "title": "\r\n\t\t\tBuild Real World Cloud Apps using Windows Azure Part II\r\n\t\t",
+    "description": "This two part talk will explore how to build real world cloud applications using Windows Azure.  The talk will cover key patterns of cloud computing including:\n\nAutomating Everything\nSource Control Best Practices\nContinuous Integration/Delivery\nEnterprise Identity and SSO Integration\nWeb Development Best Practices\nData Storage Options\nData Storage Partitioning Approaches\nUsing unstructured Blob storage\nDesigning to survive failures\nMonitoring and Diagnostics\nTransient Fault Handling\nDistributed Caching\nUsing the Queue Centric Work Pattern\n\nWe&rsquo;ll discuss each of the above cloud patterns in the talk, and then demonstrate how to really use them by walking through real code that shows how to leverage them within a Windows Azure application.",
+    "timeslots": "05 December 2013 10:20 - 11:20",
     "speakerId": 1
   },
   {
     "id": 208,
     "dayno": 2,
     "title": "\r\n\t\t\tOWASP Top Ten 2013\r\n\t\t",
+    "description": "The Open Web Application Security Project (OWASP) publishes a Top Ten list every three years, identifying and analyzing the most common and dangerous security vulnerabilities. The list is considered one of the de facto standards in this field. We will have a look at the current 2013 list, seeing attacks, bad code, and of course countermeasures in action.",
+    "timeslots": "05 December 2013 10:20 - 11:20",
     "speakerId": 72
   },
   {
     "id": 209,
     "dayno": 2,
     "title": "\r\n\t\t\tPragmatic ASP.NET Web API Solutions - beyond ValuesController\r\n\t\t",
+    "description": "Sure, 'File-New-Project' and we are done with our Web API-based application. Not! In this session Christian Weyer will talk about a number of practices learned from real-world projects, which may go beyond pure theory and 'you just have to do it like this' advises. Come and see approaches to solve problems for different problem spaces like hosting, routing, data transfer, caching, push services and get involved into some micro-architectural discussions. And no, there ain't no 'rest' ;)",
+    "timeslots": "05 December 2013 10:20 - 11:20",
     "speakerId": 59
   },
   {
     "id": 210,
     "dayno": 2,
     "title": "\r\n\t\t\tYou Thought You Understood Multithreading\r\n\t\t",
+    "description": "In the single-core world, the lock keyword is all the vast majority of developers had to know about multithreading. But with today&rsquo;s ubiquitous multi-core processors, parallel computing is becoming an increasingly important skill. We will discuss fundamental concepts of multi-core programming as well as their implementation by the Windows operating system and the .NET Framework, and give you a rock-solid understanding of what&rsquo;s happening when you&rsquo;re using multithreaded features in .NET.\nAgenda\n\nHardware: Multithreading from the point of view of processor microarchitecture: memory hierarchy, latency of synchronized memory operations, memory models on different hardware architectures (x64, ARM). Interlocked memory operations (Interlocked class).\nLab 1. Simple non-blocking data structures: Non-blocking stack, ring buffer.\nWindows Kernel: Concept of threads and processes. Dispatching of threads to the CPU. Dispatcher objects (Mutex, events, &hellip;) and their API in .NET. Cost of kernel dispatching. Spin waits.\n.NET Framework: Implementation of the lock keyword. Overview of .NET APIs for multithreading (collections, tasks).\n",
+    "timeslots": "05 December 2013 10:20 - 11:20",
     "speakerId": 92
   },
   {
     "id": 211,
     "dayno": 2,
     "title": "\r\n\t\t\tWrite massively-parallel GPU code for the browser with WebGL\r\n\t\t",
+    "description": "There's a freaking supercomputer in your browser, and nobody seems to have noticed!\nYou've heard that WebGL is for games and pretty 3D graphics? That's merely the beginning. It also lets you write arbitrary GPU code and thereby wield insane computational power for any purpose. And yes, it works in Firefox, Chrome, and IE, without plugins, today. What new categories of web apps and web businesses will this enable?\nStarting with a gentle introduction to 3D with WebGL (via the lovely Three.js library), this demo-led talk will take you deeper, into the GPU itself. You'll see:\n\nGPU coding basics - how the parallel execution is structured, and the GLSL language (don't be scared - it looks like C, and runs right in the browser)\nHow to make your GLSL code screamingly fast and not crash the browser tab\nPlenty of demos including 3D visualisation, realtime client-side media processing, and object recognition\n\nBy the end of this talk, I hope you'll be inspired to try something new in your next web app.",
+    "timeslots": "05 December 2013 10:20 - 11:20",
     "speakerId": 84
   },
   {
     "id": 212,
     "dayno": 2,
     "title": "\r\n\t\t\tBuilding for Windows 8 and Windows Phone 8 with .NET and MVVM\r\n\t\t",
+    "description": "Both Windows 8 and Windows Phone 8 run the same Windows kernel but the present programming models that have many similarities but are not exactly the same.\nThis presents a challenge to a developer who wants to write an app once and have it run on both phone devices and Windows 8 devices.\nIn this demo based session, we'll walk through steps that you can take to abstract out your code so as to get as much re-use as is possible across Windows 8 and Windows Phone (and, potentially, take your .NET code onto other platforms like iOS and Android via toolkits like Xamarin).\nWe'll be working in C# and Visual Studio and we'll be talking about MVVM, Inversion of Control and Dependency Injection techniques along the way.",
+    "timeslots": "05 December 2013 10:20 - 11:20",
     "speakerId": 73
   },
   {
     "id": 213,
     "dayno": 2,
     "title": "\r\n\t\t\tSecrets of Awesome JavaScript API Design\r\n\t\t",
+    "description": "It doesn't take long for most developers to sniff out a poorly-designed JavaScript API. Within minutes of coding against a library, most developers can divine how their long-term relationship with that library will turn out. APIs are developer UX, after all.In fields like art &amp; architecture, design is communicated through principles, and it's possible to borrow the principles of these fields, and see them in action in several popular JavaScript libraries. By digging into these libraries, and uncovering these principles, we can learn how to create APIs of our own that are a pleasure to use.JS APIs are developer UX. Just as they do for software UIs, grounded design principles from art hold the secrets to crafting amazing APIs.",
+    "timeslots": "05 December 2013 10:20 - 11:20",
     "speakerId": 79
   },
   {
     "id": 214,
     "dayno": 2,
     "title": "\r\n\t\t\tThe Reasonable Expectations of your new CTO.\r\n\t\t",
-    "speakerId": 12
+    "description": "In this talk Uncle Bob transports you to an alternate universe where _he_ is your new CTO. He then describes what he expects from you as part of his development team. Be prepared to be challenged; because what he expects is nothing short of -- professionalism.",
+    "timeslots": "05 December 2013 11:40 - 12:40",
+    "speakerId": 13
   },
   {
     "id": 215,
     "dayno": 2,
     "title": "\r\n\t\t\tBattle of the Mocking Frameworks\r\n\t\t",
+    "description": "Writing unit tests is hard, isn't it? you need an entire set of tools just to start. One of the crucial decisions when building this set is picking up a mocking framework.\nBut BEWARE! what you choose has the ability to make you or break you!\nCome to the session and see Dror Helper, once a mocking framework developer, show the good and the bad of different mocking frameworks (free and commercial) and make them battle to the death!",
+    "timeslots": "05 December 2013 11:40 - 12:40",
     "speakerId": 68
   },
   {
     "id": 216,
     "dayno": 2,
     "title": "\r\n\t\t\tSecuring ASP.NET Web API (v2)\r\n\t\t",
+    "description": "If you want your services to be usable by arbitrary clients like browsers and mobile/desktop native apps, you need to model them as &ldquo;web APIs&rdquo;.\nASP.NET Web API is the framework from Microsoft to build such services and software systems with .NET. To effectively secure web APIs you need to understand the fundamental application types, HTTP security and a bunch of new technologies like OAuth2 and JSON Web Tokens.\nWe&rsquo;ll walk you through typical web API architectures and their security requirements, and explain how you can implement these applications using the ASP.NET Web API v2 on the server and any technology on the client.",
+    "timeslots": "05 December 2013 11:40 - 12:40",
     "speakerId": 7
   },
   {
     "id": 217,
     "dayno": 2,
     "title": "\r\n\t\t\tAngularJS â€“ an Introduction for Windows developers\r\n\t\t",
+    "description": "In the last few years, a number of client-side MVC-style frameworks for JavaScript have emerged. One of the most successful and most widely used today is AngularJS, an open-source framework which has been initiated by developers working at Google. In this session, you'll learn about the core concepts of AngularJS and how you can use it to build business applications with a Silverlight-like MVVM-model. You will see how JavaScript and HTML can be combined in a very structured way which scales from small, mobile apps to big enterprise applications without the often-seen (in HTML-based applications) reduction in long-term maintainability.",
+    "timeslots": "05 December 2013 11:40 - 12:40",
     "speakerId": 97
   },
   {
     "id": 218,
     "dayno": 2,
     "title": "\r\n\t\t\tStop Hiring Devops Experts (And Start Growing Them)\r\n\t\t",
-    "speakerId": 8
+    "description": "Everyone is putting \"devops\" on their LinkedIn profile, and everyone is trying to hire them. In this talk, Jez will argue this is not a recruitment problem but an organizations failure. This talk discusses how to grow great people and great organizations, and how the two problems are connected. ",
+    "timeslots": "05 December 2013 11:40 - 12:40",
+    "speakerId": 9
   },
   {
     "id": 219,
     "dayno": 2,
     "title": "\r\n\t\t\tReactive meta-programming with drones\r\n\t\t",
+    "description": "This talk is a modern look at an old idea: the stream-based programming model. We'll look at two manifestations of streams: Reactive Extensions and node streams. Streams provide a natural way to model domains where events are generated over time, much like in the real world. Streams also provide a simple interface for plugging things in and out, and therefore compose easily. They are a natural companion to a functional programming style.This presentation takes a highly practical approach at explaining streams, using data generated from Quadcopter drones on stage. We investigate how streams may be elegantly composed through filtering, mapping and merging. To compensate for the practical approach, at some point we introduce some meta-programming and pixie dust into the mix. Brains might blow up. Or get chopped to pieces by spinning propellers.We attack the problem from three different angles. BjÃ¸rn Einar takes the practical hacker-dev approach, Einar looks at the problem from his Ivory Tower and Jonas provides the Strange Loop. Open your mind to a new old style of programming. Your program might literally never be the same again.",
+    "timeslots": "05 December 2013 11:40 - 12:40",
     "speakerId": 0
   },
   {
     "id": 220,
     "dayno": 2,
     "title": "\r\n\t\t\tAutomating Testing in the big, bad Enterprise World\r\n\t\t",
+    "description": "In a perfect world we would have automated test coverage that consistently provides quick and useful regression feedback for every significant part of our applications. In the real world automated testing efforts frequently fail because the tests are too time-consuming to author, too brittle when the underlying application changes, too flaky with asynchronous timing, or just flat out too slow. In this talk I&rsquo;ll share some of my lessons learned over the years on the mechanics of automated testing and how the desire for automated testing changes your architectural decision making. For specifics, I&rsquo;d like to show how my teams have been able to quickly set up a known application state with RavenDb, how we keep our test harness code synchronized with the application, and dealing with asynchronous functionality in both web interfaces and distributed service bus architectures. In the realm of semi-manual testing, I&rsquo;d also like to show how we&rsquo;re embedding reusable &ldquo;scenario&rsquo;s&rdquo; into our test environments and supporting the &ldquo;press F5 and run the entire distributed application in one process&rdquo; strategy for faster and more productive manual testing and troubleshooting.",
+    "timeslots": "05 December 2013 11:40 - 12:40",
     "speakerId": 80
   },
   {
     "id": 221,
     "dayno": 2,
     "title": "\r\n\t\t\tFunctional Programming:  What?  Why? When?\r\n\t\t",
-    "speakerId": 12
+    "description": "Why is functional programming becoming such a hot topic? Just what _is_ functional programming anyway? And when am I going to have to know about it? In this talk Uncle Bob will walk you through the rationale that is driving the current push towards functional programming. He'll also introduce you to the basics by walking through some simple Clojure code.",
+    "timeslots": "05 December 2013 13:40 - 14:40",
+    "speakerId": 13
   },
   {
     "id": 222,
     "dayno": 2,
     "title": "\r\n\t\t\tScala for C# Developers\r\n\t\t",
-    "speakerId": 47
+    "description": "Scala, a hybrid language for the JVM the offers both object oriented and functional programming concepts is making headlines when it comes to creating truly scalable systems. As a former C# developer who has spent the last 2 years in the trenches with Scala there are some things I have grown to love and some things that drive me insane about Scala.\nThis talk will introduce the language and some of its more fundamental technologies by comparing them to the typical syntax and approach common in .NET/C#",
+    "timeslots": "05 December 2013 13:40 - 14:40",
+    "speakerId": 48
   },
   {
     "id": 223,
     "dayno": 2,
     "title": "\r\n\t\t\tA technical Introduction to OAuth2, OpenID Connect and JSON Web Tokens: The Security Stack for modern Applications\r\n\t\t",
+    "description": "&ldquo;Traditional&rdquo; security protocols and technologies like Kerberos, WS* or SAML don&rsquo;t work for modern applications. We need new technologies that can be used on arbitrary devices talking to arbitrary back ends. That&rsquo;s the reason there is a new suite of common denominator technologies that can be applied to any stack that knows how to speak HTTP and JSON. Dominick will introduce you to these new technologies, tell you how they work and when to use them.",
+    "timeslots": "05 December 2013 13:40 - 14:40",
     "speakerId": 7
   },
   {
     "id": 224,
     "dayno": 2,
     "title": "\r\n\t\t\tSoftware Project Design\r\n\t\t",
-    "speakerId": 32
+    "description": "Much as the need to design the system, you must also design the project: from scheduling resources behind the services, to tracking your progress across developers, services and phases of completion, to validating your plan, and accommodating changes. This requires understanding the inner dependencies between services and activities, the critical path of integration, the available floats, the staff distribution and the risks involved. All of these challenges stem from your design and addressing them properly is a hard core engineering task &ndash; designing the project. But no plan survives unscathed the first day of the project &ndash; priorities, resources, deadlines, estimations and features change, and you must constantly adapt the plan for the new reality. The session ends by showing how to close the loop by tracking both progress and effort across developers and services and estimating the impact of changes throughout the project, allowing you to constantly stay on schedule and on budget.",
+    "timeslots": "05 December 2013 13:40 - 14:40",
+    "speakerId": 33
   },
   {
     "id": 225,
     "dayno": 2,
     "title": "\r\n\t\t\tHybrid &amp; powerful mobile apps with PhoneGap &amp; AngularJS\r\n\t\t",
+    "description": "Wanna build HTML5-based JavaScript-powered mobile apps - I mean 'real' apps? Come to see PhoneGap and AngularJS in action in this session. Christian Weyer shows you how to develop mobile applications with AngularJS in a way that resembles the well-known MVVM model from WPF and Silverlight. Separate the view from the logic and \"feel good\" with JavaScript. With a mobile-first approach, take your HTML nugget and pour it into a PhoneGap-based native app for the platform of your dreams - even leveraging the power of the platform by using native plugins. Let's have some mobile fun.",
+    "timeslots": "05 December 2013 13:40 - 14:40",
     "speakerId": 59
   },
   {
     "id": 226,
     "dayno": 2,
-    "title": "\r\n\t\t\tZeroMQ - A Whole Bunch of Awesome [C# Edition]\r\n\t\t",
-    "speakerId": 62
+    "title": "\r\n\t\t\tCreating Killer Windows Phone Apps\r\n\t\t",
+    "description": "This session is about how to sprinkle that last bit of fairy dust on your app. How to make it stand out from the cloud and how to make it ooze quality. The new project templates in Visual Studio give you a good starting point, but they also can lead to the creation of a lot of 'me too' apps. A good designer can see beyond the pre-packaged layouts and create something that still talks the Windows Phone design langauge, but also brings a little freshness, a little innovation and a little more excitement.\nIn this session, we'll look at how to use animation to create an enjoyable user experience and to add life, often in subtle but expressive ways. We will also look at how developers can help create a good user experience, using techniques such as loading data asynchronously. And we will look at some examples of app design that go beyond the standard layouts.",
+    "timeslots": "05 December 2013 13:40 - 14:40",
+    "speakerId": 74
   },
   {
     "id": 227,
     "dayno": 2,
-    "title": "\r\n\t\t\tCreating Killer Windows Phone Apps\r\n\t\t",
-    "speakerId": 74
+    "title": "\r\n\t\t\tWEB API Panel Debate\r\n\t\t",
+    "description": "",
+    "timeslots": "05 December 2013 15:00 - 16:00",
+    "speakerId": 0
   },
   {
     "id": 228,
     "dayno": 2,
-    "title": "\r\n\t\t\tWEB API Panel Debate\r\n\t\t",
-    "speakerId": 0
+    "title": "\r\n\t\t\tInternals of security in ASP.NET\r\n\t\t",
+    "description": "Security is crucial for online applications. This session on security discusses the basics and then the internals of authentication and authorization in ASP.NET. We will discuss Windows and Forms authentication, how roles are assigned to the user and how to control authorization in both WebForms and MVC applications. We will conclude by illustrating a more modern approach to security using claims-based security and Windows Identity Foundation.",
+    "timeslots": "05 December 2013 15:00 - 16:00",
+    "speakerId": 89
   },
   {
     "id": 229,
     "dayno": 2,
-    "title": "\r\n\t\t\tInternals of security in ASP.NET\r\n\t\t",
-    "speakerId": 89
+    "title": "\r\n\t\t\tWindows 8.1 Apps with JavaScript 101\r\n\t\t",
+    "description": "Windows 8 and 8.1 introduce new paradigms for apps: they run full-screen, have a unique lifecycle, and are embedded into the Windows Store. Best of all, they can be implemented in various technologies, including the web stack: HTML5, CSS3, JavaScript. This session gives a brief introduction in how to leverage web technologies to create \"real\" WIndows 8 apps. We will discuss project layout, first steps, navigation, controls, and more.",
+    "timeslots": "05 December 2013 15:00 - 16:00",
+    "speakerId": 72
   },
   {
     "id": 230,
     "dayno": 2,
-    "title": "\r\n\t\t\tWindows 8.1 Apps with JavaScript 101\r\n\t\t",
-    "speakerId": 72
+    "title": "\r\n\t\t\tActor based programming using Orleans\r\n\t\t",
+    "description": "Known for underpinning the Halo 4 server-side components, Orleans offers an actor based approach to programming for the cloud. This simplifies the programming model by removing shared state and thread safety concerns, and unlocks the potential for huge horizontal scale out.\nThe talk will be an overview of the architecture, and a live coding demonstration.\nRichard has had early access to the technology, which will hopefully be publically available by the time of NDC London.",
+    "timeslots": "05 December 2013 15:00 - 16:00",
+    "speakerId": 66
   },
   {
     "id": 231,
     "dayno": 2,
-    "title": "\r\n\t\t\tActor based programming using Orleans\r\n\t\t",
-    "speakerId": 66
+    "title": "\r\n\t\t\tArchitecting, designing and coding for change: Applying the Life Preserver to build adaptable software\r\n\t\t",
+    "description": "Synopsis: We've come a long way in embracing ways of organising work to help us evolve our software solutions. Agile processes offer us all sorts of guidance for how we should work to embrace change&hellip; but what about the software itself?\nChange is constant in evolving a software solution and your assumptions in design and architecture yesterday can be the bane of your life today&hellip; \nIt doesn't have to be like that.\nIn this talk, Russ Miles of Simplicity Itself(link here to my site please:  http://wwww.simplicityitself.com) will take a walk through a complete application's architecture using his Life Preserver pattern and tool.\nAt each step, you'll see how to design and implement software that makes the most of Functional Programming, Events, Implicit and Explicit data schemas, and Domain Driven Design in order to develop and maintain truly agile software.",
+    "timeslots": "05 December 2013 15:00 - 16:00",
+    "speakerId": 70
   },
   {
     "id": 232,
     "dayno": 2,
-    "title": "\r\n\t\t\tArchitecting, designing and coding for change: Applying the Life Preserver to build adaptable software\r\n\t\t",
-    "speakerId": 70
+    "title": "\r\n\t\t\tC++ style\r\n\t\t",
+    "description": "C++ is changing. C++11 introduced a large number of new features and C++14 will add yet more. How will developers use these new features? What long-held assumptions and well-known techniques might need to change? This talk takes a look not at the features but at possible new techniques, things that developers will need to learn and ways of exploiting the new features.",
+    "timeslots": "05 December 2013 15:00 - 16:00",
+    "speakerId": 67
   },
   {
     "id": 233,
     "dayno": 2,
-    "title": "\r\n\t\t\tC++ style\r\n\t\t",
-    "speakerId": 67
+    "title": "\r\n\t\t\tAngularJS DIrectives And The Computer Science Of JavaScript\r\n\t\t",
+    "description": "AngularJS is a fascinating framework for web developers. It's really a completely different way to build applications. There is no DOM selection and mutation, there are only Directives.\nWhat is a directive? How do they work? What is transclusion? Why are all of these words so big? These questions and more will be answered in this session based on my article of the same title on ADC, as well as my work on the open source project, Angular Kendo UI.",
+    "timeslots": "05 December 2013 15:00 - 16:00",
+    "speakerId": 41
   },
   {
     "id": 234,
     "dayno": 2,
-    "title": "\r\n\t\t\tAngularJS DIrectives And The Computer Science Of JavaScript\r\n\t\t",
-    "speakerId": 40
+    "title": "\r\n\t\t\tIdentity management in ASP.NET\r\n\t\t",
+    "description": "Identity management is the unglamorous (yet extremely important) task of managing account information for users (including passwords). Identity management in ASP.NET has had an interesting and somewhat tumultuous history. In this session we&rsquo;ll discuss the important characteristics of proper identity management and then we&rsquo;ll survey the pros and cons of the various offerings in ASP.NET including membership, simple membership and the most recent iteration with ASP.NET Identity.",
+    "timeslots": "05 December 2013 16:20 - 17:20",
+    "speakerId": 89
   },
   {
     "id": 235,
     "dayno": 2,
-    "title": "\r\n\t\t\tIdentity management in ASP.NET\r\n\t\t",
-    "speakerId": 89
+    "title": "\r\n\t\t\tTesting in AngularJS\r\n\t\t",
+    "description": "Testing is vital in any project, but particularly so in the JavaScript environment where you do not have static type checking and need to know if your application will run on a variety of different browsers.\nAngularJS, along with tools like Karma and Protractor, provides some of the best support for writing and running unit tests of all the JavaScript Frameworks.\nThis talk will show you:\n\nHow to write effective Jasmine based unit tests for your Angular application\nThe best way to test controllers, filters, services and directives.\nWhat to do about testing asynchronous features.\nAn overview of setting up karma to create a continuous testing process.\nHow to configure Travis to run tests on commits to GitHub\nAn overview of Protractor for end to end testing of your web application\n",
+    "timeslots": "05 December 2013 16:20 - 17:20",
+    "speakerId": 0
   },
   {
     "id": 236,
     "dayno": 2,
-    "title": "\r\n\t\t\tTesting in AngularJS\r\n\t\t",
-    "speakerId": 0
+    "title": "\r\n\t\t\tYes, you can! Tooling and Debugging for JavaScript\r\n\t\t",
+    "description": "In this session, we'll revisit two of Ingo's favorite topics: development-time tooling and runtime-debugging of applications developed with JavaScript. You will learn how you can get the maximum out of your existing tool chain (Visual Studio, WebStorm, and/or Chrome) to achieve JavaScript-Intellisense similar to what you'd expect from a compiled language like C#; how open-source tools can help you to drastically improve the quality of your JS code; how to find JavaScript, HTML and CSS-problems in your application; and also how Chrome turns more and more into a full-blown dynamic IDE which really advanced development and debugging-support. ",
+    "timeslots": "05 December 2013 16:20 - 17:20",
+    "speakerId": 97
   },
   {
     "id": 237,
     "dayno": 2,
-    "title": "\r\n\t\t\tYes, you can! Tooling and Debugging for JavaScript\r\n\t\t",
-    "speakerId": 97
+    "title": "\r\n\t\t\tHow I Learned to Stop Worrying and Love Flexible Scope\r\n\t\t",
+    "description": "Not fixing scope too far in the future is one of the cornerstones of agile delivery, but it is at the same time the thing that enterprise stakeholders fear the most. Ironically, being able to change decisions after delivery starts is one of the biggest benefits that companies can get from agile delivery, so it's necessary to stop worrying and embrace flexible scope to get the full benefits of an iterative process. Join Christian Hassa and Gojko Adzic to discuss how to convince people to embrace flexible scope, not only for startup environments but for big enterprise projects as well.",
+    "timeslots": "05 December 2013 16:20 - 17:20",
+    "speakerId": 0
   },
   {
     "id": 238,
     "dayno": 2,
-    "title": "\r\n\t\t\tHow I Learned to Stop Worrying and Love Flexible Scope\r\n\t\t",
-    "speakerId": 0
+    "title": "\r\n\t\t\tProgramming Diversity\r\n\t\t",
+    "description": "It's been scientifically proven that more diverse communities and workplaces create better products and the solutions to difficult problems are more complete and diverse themselves. Companies are struggling to find adequate talent. So why do we see so few women, people of color, and LGBTQ people at our events and on the about pages of our websites? Even more curiously, why do 60% of women leave the tech industry within 10 years? Why are fewer women choosing to pursue computer science and related degrees than ever before? Why have stories of active discouragement, dismissal, harassment, or worse become regular news? In this talk we&rsquo;ll examine the causes behind the lack of diversity in our communities, events, and workplaces. We&rsquo;ll discuss what we can do as community members, event organizers, and co-workers to not only combat this problem, but to encourage positive change by contributing to an atmosphere of inclusivity.",
+    "timeslots": "05 December 2013 16:20 - 17:20",
+    "speakerId": 20
   },
   {
     "id": 239,
     "dayno": 2,
-    "title": "\r\n\t\t\tProgramming Diversity\r\n\t\t",
-    "speakerId": 18
+    "title": "\r\n\t\t\tDomain driven design with the F# type system\r\n\t\t",
+    "description": "Statically typed functional programming languages like F# encourage a very different way of thinking about types. The type system is your friend, not an annoyance, and can be used in many ways that might not be familiar to OO programmers.\nTypes can be used to represent the domain in a fine-grained, self documenting way. And in many cases, types can even be used to encode business rules so that you literally cannot create incorrect code. You can then use the static type checking almost as an instant unit test &mdash; making sure that your code is correct at compile time.\nIn this talk, we'll look at some of the ways you can use types as part of a domain driven design process, with some simple real world examples in F#. No jargon, no maths, and no prior F# experience necessary.",
+    "timeslots": "05 December 2013 16:20 - 17:20",
+    "speakerId": 63
   },
   {
     "id": 240,
     "dayno": 2,
-    "title": "\r\n\t\t\tDomain driven design with the F# type system\r\n\t\t",
-    "speakerId": 63
+    "title": "\r\n\t\t\tRapid Problem Solving Workshop - Room 8\r\n\t\t",
+    "description": "From pushing beyond the first idea, working within constraints and creatively collaborating with different teams, having the skills of an improviser can give you the positive edge at every phase of the Lean Experience. After all, when plans are put to the test, they usually fall apart. Understand why it is better to have a clear goal and improvise your way to it. Through specifically tailored exercises, participants will be connecting with new people and solving problems in a new way. Experiential learning conducted in our workshop will be utilized in helping the implementation of new skills, improvement of existing ones, and breaking habits where necessary.\nThe workshop is in Room 8",
+    "timeslots": "05 December 2013 16:20 - 17:20",
+    "speakerId": 4
   },
   {
     "id": 241,
     "dayno": 2,
-    "title": "\r\n\t\t\tRapid Problem Solving Workshop\r\n\t\t",
-    "speakerId": 4
+    "title": "\r\n\t\t\tPutting the Microsoft Design Language to work\r\n\t\t",
+    "description": "The new Microsoft Design Language (formerly known as Metro) has taken the tech world by surprise. It brings a refreshing change from hyper realistic design, and offers a welcomed alternative to the other mobile platforms. From Zune and then Windows Phone, the Microsoft Design Language is now used on a number of platforms and devices, notably on Windows 8 apps. In this session, we will see how we can practically convert the five design principles and put them to work, by studying real life applications and understanding how they were applied.",
+    "timeslots": "05 December 2013 17:40 - 18:40",
+    "speakerId": 64
   },
   {
     "id": 242,
     "dayno": 2,
-    "title": "\r\n\t\t\tFrom audience member to speaker.. Managing technical presentations\r\n\t\t",
-    "speakerId": 50
+    "title": "\r\n\t\t\tF# in Finance\r\n\t\t",
+    "description": "Effective Trading is about having up-to-date detailed information. Data is acquired from a variety of sources and combined to imply new information. F# is becoming a popular choice for this kind of application. Based on hands on experience of building a Commodity Trading platform I will describe and demonstrate areas where F# gives you leverage like domain modelling, computation and concurrency.",
+    "timeslots": "05 December 2013 17:40 - 18:40",
+    "speakerId": 11
   },
   {
     "id": 243,
     "dayno": 2,
-    "title": "\r\n\t\t\tPutting the Microsoft Design Language to work\r\n\t\t",
-    "speakerId": 64
+    "title": "\r\n\t\t\tWhat&#39;s wrong with my site? Lean DevOps for Azure\r\n\t\t",
+    "description": "When you go live with a web site or set of services to support mobile apps you obviously want to avoid down time for customers. It is incredibly important to provide visibility into the system internals through logging and exception reporting, in addition to monitoring endpoints and specific indicators of system health. The problem is that with tight deadlines and limited operations staff not all teams have the luxury of a sophisticated setup. This session will take the lean approach to DevOps and show you affordable and efficient ways to gain the required visiblity and notifications of system health so you can rest easy - that is until you get a notification of problems!",
+    "timeslots": "05 December 2013 17:40 - 18:40",
+    "speakerId": 0
   },
   {
     "id": 244,
     "dayno": 2,
-    "title": "\r\n\t\t\tF# in Finance\r\n\t\t",
-    "speakerId": 10
+    "title": "\r\n\t\t\tZen of Architecture\r\n\t\t",
+    "description": "For the beginner architect, there are manyoptions for doing pretty much anything. But for the Master architect, there areonly a few. In this dense session Master Architect Juval Lowy will explain hisapproach to large system analysis design, how to decompose a system into itscomprising services, and what is the most common mistake done in architecture.",
+    "timeslots": "05 December 2013 17:40 - 18:40",
+    "speakerId": 33
   },
   {
     "id": 245,
     "dayno": 2,
-    "title": "\r\n\t\t\tWhat&#39;s wrong with my site? Lean DevOps for Azure\r\n\t\t",
-    "speakerId": 0
-  },
-  {
-    "id": 246,
-    "dayno": 2,
-    "title": "\r\n\t\t\tZen of Architecture\r\n\t\t",
-    "speakerId": 32
-  },
-  {
-    "id": 247,
-    "dayno": 2,
     "title": "\r\n\t\t\tTest Your Javascript...with the Help of D&amp;D\r\n\t\t",
+    "description": "Most everyone can agree automated tests are an essential part of any modern, maintainable software. Unfortunately, testing JavaScript&mdash;the modern Web's ubiquitous development language&mdash;can be a daunting task. In this code-heavy session, you'll be introduced to some methods to do just that...but with a Dungeons and Dragons twist.",
+    "timeslots": "05 December 2013 17:40 - 18:40",
     "speakerId": 65
   },
   {
     "id": 300,
     "dayno": 3,
     "title": "\r\n\t\t\tKnocking it out of the park, with Knockout.JS\r\n\t\t",
+    "description": "MVVM on the web... that works! Yes, finally; thank you Steve! If you don&rsquo;t know who I&rsquo;m thanking, Steve Sanderson is one of the brilliant minds behind major contributions to ASP.NET with focus on the MVC side of things. And if you don&rsquo;t know what Knockout.JS is, you really need to come see me show you how to use Steve&rsquo;s latest brainchild. Knockout.JS lets you do real MVVM on your HTML. I&rsquo;m talking about real two-way binding. And with the help of Web API and Ajax, you can overcome any shortcoming that cannot be totally handled on the client. So come see me and let&rsquo;s add another great tool to your web arsenal.",
+    "timeslots": "06 December 2013 09:00 - 10:00",
     "speakerId": 0
   },
   {
     "id": 301,
     "dayno": 3,
     "title": "\r\n\t\t\tThe C Word--Continuous\r\n\t\t",
-    "speakerId": 45
+    "description": "Steve Ballmer famously chanted years ago &ldquo;Developers, Developers, Developers&rdquo;. While that mantra is still something to be heard and repeated, it takes more than cutting code to ship something that your users truly love. The mantra for the modern team is &ldquo;Continuous, Continuous, Continuous&rdquo;.\nIn this fast-paced session, Brian will guide you down the path to shipping solutions your users truly love. He&rsquo;ll do this by helping you understand continuous value delivery. You&rsquo;ll learn about all the big &ldquo;Cs&rdquo; for modern development: continuous feedback, continuous integration, continuous testing, and continuous deployment. You&rsquo;ll learn about all these in the abstract and how they apply to all teams no matter what tools you use. Then, Brian will show you how to apply these processes to your team using Visual Studio 2013 and Visual Studio Online.",
+    "timeslots": "06 December 2013 09:00 - 10:00",
+    "speakerId": 46
   },
   {
     "id": 302,
     "dayno": 3,
     "title": "\r\n\t\t\tAgile software architecture sketches\r\n\t\t",
+    "description": "Agility is about moving fast and this requires good communication. A consistent, shared vision is essential in order for teams to push in the same direction, but it's surprising that many agile teams struggle to effectively communicate the architecture of the software they are building. As an industry we do have the Unified Modeling Language (UML), yet many people favour informal boxes and lines sketches instead. The problem is that such diagrams rarely make any sense, usually need a narrative to accompany them and ultimately slow the team down. Although we can argue whether UML offers an effective way to communicate software architecture, that's often irrelevant because many teams have already thrown out UML or simply don't know it. Abandoning UML is one thing but, in the race for agility, many software development teams have lost the ability to communicate visually.\nThis session is aimed at everybody involved in the software development process and is about improving architectural communication in an agile environment. You'll see some patterns and anti-patterns related to NoUML diagrams and you'll learn some simple techniques for communicating software architecture using informal sketches.",
+    "timeslots": "06 December 2013 09:00 - 10:00",
     "speakerId": 69
   },
   {
     "id": 303,
     "dayno": 3,
     "title": "\r\n\t\t\tSecuring a modern JavaScript based single page web application\r\n\t\t",
-    "speakerId": 46
+    "description": "Modern web apps are often single page web apps. The heavy HTML-generating backend is replaced by JavaScript, JavaScript frameworks like Backbone.js and templating languages like mustache.js or underscore.js. Data is transferred via RESTful JSON services. We are moving functionality normally implemented on the server to the browser. Sometimes we even implement the backend using JavaScript. What kinds of security problems can occur if we do this incorrectly? How do we mitigate the security problems found in these applications?",
+    "timeslots": "06 December 2013 09:00 - 10:00",
+    "speakerId": 47
   },
   {
     "id": 304,
     "dayno": 3,
     "title": "\r\n\t\t\tPreCrime - The Future of Policing in the Era of Austerity\r\n\t\t",
-    "speakerId": 38
+    "description": "In this session we'll examine the data capture, storage and analysis of variables around crime. We'll then look at techniques in predictive analytics that will allow us to predict the type and location of crime, before ending up using PowerBI to visualize our results, enabling the police department of Garyopolis to act on this data.",
+    "timeslots": "06 December 2013 09:00 - 10:00",
+    "speakerId": 39
   },
   {
     "id": 305,
     "dayno": 3,
     "title": "\r\n\t\t\tGetting Agile with Scrum\r\n\t\t",
-    "speakerId": 11
+    "description": "Scrum is one of the leading agile software development processes. Over 12,000 project managers have become certified to run Scrum projects . Since its origin on Japanese new product development projects in the 1980s, Scrum has become recognized as one of the best project management frameworks for handling rapidly changing or evolving projects. Especially useful on projects with lots of technology or requirements uncertainty, Scrum is a proven, scalable agile process for managing software projects.\nThrough lecture, discussion and exercises, this fast-paced tutorial covers the basics of what you need to know to get started with Scrum. You will learn about all key aspects of Scrum including product and sprint backlog, the sprint planning meeting, the sprint review, conducting a sprint retrospective, activities that occur during sprints, measuring and monitoring progress, and scaling Scrum to work with large and distributed teams. Also covered are the roles and responsibilities of the ScrumMaster, the product owner, and the Scrum team.\nThis session will be equally suited for managers, programmers, testers, product managers and anyone else interested in improving product delivery.",
+    "timeslots": "06 December 2013 09:00 - 10:00",
+    "speakerId": 12
   },
   {
     "id": 306,
     "dayno": 3,
     "title": "\r\n\t\t\tHunting ASP.NET Performance Bugs\r\n\t\t",
-    "speakerId": 37
+    "description": "You are working on a new complex system, and you want to make sure that you discover potential problems before you release it to the customer. Or you deployed your application and after a while the performance starts going down. What would Tibi do? How will he find out what is going on? What tools will he use? Come to this session you will find out!",
+    "timeslots": "06 December 2013 09:00 - 10:00",
+    "speakerId": 38
   },
   {
     "id": 307,
     "dayno": 3,
     "title": "\r\n\t\t\tASP.NET SignalR 2.0 (and beyond)\r\n\t\t",
+    "description": "A new major version of SignalR is already here and some things have changed (for the better!). Along with the requisite performance and stability improvements there's even tighter integration with OWIN, .NET 4.5 server dependency, full support for self-hosting, new clients, massively improved cross-domain/CORS support, API usability improvements, easier hub unit testing and better error handling. We'll cover all this and give a sneak peak and new features in upcoming releases in this information packed session.",
+    "timeslots": "06 December 2013 10:20 - 11:20",
     "speakerId": 0
   },
   {
     "id": 308,
     "dayno": 3,
-    "title": "\r\n\t\t\tNative Cross Platform Mobile Development with Xamarin 1\r\n\t\t",
-    "speakerId": 0
+    "title": "\r\n\t\t\tIntro to iOS &amp; Android Apps with C# (using Xamarin)\r\n\t\t",
+    "description": "Learn how Xamarin helps you build mobile apps with C#, from File-New app through to creating sharable code libraries and incorporating them into iOS and Android, using both Xamarin Studio and Visual Studio 2013.",
+    "timeslots": "06 December 2013 10:20 - 11:20",
+    "speakerId": 8
   },
   {
     "id": 309,
     "dayno": 3,
     "title": "\r\n\t\t\tBDD for financial calculations: Excel vs. Given-When-Then, or both?\r\n\t\t",
-    "speakerId": 49
+    "description": "This session describes how to use Excel combined with SpecFlow to fulfill the requirements for calculations based on project experience.\nFor calculations the key examples are usually given as input-output tables that describe what expected calculation result the system should provide for the different input figures. As for these applications even small mistakes can quickly cause big losses, you better describe them in a way that both the business and the development team can understand them.\nIn Given-When-Then based BDD frameworks, like Cucumber or SpecFlow, you normally use Scenario Outlines for describing these. But are we sure that this is the best? Is this really the best way? Have you ever struggled with formatting big gherkin tables, hunting number precision issues or spending hours of recalculating the input-output tables?\nIn our projects most of the stakeholders use and like Excel for describing these and they are masters in doing this. Excel seems to be their DSL, so let's try to use it for generating automated tests!",
+    "timeslots": "06 December 2013 10:20 - 11:20",
+    "speakerId": 50
   },
   {
     "id": 310,
     "dayno": 3,
     "title": "\r\n\t\t\tIt&#39;s a Kind of Magic\r\n\t\t",
+    "description": "In the early days of C# there was virtually a 1-1 mapping between C# and IL. Much has changed since C# 1, the developer is encouraged to simply describe their intent and the compiler builds the appropriate code. This talk will dive under the hood and show how various C# features like iterator methods, anonymous methods, extension methods,dynamic and async/await all result in code gen by the C# compiler.",
+    "timeslots": "06 December 2013 10:20 - 11:20",
     "speakerId": 51
   },
   {
     "id": 311,
     "dayno": 3,
     "title": "\r\n\t\t\tThe tale about tiles\r\n\t\t",
-    "speakerId": 27
+    "description": "Once upon a time, there was an app that was so rich with content itwanted to share with its user. But the user didn&rsquo;t give the app the light ofday. The app got sad, very sad. One day, the user was cleaning up his Startscreen uninstalling the great app, not knowing what rich content it had tooffer.\nSounds like an unhappy ending? Will this be your app? Not if you attendthis session where we&rsquo;ll explain you what you need to know about live tiles andhow we can trigger the user in using your application more!\nA happy ending after all!",
+    "timeslots": "06 December 2013 10:20 - 11:20",
+    "speakerId": 29
   },
   {
     "id": 312,
     "dayno": 3,
     "title": "\r\n\t\t\tAgile Estimating\r\n\t\t",
-    "speakerId": 11
+    "description": "The first step in creating a useful plan is the ability to estimate reliably. In this session we will discuss how to do this. We will look at various approaches to estimating including unit-less points and ideal time. The class will present four specific techniques for deriving reliable estimates, including how to use the popular Planning Poker&reg; technique and other techniques that dramatically improve a project's chances of on-time completion.",
+    "timeslots": "06 December 2013 10:20 - 11:20",
+    "speakerId": 12
   },
   {
     "id": 313,
     "dayno": 3,
     "title": "\r\n\t\t\tFile -&gt; new project to deploy in 10 minutes with TeamCity and Octopus Deploy\r\n\t\t",
-    "speakerId": 48
+    "description": "If you are sitting in a .NET-project where it takes hours or days to deploy or set up deployment of a new project this talk is for you. I will in this talk show you how to configure TeamCity and Octopus Deploy to be able to set up new deployments in a matter of minutes rather than hours or days.\nTo be able to set up deployment in minutes and deploy at the same speed enables you to try new things and respond to errors faster. If you have confident in how you do deployment a lot of the fear of deploying will disappear and you can focus on developing great applications instead of being afraid of breaking something.\nThe configuration I&rsquo;ll present is a setup I&rsquo;ve put together after introducing TeamCity and Octopus Deploy for multiple customers with great success. I&rsquo;ve successfully managed to simplify the deployment process of regular web applications, EPiServer applications, Windows Services and even SharePoint. I will also cover the most of the features in Octopus Deploy, which include deployment to Azure and database migrations.\nI have two goals with this talk:\n\nWhen you leave this you&rsquo;ll have the tools necessary to setup a smooth continuous integration environment with deployment.\nThe next time you do a deployment you&rsquo;ll do it with a smile instead of fear of breaking anything.\n",
+    "timeslots": "06 December 2013 10:20 - 11:20",
+    "speakerId": 49
   },
   {
     "id": 314,
     "dayno": 3,
     "title": "\r\n\t\t\tThe Future of C#\r\n\t\t",
-    "speakerId": 25
+    "description": "For the past several years, the Microsoft C# team has been focused on rebuilding the compilers and editing experiences as part of Project Roslyn. This effort has paved the way for C# to continue evolving for many years to come. However, what does that future actually look like? We will explore how the editing experience may evolve, how public APIs may be used to write language-level extensions, and not least which potential new language features are on the designers&rsquo; minds.",
+    "timeslots": "06 December 2013 11:40 - 12:40",
+    "speakerId": 27
   },
   {
     "id": 315,
     "dayno": 3,
     "title": "\r\n\t\t\tNuts and bolts of writing OWIN middleware\r\n\t\t",
-    "speakerId": 33
+    "description": "OWIN middleware are components plugged in between your server (IIS, HttpListener, and others) and any number of web frameworks you may be using. What kind of web application problems can you solve with OWIN middleware? How do they work mechanically, and what does the code look? What are some best practices to share middleware as NuGet packages? Let&rsquo;s drill into those questions as we write some code using the Microsoft OWIN based libraries.",
+    "timeslots": "06 December 2013 11:40 - 12:40",
+    "speakerId": 34
   },
   {
     "id": 316,
     "dayno": 3,
     "title": "\r\n\t\t\tDoing SPA with MVC &amp; Knockout.JS\r\n\t\t",
+    "description": "SPA stands for single-page-application and it&rsquo;s a little bit of a misunderstood term. IT does not imply that the entire web application be a single page. SPA is more of a style applied to parts of a site, and knockout is the perfect technology for tackling on this modern way of writing web applications. In this session I&rsquo;ll show you how to mix ASP.NET MVC with KnockoutJS to develop web applications that stand strong in today&rsquo;s world of rich, interactive sites. But it won&rsquo;t be limited to just these two technologies. You see in order to keep things on a single page that flips around different modes, you need to go quietly to the server without anybody knowing (shhh), and for that I&rsquo;ll throw in the Web API. In the end you&rsquo;ll be able to write apps that get a server view when they need to using MVC then stay on the client and flip around multiple modes using Knockout, and remember, keep it quiet that I&rsquo;ll be using Web API to do a little bit server access.",
+    "timeslots": "06 December 2013 11:40 - 12:40",
     "speakerId": 0
   },
   {
     "id": 317,
     "dayno": 3,
-    "title": "\r\n\t\t\tThe Birth &amp; Death of JavaScript\r\n\t\t",
-    "speakerId": 28
+    "title": "\r\n\t\t\tZeroMQ - A Whole Bunch of Awesome [C# Edition]\r\n\t\t",
+    "description": "ZeroMQ is a high-performance asynchronous messaging library aimed at use in scalable distributed or concurrent applications. It has a very low barrier to entry, can be used across a wide range of systems and programming languages, and opens up almost infinite possibilities in terms of network topology. Not only for distributed systems, it can make concurrency programming a breeze &ndash; and whether you&rsquo;re working across threads in a process or across servers that are continents apart, the same concepts apply.\nIn this session, we will look at Zero, what it gives us, and then dive right into C# code to see how simple it is to set up systems like request-reply, pub-sub, etc. We&rsquo;ll even look at adding distributed workers on the fly. If you&rsquo;re not using Zero &ndash; you should be!",
+    "timeslots": "06 December 2013 11:40 - 12:40",
+    "speakerId": 62
   },
   {
     "id": 318,
     "dayno": 3,
-    "title": "\r\n\t\t\tAdvanced Topics in Agile Planning\r\n\t\t",
-    "speakerId": 11
+    "title": "\r\n\t\t\tThe Birth &amp; Death of JavaScript\r\n\t\t",
+    "description": "This talk traces JavaScript's impact on software development tools over forty years, from 1995 until 2035. Although the language is mostly dead today, it drove the largest transformation of mainstream development tools since the creation of Unix 65 years ago.\nWe'll examine some key moments in JavaScript's history: its accidental rise to popularity; asm.js, allowing arbitrary software to run at native speed in browsers; the language ecosystem that grew up around asm.js, displacing JavaScript itself; the replacement of traditional Unix terminals, shells, and editors with new, higher-level equivalents running against the DOM; and finally, the inversion of the browser-OS relationship, still ongoing.\nThis story is told by someone who was a fervent JavaScript detractor during its rise. It was easy to see the language's numerous and glaring shortcomings, but miss the path that it laid out.",
+    "timeslots": "06 December 2013 11:40 - 12:40",
+    "speakerId": 30
   },
   {
     "id": 319,
     "dayno": 3,
-    "title": "\r\n\t\t\tBuild It So You Can Ship It!\r\n\t\t",
-    "speakerId": 45
+    "title": "\r\n\t\t\tAdvanced Topics in Agile Planning\r\n\t\t",
+    "description": "Velocity is perhaps the most useful metric available to agile teams. In this session we will look at advanced uses of velocity for planning under special but common circumstances. We will see how to forecast velocity in the complete absence of any historical data. We will look at how a new team can forecast velocity by looking at other teams. We will see how to predict the velocity of a team that will grow or shrink in size. Most importantly we will look at the use of confidence intervals to create plans we can be 90% confident in, even on fixed-price or fixed-date contracts.",
+    "timeslots": "06 December 2013 11:40 - 12:40",
+    "speakerId": 12
   },
   {
     "id": 320,
     "dayno": 3,
-    "title": "\r\n\t\t\tNDC Cage Match: Testing! NodeJS vs. C# and .NET with Rob Ashton and Jeremy Miller\r\n\t\t",
-    "speakerId": 0
+    "title": "\r\n\t\t\tBuild It So You Can Ship It!\r\n\t\t",
+    "description": "Shipping is arguably the most important feature of any product. If you&rsquo;re users don&rsquo;t have it, it doesn&rsquo;t matter how cool it looks on your desktop. In the session, Brian will give you a crash course on the why and what of Team Foundation Server and the online Service&rsquo;s build components. You&rsquo;ll then learn about key customization tricks and how you can move from just continuous integration and ultimately to continuous deployment.",
+    "timeslots": "06 December 2013 11:40 - 12:40",
+    "speakerId": 46
   },
   {
     "id": 321,
     "dayno": 3,
-    "title": "\r\n\t\t\tAuthentication Middleware for OWIN\r\n\t\t",
-    "speakerId": 33
+    "title": "\r\n\t\t\tNDC Cage Match: Testing! NodeJS vs. C# and .NET with Rob Ashton and Jeremy Miller\r\n\t\t",
+    "description": "NodeJS is for \"cool kids\" and is built on \"a really crappy language\". C# and .NET are \"baroque and ceremonial\" that \"enterprise architects use and love\". Somewhere in the hyperbole is the truth - and what better way to see the power of a framework then to dive in to how you test and build something? That's what this Cage Match is all about: Rob Ashton (Node aficionado and journeyman developer) goes up against Jeremy D. Miller (.NET Open Source Developer, creator of StructureMap, StoryTeller, and FubuMVC) in what should be a very memorable talk!",
+    "timeslots": "06 December 2013 13:40 - 14:40",
+    "speakerId": 0
   },
   {
     "id": 322,
     "dayno": 3,
-    "title": "\r\n\t\t\tKinect\r\n\t\t",
-    "speakerId": 52
+    "title": "\r\n\t\t\tAuthentication Middleware for OWIN\r\n\t\t",
+    "description": "Microsoft has just shipped 2.0 of its components supporting the OWIN standard. Part of that release includes a set of NuGet packages with middleware that can be used to implement web applications security. The advantage of being OWIN based is that the same code can be used on IIS or self-hosted, and across different web frameworks even in the same app domain. In this session weâ€™ll take a look at how you can add â€œForms Authâ€ style cookie login to a new or existing project then augment that with social logins like Google, Facebook, or Twitter. Weâ€™ll also take a look at how the OAuth2 package enables third-party applications to gain bearer-token access to the API endpoints your web site exposes.",
+    "timeslots": "06 December 2013 13:40 - 14:40",
+    "speakerId": 34
   },
   {
     "id": 323,
     "dayno": 3,
-    "title": "\r\n\t\t\tObject Oriented Design in the Wild\r\n\t\t",
-    "speakerId": 13
+    "title": "\r\n\t\t\tGesture Recognition with Kinect for Windows\r\n\t\t",
+    "description": "Carl Franklin has done extensive work with the Kinect for Windows SDK, and now he's sharing his knowledge and code with you. Learn how his GesturePak software lets you record gestures and then recognizes those gestures with an event-driven component.",
+    "timeslots": "06 December 2013 13:40 - 14:40",
+    "speakerId": 52
   },
   {
     "id": 324,
     "dayno": 3,
-    "title": "\r\n\t\t\tMaking 3D games with Monogame\r\n\t\t",
-    "speakerId": 85
+    "title": "\r\n\t\t\tObject Oriented Design in the Wild\r\n\t\t",
+    "description": "You're a great OO developer. Can you use this skill to conquer JavaScript or Haskell or Ruby? There are truths about C# and Java that don't export, but other principles are universal. Dig into the reasoning behind object-oriented design principles, and we will find their application in the wider world. Come see how to apply skills you already have to languages you don't yet know. This session will challenge you to go beyond rules and standards and ask, when is clean code worth your time? Go beyond OO and come back with new insight. You'll go back to work on Monday with some hard questions to challenge your team.",
+    "timeslots": "06 December 2013 13:40 - 14:40",
+    "speakerId": 15
   },
   {
     "id": 325,
     "dayno": 3,
-    "title": "\r\n\t\t\tUser Stories for Agile Requirements\r\n\t\t",
-    "speakerId": 11
+    "title": "\r\n\t\t\tMaking 3D games with Monogame\r\n\t\t",
+    "description": "Monogame is a brilliant games framework that solves the annoying problem of more platforms to develop for than you can throw a hat at. With monogame you can develop for them all at once.\nMonogame is an open source implementation of XNA. It makes 2D game programming very easy, but a less well know fact, is that 3D is also much easier than it seems.\nThis talk will guide you through the basics of 3D game programming, You'll be loading, displaying and moving 3D models with textures and be able to play about with different camera types.\nBy the end and once you've clocked out from the day job you'll be ready to create your own 3D gaming masterpiece.",
+    "timeslots": "06 December 2013 13:40 - 14:40",
+    "speakerId": 85
   },
   {
     "id": 326,
     "dayno": 3,
-    "title": "\r\n\t\t\tMongoDB for the C# developer\r\n\t\t",
-    "speakerId": 81
+    "title": "\r\n\t\t\tUser Stories for Agile Requirements\r\n\t\t",
+    "description": "The technique of expressing requirements as user stories is one of the most broadly applicable techniques introduced by the agile processes. User stories are an effective approach on all time constrained projects and are a great way to begin introducing a bit of agility to your projects.\nIn this session, we will look at how to identify and write good user stories. The class will describe the six attributes that good stories should exhibit and present thirteen guidelines for writing better stories. We will explore how user role modeling can help when gathering a project&rsquo;s initial stories.\nBecause requirements touch all job functions on a development project, this tutorial will be equally suited for analysts, customers, testers, programmers, managers, or anyone involved in a software development project. By the end of this tutorial, you will leave knowing the six attributes of a good story, learn a good format for writing most user stories, learn practical techniques for gathering user stories, know how much work to do up-front and how much to do just-in-time.",
+    "timeslots": "06 December 2013 13:40 - 14:40",
+    "speakerId": 12
   },
   {
     "id": 327,
     "dayno": 3,
-    "title": "\r\n\t\t\tUsing ASP.NET SignalR... in anger\r\n\t\t",
-    "speakerId": 0
+    "title": "\r\n\t\t\tMongoDB for the C# developer\r\n\t\t",
+    "description": "Don't miss the NoSQL revolution!\nA practical introduction to MongoDB, what it&rsquo;s all about, why you should consider using it, and how to use it with your C# applications. MongoDB is the most widely used NoSQL document database, and supports a wide range of use cases and features.\nThis talk will be full of real examples, key gotchas you might face with real world Mongo development, and a good look at a powerful, fast new document database option from a .NET perspective.",
+    "timeslots": "06 December 2013 13:40 - 14:40",
+    "speakerId": 81
   },
   {
     "id": 328,
     "dayno": 3,
-    "title": "\r\n\t\t\tNative Cross Platform Mobile Development with Xamarin 2\r\n\t\t",
+    "title": "\r\n\t\t\tUsing ASP.NET SignalR... in anger\r\n\t\t",
+    "description": "You've seen the demos, read the articles and perhaps even started to use SignalR in a project, but now you're ready for the nitty gritty. What are the best patterns for using SignalR in a real application? How do you deal with users and authorization? How does it work with your favorite IoC container? How do you flow data from back-end systems to SignalR clients? How do you successfully self-host SignalR along side other OWIN compliant frameworks like Nancy and ASP.NET Web API? Damian and David from the SignalR team will answer these questions and more on stage by doing what you do: writing code.",
+    "timeslots": "06 December 2013 15:00 - 16:00",
     "speakerId": 0
   },
   {
     "id": 329,
     "dayno": 3,
-    "title": "\r\n\t\t\tVagrant, the ability to think about production deployments from day 1 of development\r\n\t\t",
-    "speakerId": 54
+    "title": "\r\n\t\t\tCloud-enabling iOS &amp; Android Apps with C# (using Xamarin)\r\n\t\t",
+    "description": "See how easy it is to add cloud capabilities like Windows Azure data-storage, login, and other features to mobile apps using C# and Xamarin for iOS and Android.",
+    "timeslots": "06 December 2013 15:00 - 16:00",
+    "speakerId": 8
   },
   {
     "id": 330,
     "dayno": 3,
-    "title": "\r\n\t\t\tWhere is the work hiding?\r\n\t\t",
-    "speakerId": 55
+    "title": "\r\n\t\t\tVagrant, the ability to think about production deployments from day 1 of development\r\n\t\t",
+    "description": "Traditionally, developers would write their applications without any thoughtas to what system it was going to be deployed onin production. It was also very difficult for them to understand how their software would react when releasing itinto a production environment as they didn't really understand how that environment wasconfigured.\nWhat if there was a way that developers could create the scripts needed to install dependencies andget the software running as it is developed? Vagrant does exactly this, it is a tool to create and configure lightweight, reproducible, and portable development environments. In this session, I will show you how to create a development workflow that will allow developers to use Vagrant to create a real continuous delivery pipeline. This means understanding the environment needs as well as what is needed to run the software.\nIn this session I will demonstrate how to start with anASP.NET MVC application and have the ability to create an Ubuntu environment to run this in production as well as how to run the same application in a Windows environment. Iwill also show how we, at OpenTable, integrate Vagrant into our pipeline to allow us to create a good acceptance testing environment against known datasets rather than having brittle tests. ",
+    "timeslots": "06 December 2013 15:00 - 16:00",
+    "speakerId": 54
   },
   {
     "id": 331,
     "dayno": 3,
-    "title": "\r\n\t\t\tPeople, Process, Tools â€“ The Essence of DevOps\r\n\t\t",
-    "speakerId": 53
+    "title": "\r\n\t\t\tWhere is the work hiding?\r\n\t\t",
+    "description": "As Don Reinertsen tells us in his book \"The Principles of Product Development Flow\"\n\"The enemy of flow is the invisible, and unmeasured queues that undermine all aspects of development performance. Stagnant piles of idle work lengthen cycle time. At the same time, they delay vital feedback and destroy process efficiency.Yet today, these queues remain unmanaged. 98% of development teams today neither measures nor control their queues.\"\nJoin me to examine the basics of queueing theory and explore together how you can start tackling some of these problems in your organisation.",
+    "timeslots": "06 December 2013 15:00 - 16:00",
+    "speakerId": 55
   },
   {
     "id": 332,
     "dayno": 3,
-    "title": "\r\n\t\t\tScaling Agile to Work with a Distributed Team\r\n\t\t",
-    "speakerId": 11
+    "title": "\r\n\t\t\tPeople, Process, Tools â€“ The Essence of DevOps\r\n\t\t",
+    "description": "DevOps is about making software better &ndash; by bringing everyone involved in software closer together, including (but not limited to): domain experts, architects, developers, designers, testers, security and operations. This session takes you through the DevOps culture, focusing on people, process and tools (in that order). You&rsquo;ll learn how to get the conversation started between the teams, how to bring the teams closer together, and how to ultimately become one team (we&rsquo;re all in this together)! Understanding DevOps is about focusing on what&rsquo;s important: building and delivering the best software you can.",
+    "timeslots": "06 December 2013 15:00 - 16:00",
+    "speakerId": 53
   },
   {
     "id": 333,
     "dayno": 3,
-    "title": "\r\n\t\t\tAgile development with Team Foundation Server 2013\r\n\t\t",
-    "speakerId": 0
+    "title": "\r\n\t\t\tScaling Agile to Work with a Distributed Team\r\n\t\t",
+    "description": "The early agile literature was adamant about two things: stick with small teams and put everyone in one room. However, in the years since the Agile Manifesto, the increasing popularity of agile and the dramatic improvements it brings has pushed it onto larger and larger projects. Additionally, having an entire team--especially on a large project--in one room, or even one building is a luxury no longer enjoyed by many projects.\nIn this presentation, we will look at how agile can be scaled to work on any multi-team project. Even a project with two teams will benefit from learning how to proactively manage interteam dependencies, conduct iteration planning for multiple teams, cultivate communities of practice, and coordinating work. Because so many projects are spread across multiple sites we will also look at overcoming the unique challenges facing distributed teams. We will look at deciding how to distribute a team, how to create coherence among team members, the importance of getting together and when are the most important times to use the travel budget, changes to what the team documents, and how to handle meetings when spread across timezones. Whether your project is spread across two locations in the same city or spread around the globe, you will leave with practical advice to try tomorrow.",
+    "timeslots": "06 December 2013 15:00 - 16:00",
+    "speakerId": 12
   },
   {
     "id": 334,
     "dayno": 3,
-    "title": "\r\n\t\t\tLessons from a Polyglot Programme\r\n\t\t",
-    "speakerId": 3
+    "title": "\r\n\t\t\tAgile development with Team Foundation Server 2013\r\n\t\t",
+    "description": "Team Foundation Server provides a range of tools to support Agile projects including web based product backlogs, sprint backlogs, task boards, capacity planning and charts such as velocity and burndown. This session will demonstrate these tools and include the latest features such as Agile portfolio management, work item charting and team rooms, as well as covering other related aspects like storyboarding, getting stakeholder feedback, exploratory testing and Kanban support.",
+    "timeslots": "06 December 2013 15:00 - 16:00",
+    "speakerId": 0
   },
   {
     "id": 335,
     "dayno": 3,
-    "title": "\r\n\t\t\tBDD all the way down\r\n\t\t",
-    "speakerId": 56
+    "title": "\r\n\t\t\tLessons from a Polyglot Programme\r\n\t\t",
+    "description": "As developers, architects and operations folk we are often scared of taking on too many technologies. Whether that's the web stack, persistence or integration. Our organisations standardise on single stack solutions, often because \"we've already got licenses\" or \"we only have the skills for xxx\". This talk is about a programme that has adopted a number of different technologies in a formerly dot not shop and the lessons we have learned during the the two year journey.\nJames and Matt will talk about organisational and team barriers to adopting a polyglot approach; the technologies we have chosen to adopt and why they were chosen. So, come along and learn a bit about event-sourcing, NoSQL, Microservices, Infrastructure Automation and \"Build it, Run it\". Because \"is it on MSDN?\" isn't the only question to ask anymore...",
+    "timeslots": "06 December 2013 16:20 - 17:20",
+    "speakerId": 3
   },
   {
     "id": 336,
     "dayno": 3,
-    "title": "\r\n\t\t\tExploring the C# scripting experience with scriptcs\r\n\t\t",
-    "speakerId": 57
+    "title": "\r\n\t\t\tBDD all the way down\r\n\t\t",
+    "description": "In this session I'll show how to apply the Behavior Driven Development (BDD) cycle when developing a feature from top to bottom in a fictitious .NET web application. Building on the concepts of Test Driven Development, I'll show you how BDD helps you produce tests that read like specifications, by forcing you to focus on what the system is supposed to do, rather than how it's implemented.\nStarting from the acceptance tests seen from the user's perspective, we'll work our way through the system implementing the necessary components at each tier, guided by unit tests. In the process, I'll cover how to write BDD-style tests in plain English with SpecFlow, in JavaScript with Jasmin and in C# with MSpec. In other words, it'll be BDD all the way down.",
+    "timeslots": "06 December 2013 16:20 - 17:20",
+    "speakerId": 56
   },
   {
     "id": 337,
     "dayno": 3,
-    "title": "\r\n\t\t\tDemystifying the Reactive Extensions\r\n\t\t",
-    "speakerId": 58
+    "title": "\r\n\t\t\tExploring the C# scripting experience with scriptcs\r\n\t\t",
+    "description": "Do you ever feel like Visual Studio is slowing you down? Is a brand new solution really necessary if all you want to do is explore an idea with code? Why can't the C# experience be as simple and frictionless as a scripting language - like Ruby or node.js?\nBelieve it or not, it can be!\nIn this session, I will introduce you to a whole new perspective on C#. Using only a simple text editor and a command prompt, I will show you how you can harness the power of C# in a scripting environment. See how NuGet integration makes it easy to use your favorite frameworks and packages directly from your command line. Learn how you can bootstrap your environment with script packs to further reduce the amount of code you need to write to setup your favorite frameworks. Come to this talk to experience C# on a diet - a new, leaner way to develop.",
+    "timeslots": "06 December 2013 16:20 - 17:20",
+    "speakerId": 57
   },
   {
     "id": 338,
     "dayno": 3,
-    "title": "\r\n\t\t\tBitcoin and The Future of Cryptocurrency\r\n\t\t",
-    "speakerId": 77
+    "title": "\r\n\t\t\tDemystifying the Reactive Extensions\r\n\t\t",
+    "description": "Reactive programming marks a major shift in the way we build asynchronous and event driven applications, replacing imperative control flow constructs with declarative data flow. Knowing what's going on under-the-covers can remove some of the mystique, and leave you better able to reason about the data flow in your own Reactive applications. Learn how Microsoft's Reactive Extensions work by joining us as we reimplement the core functionality from scratch.",
+    "timeslots": "06 December 2013 16:20 - 17:20",
+    "speakerId": 58
   },
   {
     "id": 339,
     "dayno": 3,
+    "title": "\r\n\t\t\tBitcoin and The Future of Cryptocurrency\r\n\t\t",
+    "description": "2013 has been the year of Bitcoin and cryptocurrency meaning that the future of currency may never be the same again. This presentation will provide attendees with the essential information about this new world, how they can take advantage and how it may effect them going forward.\nTo provide the foundation, Ben will discuss the background and history with technical aspects about how Bitcoin and other currencies including Litecoin and Feathercoin operate. These key factors are crucial to being able to buy, sell and build on top of the network. With the essential details covered, Ben will demonstrate how you can integrate and accept Bitcoins within your applications including discussions around how websites such as SatoshiDice bend the rules to generate even greater rewards. Finally, Ben will consider the future and discuss how cryptocurrency implementations could change the world.\nAt the end of the session, attendees will have the knowledge required to start working with Bitcoin, building on top of the network and protocol and thinking about different ways to take advantage of this new technology.",
+    "timeslots": "06 December 2013 16:20 - 17:20",
+    "speakerId": 77
+  },
+  {
+    "id": 340,
+    "dayno": 3,
+    "title": "\r\n\t\t\tFrom audience member to speaker.. Managing technical presentations\r\n\t\t",
+    "description": "Have you ever wanted to get up and do a technical talk and just couldnt figure out where to start. Or have you being doing talks but want to get better. Well then this session is for you.\nWe will go through some of most common mistakes that speakers can make. We will look at ways to prepare your session, practicing your talk and how to identify weak spots in your presentations so that you can get better as a technical presenter.\nThis talk is aimed at people who would like to try presenting or are already doing it and want to get better. There will be slides, there will be examples of how to present code and there will be cake*\n*the cake is a lie",
+    "timeslots": "06 December 2013 16:20 - 17:20",
+    "speakerId": 0
+  },
+  {
+    "id": 341,
+    "dayno": 3,
     "title": "\r\n\t\t\tRelease Management with Visual Studio 2013 â€“ InRelease\r\n\t\t",
-    "speakerId": 35
+    "description": "Visual Studio 2013 has new functionality for Release Management with InRelease. In this presentation Colin Beales will demonstrate how Release Management can be used with Team Foundation Server 2013 to manage the deployment process into your various environments through to production. The session will demonstrate how deployments can be automated and how an audited approvals process can be put in place to allow environment owners the control of releases flowing into their environments.",
+    "timeslots": "06 December 2013 16:20 - 17:20",
+    "speakerId": 36
   }
 ]

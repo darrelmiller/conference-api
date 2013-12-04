@@ -24,66 +24,63 @@ namespace ConferenceWebApi.Controllers
          public HttpResponseMessage Get()
          {
              
-             var events = _dataService.SessionRepository.GetAll();
-             var eventsCollection = GetCollection(events);
+             var sessions = _dataService.SessionRepository.GetAll();
+             var collection = GetCollection(sessions);
 
-            return new HttpResponseMessage() {
-                Content = new CollectionJsonContent(eventsCollection)
-            };
+            return Request.RespondOk(new CollectionJsonContent(collection));
         }
 
-       
 
         [Route("", Name = Links.SessionsBySpeaker)]
         public HttpResponseMessage GetSessionsBySpeaker(int speakerId)
         {
-            var events = _dataService.SessionRepository.GetAll().Where(e => e.SpeakerId == speakerId);
-            var eventsCollection = GetCollection(events);
+            var sessions = _dataService.SessionRepository.GetAll().Where(e => e.SpeakerId == speakerId);
+            var collection = GetCollection(sessions);
 
-            return new HttpResponseMessage()
-            {
-                Content = new CollectionJsonContent(eventsCollection)
-            };
+            return Request.RespondOk(new CollectionJsonContent(collection));
         }
 
         [Route("", Name = Links.SessionsBySpeakerName)]
-        public HttpResponseMessage GetSessionsBySpeakerName(string speakerName)
+        public HttpResponseMessage GetSessionsBySpeakerName(string speakername)
         {
-            var speaker = _dataService.SpeakerRepository.GetAll().FirstOrDefault(s => s.Name == speakerName);
-            if (speaker == null) return Request.RespondNotFound("Unknown speaker - " + speakerName);
+            var speaker = _dataService.SpeakerRepository.GetAll().FirstOrDefault(s => s.Name == speakername);
+            if (speaker == null) return Request.RespondNotFound("Unknown speaker - " + speakername);
 
             var sessions = _dataService.SessionRepository.GetAll().Where(e => e.SpeakerId == speaker.Id);
             var collection = GetCollection(sessions);
 
-            return new HttpResponseMessage()
-            {
-                Content = new CollectionJsonContent(collection)
-            };
+            return Request.RespondOk(new CollectionJsonContent(collection));
         }
 
         [Route("", Name = Links.SessionsByDay)]
         public HttpResponseMessage GetSessionsByDay(int dayno)
         {
-            
             var sessions = _dataService.SessionRepository.GetSessionsByDay(dayno).ToList();
             var collection = GetCollection(sessions);
 
-            return new HttpResponseMessage()
-            {
-                Content = new CollectionJsonContent(collection)
-            };
+            return Request.RespondOk(new CollectionJsonContent(collection));
+        }
+
+
+        [Route("", Name = Links.SessionsByKeyword)]
+        public HttpResponseMessage GetSessionsByKeyword(string keyword)
+        {
+
+            var sessions = _dataService.SessionRepository.GetAll().Where(e => e.Description.Contains(keyword));
+            var collection = GetCollection(sessions);
+
+            return Request.RespondOk(new CollectionJsonContent(collection));
         }
 
         [Route("", Name = Links.SessionsByTopic)]
         public HttpResponseMessage GetSessionsByTopic(int topicid)
         {
-            var events = _dataService.SessionRepository.GetAll().Where(e => true);
-            var eventsCollection = GetCollection(events);
+            var sessiontopics = _dataService.SessionTopicRepository.GetAll().Where(s => s.TopicId == topicid);
+            var sessions = sessiontopics.Select(sessiontopic => _dataService.SessionRepository.Get(sessiontopic.SessionId)).ToList();
 
-            return new HttpResponseMessage()
-            {
-                Content = new CollectionJsonContent(eventsCollection)
-            };
+            var collection = GetCollection(sessions);
+
+            return Request.RespondOk(new CollectionJsonContent(collection));
         }
 
 
@@ -104,8 +101,11 @@ namespace ConferenceWebApi.Controllers
                             Value = _dataService.SpeakerRepository.Get(session.SpeakerId).Name
                         });
                 }
+                
+
                 item.Links.Add(Request.ResolveLink<SessionLink>(Links.SessionById, new { id = session.Id }).ToCJLink());
                 item.Links.Add(Request.ResolveLink<SpeakerLink>(Links.SpeakerById, new { id = session.SpeakerId }).ToCJLink());
+                item.Links.Add(Request.ResolveLink<TopicsLink>(Links.TopicsBySession, new { sessionid = session.Id }).ToCJLink());
                 eventsCollection.Items.Add(item);
             }
             return eventsCollection;

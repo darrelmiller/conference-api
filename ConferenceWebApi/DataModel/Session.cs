@@ -1,4 +1,4 @@
-﻿namespace ConferenceWebPack
+﻿namespace ConferenceWebApi.DataModel
 {
     public class Session
     {
@@ -7,5 +7,7 @@
         public int SpeakerId { get; set; }
         public int Dayno { get; set; }
         public int Timeslot { get; set; }
+        public string TimeslotDescription { get; set; }
+        public string Description { get; set; }
     }
 }

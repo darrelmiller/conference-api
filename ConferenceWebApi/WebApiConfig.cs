@@ -23,8 +23,7 @@ namespace ConferenceWebApi
                 AllClasses.FromLoadedAssemblies().Where(t => t.IsAssignableFrom(typeof(IHttpController))),
                 WithMappings.FromAllInterfaces);
             config.DependencyResolver = new UnityDependencyResolver(unityContainer);
-            config.MessageHandlers.Add(new DescribedByHandler());
-            config.MessageHandlers.Add(new HeadMessageHandler());
+          
             config.MapHttpAttributeRoutes();
 
 

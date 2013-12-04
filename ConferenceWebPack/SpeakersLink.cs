@@ -1,4 +1,6 @@
-﻿using System.Net.Http;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Net.Http;
 using Tavis;
 using Tavis.Home;
 using Tavis.IANA;
@@ -16,7 +18,9 @@ namespace ConferenceWebPack
                     h.AddMethod(HttpMethod.Put);
                     h.AddMethod(HttpMethod.Delete);
                 });
-            this.AddHint<FormatsHint>(h => h.AddMediaType("application/collection+json"));
+            this.AddHint<FormatsHint>(h => h.AddMediaType("application/vnd.collection+json"));
         }
+
+          
     }
 }
