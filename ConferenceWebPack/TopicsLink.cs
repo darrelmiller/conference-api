@@ -8,15 +8,5 @@ namespace ConferenceWebPack
     [LinkRelationType("http://tavis.net/rels/topics")]
     public class TopicsLink : Link
     {
-        public TopicsLink()
-        {
-            this.AddHint<AllowHint>(h =>
-                {
-                    h.AddMethod(HttpMethod.Get);
-                    h.AddMethod(HttpMethod.Put);
-                    h.AddMethod(HttpMethod.Delete);
-                });
-            this.AddHint<FormatsHint>(h => h.AddMediaType("application/collection+json"));
-        }
     }
 }

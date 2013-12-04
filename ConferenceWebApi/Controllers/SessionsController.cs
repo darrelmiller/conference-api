@@ -68,7 +68,7 @@ namespace ConferenceWebApi.Controllers
 
             var sessions = _dataService.SessionRepository.GetAll().Where(e => e.Description.Contains(keyword));
             var collection = GetCollection(sessions);
-
+            
             return Request.RespondOk(new CollectionJsonContent(collection));
         }
 

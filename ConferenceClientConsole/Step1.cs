@@ -41,7 +41,6 @@ namespace ConferenceClientConsole
         [Fact]
         public async Task MakeMultipleRequests()
         {
-            ServicePointManager.DefaultConnectionLimit = ServicePointManager.DefaultConnectionLimit;
             var api = new ConferenceApi();
             var speakers = await api.GetAllSpeakers();
             foreach (var speakerDto in speakers)

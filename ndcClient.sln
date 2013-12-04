@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceClientConsole", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceClientLib", "ConferenceClientLib\ConferenceClientLib.csproj", "{B09723B7-A3B2-4B88-B295-23465ECB4477}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceWebPack", "ConferenceWebPack\ConferenceWebPack.csproj", "{18B4CA0F-D309-49FF-B700-5A4AB2924271}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferenceWebPack45", "ConferenceWebPack45\ConferenceWebPack45.csproj", "{7C15619A-E248-47AF-9A55-331B64737BFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,10 @@ Global
 		{B09723B7-A3B2-4B88-B295-23465ECB4477}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B09723B7-A3B2-4B88-B295-23465ECB4477}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B09723B7-A3B2-4B88-B295-23465ECB4477}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18B4CA0F-D309-49FF-B700-5A4AB2924271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18B4CA0F-D309-49FF-B700-5A4AB2924271}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18B4CA0F-D309-49FF-B700-5A4AB2924271}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18B4CA0F-D309-49FF-B700-5A4AB2924271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C15619A-E248-47AF-9A55-331B64737BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C15619A-E248-47AF-9A55-331B64737BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C15619A-E248-47AF-9A55-331B64737BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C15619A-E248-47AF-9A55-331B64737BFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

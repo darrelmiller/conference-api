@@ -10,11 +10,6 @@ namespace ConferenceWebPack
     {
         public DaysLink()
         {
-            this.AddHint<AllowHint>(h =>
-                {
-                    h.AddMethod(HttpMethod.Get);
-                });
-            this.AddHint<FormatsHint>(h => h.AddMediaType("application/vnd.collection+json"));
         }
     }
 }

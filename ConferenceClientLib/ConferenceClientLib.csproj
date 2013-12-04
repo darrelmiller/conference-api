@@ -96,9 +96,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConferenceWebPack\ConferenceWebPack.csproj">
-      <Project>{18b4ca0f-d309-49ff-b700-5a4ab2924271}</Project>
-      <Name>ConferenceWebPack</Name>
+    <ProjectReference Include="..\ConferenceWebPack45\ConferenceWebPack45.csproj">
+      <Project>{7c15619a-e248-47af-9a55-331b64737bfc}</Project>
+      <Name>ConferenceWebPack45</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

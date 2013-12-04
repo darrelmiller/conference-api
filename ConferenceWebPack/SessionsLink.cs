@@ -8,13 +8,9 @@ namespace ConferenceWebPack
     [LinkRelationType("http://tavis.net/rels/sessions")]
     public class SessionsLink : Link
     {
-        public SessionsLink()
+        public void SetDay(int day)
         {
-            this.AddHint<AllowHint>(h =>
-                {
-                    h.AddMethod(HttpMethod.Get);
-                 });
-            this.AddHint<FormatsHint>(h => h.AddMediaType("application/vnd.collection+json"));
+            SetParameter("dayno",day.ToString());
         }
     }
 }

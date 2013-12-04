@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -26,7 +27,29 @@ namespace ConferenceClientConsole
         [Fact]
         public async Task GetAllSpeakers()
         {
-            // Retreive the Home document
+            var homeDocument = await GetHomeDocument();
+
+            // Get the speakers link
+            var speakersLink = homeDocument.GetResource<SpeakersLink>();
+
+            // Get the Speakers
+            var speakersResponse = await _client.SendAsync(speakersLink.CreateRequest());
+
+            // Interpret the result
+            var collection = await speakersLink.ParseResponse(speakersResponse);
+
+            foreach (var item in collection.Items)
+            {
+                foreach (var data in item.Data)
+                {
+                    Debug.WriteLine(data.Value);
+                }
+             
+            }
+        }
+
+        private async Task<HomeDocument> GetHomeDocument()
+        {
             var linkFactory = new LinkFactory();
             ConferenceWebPack.Config.Register(linkFactory);
 
@@ -35,24 +58,23 @@ namespace ConferenceClientConsole
             var response = await _client.SendAsync(homeLink.CreateRequest());
 
             var homeDocument = await homeLink.ParseResponse(response, linkFactory);
-
-            // Get the speakers link
-            var speakersLink = homeDocument.GetResource(LinkHelper.GetLinkRelationTypeName<SpeakersLink>()) as SpeakersLink;
-
-            // Get the Speakers
-            var speakersResponse = await _client.SendAsync(speakersLink.CreateRequest());
-
-            // Interpret the result
-            var collection = speakersLink.ParseResponse(speakersResponse);
-
+            return homeDocument;
         }
 
         [Fact]
         public async Task GetAllSessions()
         {
 
-            var api = new ConferenceApi();
-            var sessions = await api.GetAllSessions();
+            var homeDocument = await GetHomeDocument();
+
+            var sessionsLink = homeDocument.GetResource<SessionsLink>();
+
+            sessionsLink.SetDay(1);
+            var request = sessionsLink.CreateRequest();
+            var sessionsResponse = await _client.SendAsync(request);
+
+            // Interpret the result
+            var collection = await sessionsLink.ParseResponse(sessionsResponse);
 
         }
        
@@ -65,18 +87,6 @@ namespace ConferenceClientConsole
 
         }
 
-        [Fact]
-        public async Task MakeMultipleRequests()
-        {
-           
-            var api = new ConferenceApi();
-            var speakers = await api.GetAllSpeakers();
-            foreach (var speakerDto in speakers)
-            {
-                var sessions = await api.GetSessionsBySpeakerName(speakerDto.Name);    
-            }
-            
-
-        }
+     
     }
 }
