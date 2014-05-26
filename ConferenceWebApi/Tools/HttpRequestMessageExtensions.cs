@@ -11,12 +11,17 @@ namespace ConferenceWebApi.Tools
             var urlHelper = new UrlHelper(request);
             return new Uri(urlHelper.Link(routeName, parameters));  
         }
+
+        public static T ResolveLink<T>(this HttpRequestMessage request, string routeName, string queryParams) where T : Tavis.Link, new()
+        {
+            return request.ResolveLink<T>(routeName, null,queryParams);
+        }
+
         public static T ResolveLink<T>(this HttpRequestMessage request, string routeName, object parameters = null, string queryParams = null)  where T : Tavis.Link, new()
         {
             var urlHelper = new UrlHelper(request);
             
-            var link = new T {Target = new Uri(urlHelper.Link(routeName, parameters).Replace("[","{").Replace("]","}") + queryParams ?? "")};
-
+            var link = new T {Target = new Uri(urlHelper.Link(routeName, parameters).Replace("[","{").Replace("]","}") + (queryParams ?? ""))};
 
             return link;
         }

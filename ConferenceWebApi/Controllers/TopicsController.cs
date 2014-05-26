@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Web.Http;
 using ConferenceWebApi.DataModel;
+using ConferenceWebApi.ServerLinks;
 using ConferenceWebApi.Tools;
 using ConferenceWebPack;
 using WebApiContrib.CollectionJson;
@@ -20,61 +21,28 @@ namespace ConferenceWebApi.Controllers
             _dataService = dataService;
         }
 
-        [Route("", Name = Links.AllTopics)]
-        public HttpResponseMessage Get()
+        [Route("", Name = TopicsLinkHelper.TopicsSearchRoute)]
+        public IHttpActionResult Get()
         {
-
             var topics = _dataService.TopicRepository.GetAll();
-            var topicsCollection = GetCollection(topics);
-
-            return new HttpResponseMessage()
-            {
-                Content = new CollectionJsonContent(topicsCollection)
-            };
+            return TopicsLinkHelper.GetResponse(topics, Request);
         }
 
-        [Route("", Name = Links.TopicsBySession)]
-        public HttpResponseMessage Get(int sessionId)
+
+
+        [Route("")]
+        public IHttpActionResult Get(int dayno)
         {
 
-            var sessionTopics = _dataService.SessionTopicRepository.GetAll().Where(st => st.SessionId == sessionId);
+            var topics = _dataService.SessionRepository.GetSessionsByDay(dayno)
+                .SelectMany(s => _dataService.SessionTopicRepository.GetTopicsBySession(s.Id))
+                .Select(st => st.TopicId).Distinct().Select(s => _dataService.TopicRepository.Get(s));
 
-            var topics = sessionTopics.Select(st => _dataService.TopicRepository.Get(st.TopicId));
-
-            var topicsCollection = GetCollection(topics);
-
-            return Request.RespondOk(new CollectionJsonContent(topicsCollection));
+            return TopicsLinkHelper.GetResponse(topics, Request);
         }
 
-        //[Route("", Name = Links.TopicsByDay)]
-        //public HttpResponseMessage Get(int dayno)
-        //{
-
-        //    var topics = _dataService.SessionRepository.GetSessionsByDay(dayno); //.Select(s => s.TopicId).Distinct().Select(s => _dataService.TopicRepository.Get(s));
-        //    var topicsCollection = GetCollection(topics);
-
-        //    return new HttpResponseMessage()
-        //    {
-        //        Content = new CollectionJsonContent(topicsCollection)
-        //    };
-        //}
 
 
-
-        private Collection GetCollection(IEnumerable<Topic> topics)
-        {
-            var eventsCollection = new Collection();
-
-            foreach (var topic in topics)
-            {
-                var item = new Item();
-
-                item.Data.Add(new Data { Name = "Title", Value = topic.Name });
-                item.Links.Add(Request.ResolveLink<SessionsLink>(Links.SessionsByTopic, new { topicid = topic.Id }).ToCJLink());
-                eventsCollection.Items.Add(item);
-            }
-            return eventsCollection;
-        }
 
 
 

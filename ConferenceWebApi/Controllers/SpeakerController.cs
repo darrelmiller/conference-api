@@ -1,17 +1,15 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web.Http;
 using ConferenceWebApi.DataModel;
-using ConferenceWebApi.Tools;
-using ConferenceWebPack;
-using Newtonsoft.Json.Linq;
-using Tavis;
-using Tavis.IANA;
+using ConferenceWebApi.ServerLinks;
+
 
 namespace ConferenceWebApi.Controllers
 {
-     [RoutePrefix("speaker")]
+    [RoutePrefix("speaker")]
     public class SpeakerController : ApiController
     {
          private readonly DataService _dataService;
@@ -22,47 +20,36 @@ namespace ConferenceWebApi.Controllers
              _dataService = dataService;
          }
 
-         [Route("{id}",Name = Links.SpeakerById)]
-        public HttpResponseMessage GetSpeaker(int id)
+        [Route("{id}",Name = SpeakerLinkHelper.SpeakerByIdRoute)]
+        public IHttpActionResult GetSpeaker(int id)
         {
-
             var speakerInfo = _dataService.SpeakerRepository.Get(id);
 
-            var response = Request.RespondOk();
-
-             if (Request.Headers.Accept.Contains(new MediaTypeWithQualityHeaderValue("application/hal+json")))
-             {
-                 response.Content = CreateHalContent(speakerInfo);
-             }
-             else
-             {
-                 response.Content = new StringContent(speakerInfo.Name + Environment.NewLine + speakerInfo.Bio);
-                 response.Headers.AddLinkHeader(Request.ResolveLink<SessionsLink>(Links.SessionsBySpeaker, new { speakerId = speakerInfo.Id }));
-                 response.Headers.AddLinkHeader(new IconLink() { Target = new Uri(speakerInfo.ImageUrl) });
-             }
-
-            return response;
+            return SpeakerLinkHelper.CreateResponse(speakerInfo, Request);
         }
 
-         private HttpContent CreateHalContent(Speaker speakerInfo)
+    
+        [Route("{id}/sessions", Name = SessionsLinkHelper.SpeakerSessionsRoute)]
+         public IHttpActionResult GetSessionsBySpeaker(int id)
          {
-             dynamic jspeaker = new JObject();
-             jspeaker.name = speakerInfo.Name;
-             jspeaker.bio = speakerInfo.Bio;
-             
-             dynamic links = new JObject();
-             
-             dynamic iconLink = new JObject();
-             iconLink.href = speakerInfo.ImageUrl;
-             links.icon = iconLink;
+             var sessions = _dataService.SessionRepository.GetAll().Where(s => s.SpeakerId == id);
 
-             dynamic sessionsLink = new JObject();
-             sessionsLink.href = Request.ResolveLink<SessionsLink>(Links.SessionsBySpeaker, new { speakerId = speakerInfo.Id }).Target;
-             links[LinkHelper.GetLinkRelationTypeName<SessionsLink>()] = sessionsLink;
-
-             jspeaker["_links"] = links;
-             
-            return new DynamicHalContent(jspeaker);
+             return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
+            
          }
+
+         [Route("{id}/topics", Name = TopicsLinkHelper.SpeakerTopicsRoute)]
+         public IHttpActionResult GetTopicsBySpeaker(int id)
+         {
+             var topics = _dataService.SessionRepository.GetAll()
+                 .Where(s => s.SpeakerId == id)
+                 .SelectMany(s => _dataService.SessionTopicRepository.GetTopicsBySession(s.Id))
+                 .Select(st => st.TopicId)
+                 .Distinct()
+                 .Select(t => _dataService.TopicRepository.Get(t));
+
+             return TopicsLinkHelper.GetResponse(topics, Request);
+         }
+
     }
 }

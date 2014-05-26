@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ndc")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Conference Api")]
+[assembly: AssemblyDescription("Hypermedia based Web API Conference ")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ndc")]
+[assembly: AssemblyCompany("Tavis Software Inc.")]
+[assembly: AssemblyProduct("ConferenceApi")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

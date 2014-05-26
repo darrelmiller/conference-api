@@ -23,7 +23,7 @@ namespace ConferenceClientLib.Gen2
     /// <summary>
     /// The smart wrapper
     /// </summary>
-    public class ConferenceApi
+    public class ConferenceApi : IDisposable
     {
         private const string AllSessions = "sessions";
         private const string AllSpeakers = "speakers";
@@ -42,7 +42,7 @@ namespace ConferenceClientLib.Gen2
             var response = await _HttpClient.GetAsync(AllSpeakers);
             response.EnsureSuccessStatusCode();
 
-            var readDocument = await response.Content.ReadAsAsync<ReadDocument>(new[] { new CollectionJsonFormatter() });
+            var readDocument = await response.Content.ReadAsAsync<ReadDocument>(new[] {new CollectionJsonFormatter()});
             return ParseSpeakers(readDocument);
         }
 
@@ -62,20 +62,20 @@ namespace ConferenceClientLib.Gen2
             var response = await _HttpClient.GetAsync(AllSessions);
             response.EnsureSuccessStatusCode();
 
-            var readDocument = await response.Content.ReadAsAsync<ReadDocument>(new[] { new CollectionJsonFormatter() });
+            var readDocument = await response.Content.ReadAsAsync<ReadDocument>(new[] {new CollectionJsonFormatter()});
             return ParseSessions(readDocument);
         }
 
         public async Task<List<SessionDTO>> GetSessionsBySpeaker(int speakerid)
         {
 
-            var response = await _HttpClient.GetAsync(SessionsBySpeaker.Replace("{speakerid}",speakerid.ToString()) );
+            var response = await _HttpClient.GetAsync(SessionsBySpeaker.Replace("{speakerid}", speakerid.ToString()));
             response.EnsureSuccessStatusCode();
 
-            var readDocument = await response.Content.ReadAsAsync<ReadDocument>(new[] { new CollectionJsonFormatter() });
+            var readDocument = await response.Content.ReadAsAsync<ReadDocument>(new[] {new CollectionJsonFormatter()});
 
             return ParseSessions(readDocument);
-            
+
         }
 
         public async Task<List<SessionDTO>> GetSessionsBySpeakerName(string speakerName)
@@ -83,10 +83,10 @@ namespace ConferenceClientLib.Gen2
             var response = await _HttpClient.GetAsync(SessionsBySpeakerName.Replace("{speakername}", speakerName));
             response.EnsureSuccessStatusCode();
 
-            var readDocument = await response.Content.ReadAsAsync<ReadDocument>(new[] { new CollectionJsonFormatter() });
+            var readDocument = await response.Content.ReadAsAsync<ReadDocument>(new[] {new CollectionJsonFormatter()});
 
             return ParseSessions(readDocument);
-         
+
         }
 
         private static List<SessionDTO> ParseSessions(ReadDocument readDocument)
@@ -98,8 +98,12 @@ namespace ConferenceClientLib.Gen2
                 {
                     switch (data.Name)
                     {
-                        case "Title": session.Title = data.Value; break;
-                        case "SpeakerName": session.SpeakerName = data.Value; break;
+                        case "Title":
+                            session.Title = data.Value;
+                            break;
+                        case "SpeakerName":
+                            session.SpeakerName = data.Value;
+                            break;
                     }
                 }
                 return session;
@@ -115,7 +119,16 @@ namespace ConferenceClientLib.Gen2
             client.BaseAddress = new Uri("http://birch:1001/");
             // Setup default headers,
             // Setup security credentials
+            // Cookies
+            // Caching
+            // MessageHandlers
             return client;
+        }
+
+        public void Dispose()
+        {
+            _HttpClient.Dispose();
         }
     }
 }
+

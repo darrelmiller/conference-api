@@ -21,7 +21,7 @@ namespace ConferenceClientLib.Gen1
 
         public async Task<List<SpeakerDTO>> GetAllSpeakers()
         {
-            using (var httpClient = CreateHttpClient())
+            using (var httpClient = new HttpClient {BaseAddress = new Uri("http://127.0.0.1:1001")})
             {
                 var response = await httpClient.GetAsync("speakers");
                 response.EnsureSuccessStatusCode();
@@ -39,7 +39,7 @@ namespace ConferenceClientLib.Gen1
 
         public async Task<List<SessionDTO>> GetAllSessions()
         {
-            using (var httpClient = CreateHttpClient())
+            using (var httpClient = new HttpClient {BaseAddress = new Uri("http://127.0.0.1:1001")})
             {
                 var response = await httpClient.GetAsync("sessions");
                 response.EnsureSuccessStatusCode();
@@ -58,7 +58,7 @@ namespace ConferenceClientLib.Gen1
 
         public async Task<List<SessionDTO>> GetSessionsBySpeaker(int speakerid)
         {
-            using (var httpClient = CreateHttpClient())
+            using (var httpClient = new HttpClient {BaseAddress = new Uri("http://127.0.0.1:1001")})
             {
                 var response = await httpClient.GetAsync("sessions?speakerId=" + speakerid);
                 response.EnsureSuccessStatusCode();
@@ -78,7 +78,7 @@ namespace ConferenceClientLib.Gen1
 
         public async Task<List<SessionDTO>> GetSessionsBySpeakerName(string speakerName)
         {
-            using (var httpClient = CreateHttpClient())
+            using (var httpClient = new HttpClient {BaseAddress = new Uri("http://127.0.0.1:1001")})
             {
                 var response = await httpClient.GetAsync("sessions?speakerName=" + speakerName);
                 response.EnsureSuccessStatusCode();
@@ -95,16 +95,12 @@ namespace ConferenceClientLib.Gen1
                 return sessions;
             }
         }
-
-        private HttpClient CreateHttpClient()
-        {
-            var client = new HttpClient();
-            // do all the setup stuff
-            client.BaseAddress = new Uri("http://birch:1001/");
-            // Setup default headers,
-            // Setup security credentials
-            return client;
-        }
-
-       }
+    }
 }
+
+
+// Can't change the BaseAddress
+// Redundantly does setup of HttpClient on every request.
+// Error handling is duplicated on each method
+// Response interpretation  is duplicated on each method.
+// Hardcoded URIs

@@ -68,8 +68,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Tavis.Home.0.5.8\lib\portable-win+net40+sl40+wp71\Tavis.Home.dll</HintPath>
     </Reference>
-    <Reference Include="Tavis.Link">
-      <HintPath>..\packages\Tavis.Link.0.5.0\lib\portable-win+net40+sl40+wp71\Tavis.Link.dll</HintPath>
+    <Reference Include="Tavis.Link, Version=0.1.5202.28367, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Tavis.Link.2.0.0-beta\lib\portable-win+net40+sl40+wp71\Tavis.Link.dll</HintPath>
     </Reference>
     <Reference Include="Tavis.UriTemplates">
       <HintPath>..\packages\Tavis.UriTemplates.0.4\lib\Net35\Tavis.UriTemplates.dll</HintPath>
@@ -90,9 +91,12 @@
     <Compile Include="DTOs\TopicDTO.cs" />
     <Compile Include="Gen2\ConferenceApi.cs" />
     <Compile Include="Gen3\ConferenceApi.cs" />
+    <Compile Include="Gen4\ConferenceApi.cs" />
+    <Compile Include="LinkExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

@@ -6,12 +6,12 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using ConferenceClientLib;
 using ConferenceClientLib.Gen2;
 using ConferenceWebPack;
 using Tavis;
 using Tavis.Home;
 using Xunit;
-
 
 namespace ConferenceClientConsole
 {
@@ -33,10 +33,10 @@ namespace ConferenceClientConsole
             var speakersLink = homeDocument.GetResource<SpeakersLink>();
 
             // Get the Speakers
-            var speakersResponse = await _client.SendAsync(speakersLink.CreateRequest());
+            var speakersResponse = await _client.SendAsync(speakersLink.BuildRequestMessage());
 
             // Interpret the result
-            var collection = await speakersLink.ParseResponse(speakersResponse);
+            var collection = await speakersLink.ParseResponseAsync(speakersResponse);
 
             foreach (var item in collection.Items)
             {
@@ -55,7 +55,7 @@ namespace ConferenceClientConsole
 
             var homeLink = linkFactory.CreateLink<HomeLink>();
             homeLink.Target = new Uri("http://birch:1001/");
-            var response = await _client.SendAsync(homeLink.CreateRequest());
+            var response = await _client.SendAsync(homeLink.BuildRequestMessage());
 
             var homeDocument = await homeLink.ParseResponse(response, linkFactory);
             return homeDocument;
@@ -69,12 +69,11 @@ namespace ConferenceClientConsole
 
             var sessionsLink = homeDocument.GetResource<SessionsLink>();
 
-            sessionsLink.SetDay(1);
-            var request = sessionsLink.CreateRequest();
+            var request = sessionsLink.BuildRequestMessage(new Dictionary<string, object>{{"day",1}});
             var sessionsResponse = await _client.SendAsync(request);
 
             // Interpret the result
-            var collection = await sessionsLink.ParseResponse(sessionsResponse);
+            var collection = await sessionsLink.ParseResponseAsync(sessionsResponse);
 
         }
        

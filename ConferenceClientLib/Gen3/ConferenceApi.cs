@@ -12,14 +12,9 @@ using WebApiContrib.Formatting.CollectionJson.Client;
 
 namespace ConferenceClientLib.Gen3
 {
-    // Centralize and decouple URIs
-    // Reuse semantic parsing code
-    // Use lenient parsing
-    // Share HTTPClient
+    // Externalize HttpClient
+    // Discover URIs from home document
 
-    // Variants on this could be 
-    //   derived HttpClient
-    //   Extension methods
 
     public class ConferenceApi
     {

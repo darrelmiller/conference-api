@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Description;
+using System.Web.Http.Results;
 using ConferenceWebApi.DataModel;
-using ConferenceWebApi.Tools;
-using ConferenceWebPack;
-using WebApiContrib.CollectionJson;
+using ConferenceWebApi.ServerLinks;
 using System.Linq;
+using NotFoundResult = ConferenceWebApi.Tools.NotFoundResult;
+
 
 namespace ConferenceWebApi.Controllers
 {
@@ -22,67 +22,41 @@ namespace ConferenceWebApi.Controllers
             _dataService = dataService;
         }
 
-        [Route("", Name = Links.AllSpeakers)]
-        public HttpResponseMessage Get()
+        [Route("", Name = SpeakersLinkHelper.SpeakersSearchRoute)]
+        public IHttpActionResult Get()
         {
-
             var speakers = _dataService.SpeakerRepository.GetAll();
-            var speakersCollection = GetCollection(speakers);
-            
-            return Request.RespondOk(new CollectionJsonContent(speakersCollection));
+            return SpeakersLinkHelper.CreateResponse(speakers, Request);
+        }
+     
+
+        [Route("")]
+        public IHttpActionResult Get(int dayno)
+        {
+            var speakers = _dataService.SessionRepository.GetSessionsByDay(dayno).Select(s => s.SpeakerId).Distinct().Where(sp=> sp != 0).Select(s => _dataService.SpeakerRepository.Get(s));
+            return SpeakersLinkHelper.CreateResponse(speakers, Request);
         }
 
-
-        [Route("", Name = Links.SpeakersByDay)]
-        public HttpResponseMessage Get(int dayno)
+        [Route("")]
+        public IHttpActionResult Get(string speakername)
         {
 
-            var speakers = _dataService.SessionRepository.GetSessionsByDay(dayno).Select(s => s.SpeakerId).Distinct().Select(s => _dataService.SpeakerRepository.Get(s));
-            var speakersCollection = GetCollection(speakers);
-
-            return Request.RespondOk(new CollectionJsonContent(speakersCollection));
-        }
-
-        [Route("", Name = Links.SpeakersByName)]
-        public HttpResponseMessage Get(string name)
-        {
-
-            var speakers = _dataService.SpeakerRepository.GetAll().Where(s => s.Name.Contains(name)).ToList();
+            var speakers = _dataService.SpeakerRepository.GetAll().Where(s => s.Name.Contains(speakername)).ToList();
             var count = speakers.Count();
             if (count > 1)
             {
-                var speakersCollection = GetCollection(speakers);
-                return Request.RespondOk(new CollectionJsonContent(speakersCollection));
+                return SpeakersLinkHelper.CreateResponse(speakers, Request);
 
             } else if (count == 1)
             {
                 var speaker = speakers.First();
-                var speakerLink = Request.ResolveLink<SpeakerLink>(Links.SpeakerById, new {id = speaker.Id});
-                return Request.RespondSeeOther(speakerLink);
-                
+                return new RedirectResult(SpeakerLinkHelper.CreateLink(Request, speaker).Target,Request);
             }
             else
             {
-                return Request.RespondNotFound("Speaker not found " + name);
+                return new NotFoundResult("Speaker not found " + speakername); 
             }
            
-        }
-
-
-        private  Collection GetCollection(IEnumerable<Speaker> speakers)
-        {
-            var collection = new Collection();
-
-            foreach (var speaker in speakers)
-            {
-                var item = new Item();
-
-                item.Data.Add(new Data {Name = "Name", Value = speaker.Name});
-                item.Links.Add(Request.ResolveLink<SpeakerLink>(Links.SpeakerById,new {speaker.Id}).ToCJLink());
-                collection.Items.Add(item);
-            }
-            collection.Href = Request.RequestUri;
-            return collection;
         }
 
        
