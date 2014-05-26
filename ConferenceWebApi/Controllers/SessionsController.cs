@@ -30,7 +30,6 @@ namespace ConferenceWebApi.Controllers
             return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
         }
 
-
         [Route("")] //Links.SessionsSearch
         public IHttpActionResult GetSessionsBySpeaker(int speakerId)
         {

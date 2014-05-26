@@ -5,9 +5,7 @@ using System.Web.Http;
 using System.Web.Http.Results;
 using ConferenceWebApi.ServerLinks;
 using ConferenceWebApi.Tools;
-using ConferenceWebPack;
 using Tavis.Home;
-using Tavis.IANA;
 
 namespace ConferenceWebApi.Controllers
 {
@@ -25,7 +23,6 @@ namespace ConferenceWebApi.Controllers
             home.AddResource(DaysLinkHelper.CreateLink(Request).WithHints());
             home.AddResource(SessionsLinkHelper.CreateLink(Request).WithHints());
             home.AddResource(SpeakersLinkHelper.CreateLink(Request).WithHints());
-
 
             return new OkResult(Request)
                 .WithCaching(new CacheControlHeaderValue() { MaxAge = new TimeSpan(0, 0, 60) })

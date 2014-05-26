@@ -27,7 +27,6 @@ namespace ConferenceWebApi
             config.MapHttpAttributeRoutes();
 
 
-            //config.EnableSystemDiagnosticsTracing();
-        }
+           }
     }
 }
