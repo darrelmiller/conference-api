@@ -32,107 +32,89 @@ namespace ConferenceWebApi.Tools
     }
 
 
-    public class NotFoundResult : IHttpActionResult
+
+
+    public class NotFoundResult : BaseChainedResult
     {
         private readonly string _errorMessage;
 
         public NotFoundResult(string errorMessage)
+            : base(null)
         {
             _errorMessage = errorMessage;
         }
 
-        public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+        public override void ApplyAction(HttpResponseMessage response)
         {
-            return Task.FromResult(new HttpResponseMessage() { ReasonPhrase = _errorMessage});
+            response.StatusCode = HttpStatusCode.NotFound;
+            response.ReasonPhrase = _errorMessage;
         }
     }
 
-    public class ContentResult : IHttpActionResult
+
+    public class ContentResult2 : BaseChainedResult
     {
-        private readonly IHttpActionResult _actionResult;
         private readonly HttpContent _content;
 
-        public ContentResult(IHttpActionResult actionResult, HttpContent content)
+        public ContentResult2(IHttpActionResult actionResult, HttpContent content)
+            : base(actionResult)
         {
-            _actionResult = actionResult;
             _content = content;
         }
 
-        public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+        public override void ApplyAction(HttpResponseMessage response)
         {
-
-            return _actionResult.ExecuteAsync(cancellationToken)
-                .ContinueWith(t =>
-                {
-                    t.Result.Content = _content;
-                    return t.Result;
-                },cancellationToken);
+            response.Content = _content;
         }
     }
 
-    public class LinkHeadersResult : IHttpActionResult
+    public class LinkHeadersResult2 : BaseChainedResult
     {
-        private readonly IHttpActionResult _actionResult;
         private readonly List<Link> _linkHeaders;
 
-
-        public LinkHeadersResult(IHttpActionResult actionResult, List<Link> linkHeaders)
+        public LinkHeadersResult2(IHttpActionResult actionResult, List<Link> linkHeaders)
+            : base(actionResult)
         {
-            _actionResult = actionResult;
             _linkHeaders = linkHeaders;
-      
         }
 
-        public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+        public override void ApplyAction(HttpResponseMessage response)
         {
-
-            return _actionResult.ExecuteAsync(cancellationToken)
-                .ContinueWith(t =>
-                {
-                    t.Result.Headers.AddLinkHeaders(_linkHeaders);
-                    return t.Result;
-                }, cancellationToken);
+            response.Headers.AddLinkHeaders(_linkHeaders);
         }
     }
 
-    public class CachingResult : IHttpActionResult
+    public class CachingResult2 : BaseChainedResult
     {
-        private readonly IHttpActionResult _actionResult;
         private readonly CacheControlHeaderValue _cachingHeaderValue;
 
-
-        public CachingResult(IHttpActionResult actionResult, CacheControlHeaderValue cachingHeaderValue)
+        public CachingResult2(IHttpActionResult actionResult, CacheControlHeaderValue cachingHeaderValue) : base(actionResult)
         {
-            _actionResult = actionResult;
             _cachingHeaderValue = cachingHeaderValue;
         }
 
-        public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+        public override void ApplyAction(HttpResponseMessage response)
         {
-
-            return _actionResult.ExecuteAsync(cancellationToken)
-                .ContinueWith(t =>
-                {
-                    t.Result.Headers.CacheControl = _cachingHeaderValue;
-                    return t.Result;
-                }, cancellationToken);
+            response.Headers.CacheControl = _cachingHeaderValue;
         }
     }
+
+   
 
 
     public static class ActionResultExtensions
     {
         public static IHttpActionResult WithContent(this IHttpActionResult actionResult, HttpContent content)
         {
-            return new ContentResult(actionResult, content);
+            return new ContentResult2(actionResult, content);
         }
         public static IHttpActionResult WithCaching(this IHttpActionResult actionResult, CacheControlHeaderValue cacheControl)
         {
-            return new CachingResult(actionResult, cacheControl);
+            return new CachingResult2(actionResult, cacheControl);
         }
         public static IHttpActionResult WithLinkHeaders(this IHttpActionResult actionResult, List<Link> linkHeaders)
         {
-            return new LinkHeadersResult(actionResult, linkHeaders);
+            return new LinkHeadersResult2(actionResult, linkHeaders);
         }
     }
 }

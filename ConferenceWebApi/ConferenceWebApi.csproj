@@ -130,6 +130,7 @@
     <Compile Include="ServerLinks\SpeakersLinkHelper.cs" />
     <Compile Include="ServerLinks\TopicLinkHelper.cs" />
     <Compile Include="ServerLinks\TopicsLinkHelper.cs" />
+    <Compile Include="Tools\BaseChainedResult.cs" />
     <Compile Include="Tools\CollectionJsonContent.cs" />
     <Compile Include="Tools\DynamicHalContent.cs" />
     <Compile Include="Tools\HttpRequestMessageExtensions.cs" />

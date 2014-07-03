@@ -20,7 +20,7 @@ namespace ConferenceWebApi.Controllers
        }
 
        [Route("{id}", Name = SessionLinkHelper.SessionByIdRoute)]
-       public HttpResponseMessage Get(int id)
+       public IHttpActionResult Get(int id)
        {
            var session = _dataService.SessionRepository.Get(id);
 

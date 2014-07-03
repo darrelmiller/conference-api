@@ -5,6 +5,8 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
+using System.Web.Http.Results;
 using ConferenceWebApi.DataModel;
 using ConferenceWebApi.Tools;
 using ConferenceWebPack;
@@ -47,18 +49,21 @@ namespace ConferenceWebApi.ServerLinks
             return sessionLink;
         }
 
-        public static HttpResponseMessage CreateResponse(Session session, HttpRequestMessage request)
+        public static IHttpActionResult CreateResponse(Session session, HttpRequestMessage request)
         {
-            var response = request.RespondOk();
+            IHttpActionResult response = new OkResult(request);
 
             if (request.Headers.Accept.Contains(new MediaTypeWithQualityHeaderValue("application/hal+json")))
             {
-                response.Content = CreateHalContent(session,request);
+                response = response.WithContent(CreateHalContent(session,request));
             }
             else
             {
-                response.Content = new StringContent(session.Title + Environment.NewLine + session.Description);
-                response.Headers.AddLinkHeader(SpeakerLinkHelper.CreateLink(request, session.SpeakerId));
+                response = response
+                    .WithContent(new StringContent(session.Title + Environment.NewLine + session.Description))
+                    .WithLinkHeaders(new List<Link> {SpeakerLinkHelper.CreateLink(request, session.SpeakerId)});
+            
+                
             }
             return response;
         }
