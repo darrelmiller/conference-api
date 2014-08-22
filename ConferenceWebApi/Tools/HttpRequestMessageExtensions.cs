@@ -21,7 +21,7 @@ namespace ConferenceWebApi.Tools
         {
             var urlHelper = new UrlHelper(request);
             
-            var link = new T {Target = new Uri(urlHelper.Link(routeName, parameters).Replace("[","{").Replace("]","}") + (queryParams ?? ""))};
+            var link = new T {Target = new Uri(urlHelper.Link(routeName, parameters) + (queryParams ?? ""))};
 
             return link;
         }

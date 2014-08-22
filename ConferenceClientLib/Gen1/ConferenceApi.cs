@@ -95,6 +95,8 @@ namespace ConferenceClientLib.Gen1
                 return sessions;
             }
         }
+
+        //...
     }
 }
 
