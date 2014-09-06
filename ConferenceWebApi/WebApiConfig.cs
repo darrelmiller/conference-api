@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -8,15 +9,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
+using System.Web.Http.Dependencies;
 using System.Web.Http.ExceptionHandling;
 using System.Web.Http.Hosting;
-using System.Web.Http.Owin;
-using System.Web.Http.Results;
 using ConferenceWebApi.DataModel;
-using ConferenceWebApi.Tools;
-using Microsoft.Owin;
 using Microsoft.Practices.Unity;
-using Unity.WebApi;
 
 
 namespace ConferenceWebApi
@@ -91,13 +88,113 @@ public class BufferNonStreamedContentHandler : DelegatingHandler
         var response = await base.SendAsync(request, cancellationToken);
         if (response.Content != null)
         {
-            var bufferPolicy = (IHostBufferPolicySelector)request.GetConfiguration().Services.GetService(typeof (IHostBufferPolicySelector));
+            var bufferPolicy = request.GetConfiguration().Services.GetHostBufferPolicySelector();
             if (bufferPolicy.UseBufferedOutputStream(response))  // If the host is going to buffer it anyway,
             {
                 await response.Content.LoadIntoBufferAsync();  // Buffer it now so we can catch the exception
             }
         }
         return response;
+    }
+}
+
+public sealed class UnityDependencyResolver : IDependencyResolver
+{
+    private IUnityContainer container;
+    private SharedDependencyScope sharedScope;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="UnityDependencyResolver"/> class for a container.
+    /// </summary>
+    /// <param name="container">The <see cref="IUnityContainer"/> to wrap with the <see cref="IDependencyResolver"/>
+    /// interface implementation.</param>
+    public UnityDependencyResolver(IUnityContainer container)
+    {
+        if (container == null)
+        {
+            throw new ArgumentNullException("container");
+        }
+        this.container = container;
+        this.sharedScope = new SharedDependencyScope(container);
+    }
+
+    /// <summary>
+    /// Reuses the same scope to resolve all the instances.
+    /// </summary>
+    /// <returns>The shared dependency scope.</returns>
+    public IDependencyScope BeginScope()
+    {
+        return this.sharedScope;
+    }
+
+    /// <summary>
+    /// Disposes the wrapped <see cref="IUnityContainer"/>.
+    /// </summary>
+    public void Dispose()
+    {
+        this.container.Dispose();
+        this.sharedScope.Dispose();
+    }
+
+    /// <summary>
+    /// Resolves an instance of the default requested type from the container.
+    /// </summary>
+    /// <param name="serviceType">The <see cref="Type"/> of the object to get from the container.</param>
+    /// <returns>The requested object.</returns>
+    /// 
+    [DebuggerStepThrough]
+    public object GetService(Type serviceType)
+    {
+        try
+        {
+            return this.container.Resolve(serviceType);
+        }
+        catch (ResolutionFailedException)
+        {
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Resolves multiply registered services.
+    /// </summary>
+    /// <param name="serviceType">The type of the requested services.</param>
+    /// <returns>The requested services.</returns>
+    public IEnumerable<object> GetServices(Type serviceType)
+    {
+        try
+        {
+            return this.container.ResolveAll(serviceType);
+        }
+        catch (ResolutionFailedException)
+        {
+            return null;
+        }
+    }
+
+    private sealed class SharedDependencyScope : IDependencyScope
+    {
+        private IUnityContainer container;
+
+        public SharedDependencyScope(IUnityContainer container)
+        {
+            this.container = container;
+        }
+
+        public object GetService(Type serviceType)
+        {
+            return this.container.Resolve(serviceType);
+        }
+
+        public IEnumerable<object> GetServices(Type serviceType)
+        {
+            return this.container.ResolveAll(serviceType);
+        }
+
+        public void Dispose()
+        {
+            // NO-OP, as the container is shared.
+        }
     }
 }
 }

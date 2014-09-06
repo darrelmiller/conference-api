@@ -3,10 +3,12 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Mime;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using WebApiContrib.CollectionJson;
+
 
 namespace ConferenceWebApi.Tools
 {
@@ -27,7 +29,8 @@ namespace ConferenceWebApi.Tools
 
             using (var writer = new JsonTextWriter(new StreamWriter(_memoryStream)){CloseOutput = false})
             {
-                var readDocument = new ReadDocument {Collection = collection};
+                var readDocument = new ReadDocument(collection);
+                
                 var serializer = JsonSerializer.Create(serializerSettings);
                 serializer.Serialize(writer,readDocument);
                 writer.Flush();
@@ -46,5 +49,21 @@ namespace ConferenceWebApi.Tools
             length = _memoryStream.Length;
             return true;
         }
+    }
+
+    [DataContract]
+    public class ReadDocument : IReadDocument
+    {
+        public ReadDocument(Collection collection)
+        {
+            Collection = collection;
+        }
+        public ReadDocument()
+        {
+            Collection = new Collection();
+        }
+
+        [DataMember(Name = "collection")]
+        public Collection Collection { get; private set; }
     }
 }
