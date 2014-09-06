@@ -14,40 +14,40 @@ namespace ConferenceWebApi.Tools
 {
     public class CollectionJsonContent : HttpContent
     {
-        private readonly MemoryStream _memoryStream = new MemoryStream();
+        private readonly ReadDocument _readDocument;
+        private readonly JsonSerializer _serializer;
+
         public CollectionJsonContent(Collection collection)
         {
-            var serializerSettings = new JsonSerializerSettings
+           
+            _serializer = JsonSerializer.Create(new JsonSerializerSettings
                 {
                     NullValueHandling = NullValueHandling.Ignore,
-                    Formatting = Newtonsoft.Json.Formatting.Indented,
+                    Formatting = Formatting.Indented,
                     ContractResolver = new CamelCasePropertyNamesContractResolver()
-                };
+                });
+
             collection.Version = "1.0";
-
+            _readDocument = new ReadDocument(collection);
+            
             Headers.ContentType = new MediaTypeHeaderValue("application/vnd.collection+json");
-
-            using (var writer = new JsonTextWriter(new StreamWriter(_memoryStream)){CloseOutput = false})
-            {
-                var readDocument = new ReadDocument(collection);
-                
-                var serializer = JsonSerializer.Create(serializerSettings);
-                serializer.Serialize(writer,readDocument);
-                writer.Flush();
-            }
-            _memoryStream.Position = 0;
         }
 
 
         protected override Task SerializeToStreamAsync(Stream stream, TransportContext context)
         {
-            return _memoryStream.CopyToAsync(stream);
+            using (var writer = new JsonTextWriter(new StreamWriter(stream)) { CloseOutput = false })
+            {
+                _serializer.Serialize(writer, _readDocument);
+                writer.Flush();
+            }
+            return Task.FromResult(0);
         }
 
         protected override bool TryComputeLength(out long length)
         {
-            length = _memoryStream.Length;
-            return true;
+            length = -1;
+            return false;
         }
     }
 
