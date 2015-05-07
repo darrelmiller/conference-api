@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>ConferenceApi</id>
-    <version>1.0.7</version>
+    <version>1.0.9</version>
     <title>Conference Api</title>
     <authors>Darrel Miller</authors>
     <owners>Darrel Miller</owners>

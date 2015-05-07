@@ -23,6 +23,13 @@ namespace ConferenceWebApi.DataModel
             SessionTopicRepository = new SessionTopicRepository(LoadJsonArray("sessiontopics.json"));
         }
 
+        public int TotalDays
+        {
+            get
+            {
+                return (int)(ConferenceEnd - ConferenceStart).TotalDays + 1;
+            }
+        }
         private JArray LoadJsonArray(string jsonDataFile)
         {
             var resourceStream = this.GetType().Assembly.GetManifestResourceStream(this.GetType(), jsonDataFile);

@@ -33,6 +33,23 @@ namespace ConferenceWebApi.Tools
 
 
 
+    public class BadRequestResult : BaseChainedResult
+    {
+        private readonly ProblemDocument _problem;
+
+        public BadRequestResult(ProblemDocument problem)
+            : base(null)
+        {
+            _problem = problem;
+
+        }
+
+        public override void ApplyAction(HttpResponseMessage response)
+        {
+            response.StatusCode = HttpStatusCode.BadRequest;
+            response.Content = new ProblemContent(_problem);
+        }
+    }
 
     public class NotFoundResult : BaseChainedResult
     {

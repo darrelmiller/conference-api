@@ -117,6 +117,10 @@
     <Reference Include="Tavis.OwinService">
       <HintPath>..\packages\Tavis.OwinService.1.0.1.23035\lib\net45\Tavis.OwinService.dll</HintPath>
     </Reference>
+    <Reference Include="Tavis.Problem, Version=0.8.0.3747, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Tavis.Problem.0.9.5-beta2\lib\portable-net45+sl5+wp8+win8+wpa81+MonoTouch1+MonoAndroid1\Tavis.Problem.dll</HintPath>
+    </Reference>
     <Reference Include="Tavis.UriTemplates, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Tavis.UriTemplates.0.4\lib\Net35\Tavis.UriTemplates.dll</HintPath>

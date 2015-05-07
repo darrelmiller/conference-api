@@ -14,6 +14,7 @@ using System.Web.Http.ExceptionHandling;
 using System.Web.Http.Hosting;
 using ConferenceWebApi.DataModel;
 using Microsoft.Practices.Unity;
+using Tavis;
 
 
 namespace ConferenceWebApi
@@ -77,7 +78,10 @@ public class GlobalErrorHandlerService : IExceptionHandler
         private static HttpResponseMessage ConvertExceptionToHttpResponse(Exception ex)
         {
             // Centralized error handling code
-            return new HttpResponseMessage(HttpStatusCode.InternalServerError);
+            return new HttpResponseMessage(HttpStatusCode.InternalServerError)
+            {
+               
+            };
         }
     }
 

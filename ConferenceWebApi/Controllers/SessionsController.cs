@@ -52,6 +52,14 @@ namespace ConferenceWebApi.Controllers
         [Route("")] //Links.SessionsSearch
         public IHttpActionResult GetSessionsByDay(int dayno)
         {
+            if (dayno > _dataService.TotalDays)
+            {
+                return new BadRequestResult(new Tavis.ProblemDocument()
+                {
+                    ProblemType = new System.Uri("urn:conference:invalid-day"),
+                    Title = string.Format("Day {0}  is after the end of the conference",dayno)
+                });
+            }
             var sessions = _dataService.SessionRepository.GetSessionsByDay(dayno).ToList();
 
             return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
