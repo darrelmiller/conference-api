@@ -5,7 +5,7 @@ using ConferenceWebApi.DataModel;
 using ConferenceWebApi.ServerLinks;
 using ConferenceWebApi.Tools;
 using ConferenceWebPack;
-using WebApiContrib.CollectionJson;
+using CollectionJson;
 using System.Linq;
 
 namespace ConferenceWebApi.Controllers

@@ -61,7 +61,7 @@ namespace ConferenceWebApi.ServerLinks
             {
                 response = response
                     .WithContent(new StringContent(session.Title + Environment.NewLine + session.Description))
-                    .WithLinkHeaders(new List<Link> {SpeakerLinkHelper.CreateLink(request, session.SpeakerId)});
+                    .WithLinkHeaders(new List<ILink> {SpeakerLinkHelper.CreateLink(request, session.SpeakerId)});
             
                 
             }

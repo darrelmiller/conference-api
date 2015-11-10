@@ -59,7 +59,7 @@ namespace ConferenceWebApi.ServerLinks
             // fall back to text/plain response
             return new OkResult(request)
                 .WithContent(new StringContent(speakerInfo.Name + Environment.NewLine + speakerInfo.Bio))
-                .WithLinkHeaders(new List<Link>
+                .WithLinkHeaders(new List<ILink>
                 {
                     SessionsLinkHelper.CreateLink(request, speakerInfo),
                     new IconLink() { Target = new Uri(speakerInfo.ImageUrl) }

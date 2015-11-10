@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using WebApiContrib.CollectionJson;
+using CollectionJson;
 
 
 namespace ConferenceWebApi.Tools

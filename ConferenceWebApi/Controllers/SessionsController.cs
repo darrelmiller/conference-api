@@ -6,7 +6,7 @@ using ConferenceWebApi.DataModel;
 using ConferenceWebApi.ServerLinks;
 using ConferenceWebApi.Tools;
 using ConferenceWebPack;
-using WebApiContrib.CollectionJson;
+using CollectionJson;
 
 namespace ConferenceWebApi.Controllers
 {
@@ -29,6 +29,16 @@ namespace ConferenceWebApi.Controllers
 
             return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
         }
+
+        [Route("", Name = "SessionTest")]
+        public IHttpActionResult Get(string foo)
+        {
+
+            var sessions = _dataService.SessionRepository.GetAll();
+
+            return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
+        }
+
 
         [Route("")] //Links.SessionsSearch
         public IHttpActionResult GetSessionsBySpeaker(int speakerId)

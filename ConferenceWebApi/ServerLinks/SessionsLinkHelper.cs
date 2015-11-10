@@ -12,7 +12,7 @@ using ConferenceWebPack;
 using Tavis;
 using Tavis.IANA;
 using Tavis.Home;
-using WebApiContrib.CollectionJson;
+using CollectionJson;
 
 namespace ConferenceWebApi.ServerLinks
 {

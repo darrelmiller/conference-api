@@ -10,7 +10,7 @@ namespace ConferenceWebPack
     {
         public void SetDay(int day)
         {
-            SetParameter("dayno",day.ToString());
+            Template.SetParameter("dayno",day.ToString());
         }
         
     }

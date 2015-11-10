@@ -1,4 +1,4 @@
-﻿using WebApiContrib.CollectionJson;
+﻿using CollectionJson;
 
 namespace ConferenceWebApi.Tools
 {

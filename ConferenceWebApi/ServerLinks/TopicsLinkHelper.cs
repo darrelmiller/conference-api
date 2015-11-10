@@ -11,7 +11,7 @@ using ConferenceWebApi.Tools;
 using ConferenceWebPack;
 using Tavis.IANA;
 using Tavis.Home;
-using WebApiContrib.CollectionJson;
+using CollectionJson;
 
 namespace ConferenceWebApi.ServerLinks
 {

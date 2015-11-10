@@ -87,9 +87,9 @@ namespace ConferenceWebApi.Tools
 
     public class LinkHeadersResult2 : BaseChainedResult
     {
-        private readonly List<Link> _linkHeaders;
+        private readonly List<ILink> _linkHeaders;
 
-        public LinkHeadersResult2(IHttpActionResult actionResult, List<Link> linkHeaders)
+        public LinkHeadersResult2(IHttpActionResult actionResult, List<ILink> linkHeaders)
             : base(actionResult)
         {
             _linkHeaders = linkHeaders;
@@ -129,7 +129,7 @@ namespace ConferenceWebApi.Tools
         {
             return new CachingResult2(actionResult, cacheControl);
         }
-        public static IHttpActionResult WithLinkHeaders(this IHttpActionResult actionResult, List<Link> linkHeaders)
+        public static IHttpActionResult WithLinkHeaders(this IHttpActionResult actionResult, List<ILink> linkHeaders)
         {
             return new LinkHeadersResult2(actionResult, linkHeaders);
         }

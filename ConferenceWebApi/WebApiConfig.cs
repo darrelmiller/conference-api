@@ -15,7 +15,7 @@ using System.Web.Http.Hosting;
 using ConferenceWebApi.DataModel;
 using Microsoft.Practices.Unity;
 using Tavis;
-
+using System.Net.Http.Headers;
 
 namespace ConferenceWebApi
 {
@@ -34,11 +34,31 @@ namespace ConferenceWebApi
             config.Services.Replace(typeof(IExceptionHandler),new GlobalErrorHandlerService());
             config.MessageHandlers.Add(new ErrorHandlerMessageHandler());
             config.MessageHandlers.Add(new BufferNonStreamedContentHandler());
+            config.MessageHandlers.Add(new ForwardedMessageHandler());
             config.EnableSystemDiagnosticsTracing();
         }
     }
 
-
+    public class ForwardedMessageHandler : DelegatingHandler
+    {
+        
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            if (request.Headers.Contains("Forwarded"))
+            {
+                try {
+                    var header = request.Headers.GetValues("Forwarded").First();
+                    var forwardedHeader = header.Split(';').Where(nv=>!string.IsNullOrEmpty(nv)).Select(nv => NameValueHeaderValue.Parse(nv)).ToDictionary(nv => nv.Name, nv => nv.Value);
+                    var gatewayUrl = new Uri(string.Format("{0}://{1}", forwardedHeader["proto"], forwardedHeader["host"]));
+                    request.Properties[ConferenceWebApi.Tools.HttpRequestMessageExtensions.GatewayUrlKey] = gatewayUrl;
+                } catch (Exception ex)
+                {
+                    return Task.FromResult<HttpResponseMessage>(new HttpResponseMessage(HttpStatusCode.InternalServerError) { Content = new StringContent("Failed to parse Forwarded header : " + ex.Message) });
+                }
+            }
+            return base.SendAsync(request, cancellationToken);
+        }
+    }
     
     public class GlobalErrorLoggingService : IExceptionLogger
     {
