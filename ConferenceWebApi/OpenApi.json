@@ -1,0 +1,562 @@
+﻿{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Conference Api Manual"
+  },
+  "schemes": [ "http", "https" ],
+  "host" :  "http://example.org",
+  "paths": {
+    "/days": {
+      "get": {
+        "operationId": "Days_Get",
+        "produces": [ "text/plain" ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "examples": { "text/plain": "Feb 21,22,23" }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "operationId": "Home_Get",
+        "produces": [ "text/plain" ],
+        "responses": {
+          "200": { "description": "OK" }
+        }
+      }
+    },
+    "/session/{id}": {
+      "get": {
+        "operationId": "Session_GetById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/session/{id}/topics": {
+      "get": {
+        "tags": [
+          "Session"
+        ],
+        "operationId": "Session_GetTopicsBySessionById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+          }
+        }
+      }
+    },
+    "/sessions": {
+      "get": {
+        "tags": [
+          "Sessions"
+        ],
+        "operationId": "Sessions_Get",
+
+        "responses": {
+          "200": {
+            "description": "OK",
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/sessions/byspeakerid": {
+      "get": {
+        "tags": [
+          "Sessions"
+        ],
+        "operationId": "Sessions_GetSessionsBySpeakerBySpeakerid",
+        "parameters": [
+          {
+            "name": "speakerId",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/sessions/byspeakername": {
+      "get": {
+        "tags": [
+          "Sessions"
+        ],
+        "operationId": "Sessions_GetSessionsBySpeakerNameBySpeakername",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "speakername",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/sessions/byday": {
+      "get": {
+        "tags": [
+          "Sessions"
+        ],
+        "operationId": "Sessions_GetSessionsByDayByDayno",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "dayno",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/sessions/bykeyword": {
+      "get": {
+        "tags": [
+          "Sessions"
+        ],
+        "operationId": "Sessions_GetSessionsByKeywordByKeyword",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/speaker/{id}": {
+      "get": {
+        "tags": [
+          "Speaker"
+        ],
+        "operationId": "Speaker_GetSpeakerById",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/speaker/{id}/sessions": {
+      "get": {
+        "tags": [
+          "Speaker"
+        ],
+        "operationId": "Speaker_GetSessionsBySpeakerById",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/speaker/{id}/topics": {
+      "get": {
+        "tags": [
+          "Speaker"
+        ],
+        "operationId": "Speaker_GetTopicsBySpeakerById",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/speakers": {
+      "get": {
+        "tags": [
+          "Speakers"
+        ],
+        "operationId": "Speakers_Get",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/speakers/byday": {
+      "get": {
+        "tags": [
+          "Speakers"
+        ],
+        "operationId": "Speakers_GetByDayno",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "dayno",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/speakers/byspeakername": {
+      "get": {
+        "tags": [
+          "Speakers"
+        ],
+        "operationId": "Speakers_GetBySpeakername",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "speakername",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/topic/{id}": {
+      "get": {
+        "tags": [
+          "Topic"
+        ],
+        "operationId": "Topic_GetTopicById",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/topic/{id}/sessions": {
+      "get": {
+        "tags": [
+          "Topic"
+        ],
+        "operationId": "Topic_GetSessionsByTopicById",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/topic/{id}/speakers": {
+      "get": {
+        "tags": [
+          "Topic"
+        ],
+        "operationId": "Topic_GetSpeakersByTopicById",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/topics": {
+      "get": {
+        "tags": [
+          "Topics"
+        ],
+        "operationId": "Topics_Get",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/topics/byday": {
+      "get": {
+        "tags": [
+          "Topics"
+        ],
+        "operationId": "Topics_GetByDayno",
+        "consumes": [ ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "dayno",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "Object": {
+      "type": "object",
+      "properties": { }
+    }
+  }
+}

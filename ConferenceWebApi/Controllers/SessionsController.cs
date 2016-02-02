@@ -30,17 +30,8 @@ namespace ConferenceWebApi.Controllers
             return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
         }
 
-        [Route("", Name = "SessionTest")]
-        public IHttpActionResult Get(string foo)
-        {
 
-            var sessions = _dataService.SessionRepository.GetAll();
-
-            return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
-        }
-
-
-        [Route("")] //Links.SessionsSearch
+        [Route("byspeakerid")] //Links.SessionsSearch
         public IHttpActionResult GetSessionsBySpeaker(int speakerId)
         {
             var sessions = _dataService.SessionRepository.GetAll().Where(e => e.SpeakerId == speakerId);
@@ -48,7 +39,7 @@ namespace ConferenceWebApi.Controllers
             return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
         }
 
-        [Route("")] //Links.SessionsSearch
+        [Route("byspeakername")] //Links.SessionsSearch
         public IHttpActionResult GetSessionsBySpeakerName(string speakername)
         {
             var speaker = _dataService.SpeakerRepository.GetAll().FirstOrDefault(s => s.Name == speakername);
@@ -59,7 +50,7 @@ namespace ConferenceWebApi.Controllers
             return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
         }
 
-        [Route("")] //Links.SessionsSearch
+        [Route("byday")] //Links.SessionsSearch
         public IHttpActionResult GetSessionsByDay(int dayno)
         {
             if (dayno > _dataService.TotalDays)
@@ -76,7 +67,7 @@ namespace ConferenceWebApi.Controllers
         }
 
         
-        [Route("")] //Links.SessionsSearch
+        [Route("bykeyword")] //Links.SessionsSearch
         public IHttpActionResult GetSessionsByKeyword(string keyword)
         {
 
@@ -85,9 +76,7 @@ namespace ConferenceWebApi.Controllers
 
             return SessionsLinkHelper.CreateResponse(sessions, _dataService, Request);
         }
-
- 
-
+        
        
     }
 }

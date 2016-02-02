@@ -30,7 +30,7 @@ namespace ConferenceWebApi.Controllers
 
 
 
-        [Route("")]
+        [Route("byday")]
         public IHttpActionResult Get(int dayno)
         {
 

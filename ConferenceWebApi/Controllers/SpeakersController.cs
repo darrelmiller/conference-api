@@ -30,14 +30,14 @@ namespace ConferenceWebApi.Controllers
         }
      
 
-        [Route("")]
+        [Route("byday")]
         public IHttpActionResult Get(int dayno)
         {
             var speakers = _dataService.SessionRepository.GetSessionsByDay(dayno).Select(s => s.SpeakerId).Distinct().Where(sp=> sp != 0).Select(s => _dataService.SpeakerRepository.Get(s));
             return SpeakersLinkHelper.CreateResponse(speakers, Request);
         }
 
-        [Route("")]
+        [Route("byspeakername")]
         public IHttpActionResult Get(string speakername)
         {
 
