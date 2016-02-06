@@ -33,13 +33,91 @@ namespace ConferenceWebApi
             config.MapHttpAttributeRoutes();
             config.Services.Replace(typeof(IExceptionHandler),new GlobalErrorHandlerService());
             config.MessageHandlers.Add(new ErrorHandlerMessageHandler());
+            config.MessageHandlers.Add(new DateStampHandler());
             config.MessageHandlers.Add(new BufferNonStreamedContentHandler());
+            config.MessageHandlers.Add(new BasicAuthenticationHandler());
             config.MessageHandlers.Add(new ForwardedMessageHandler());
             config.EnableSystemDiagnosticsTracing();
         }
     }
 
-    public class ForwardedMessageHandler : DelegatingHandler
+    public class DateStampHandler : DelegatingHandler
+    {
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            var response = await base.SendAsync(request, cancellationToken);
+            response.Headers.Date = DateTime.Now;
+            return response;
+        }
+    }
+    public class BasicAuthenticationHandler : DelegatingHandler
+    {
+
+        protected static bool Authorize(string username, string password)
+        {
+            if (username == "apim" && password=="rocks") return true;
+            return false;
+        }
+
+        protected string Realm { get { return "conference"; } }
+
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
+        {
+
+            
+            if (request.RequestUri.Scheme == "https")
+            {
+                if (request.Headers.Authorization != null && request.Headers.Authorization.Scheme == "Basic")
+                {
+                    var credentials = ParseCredentials(request.Headers.Authorization);
+
+                    if (Authorize(credentials.Username, credentials.Password))
+                    {
+                        return base.SendAsync(request, cancellationToken);
+                    } 
+                }
+                // Not authenticated and anonymous is not allowed, so ask client to provide basic
+                var tcs = new TaskCompletionSource<HttpResponseMessage>();
+                var response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
+                response.Headers.WwwAuthenticate.Add(new AuthenticationHeaderValue("Basic", string.Format("realm=\"{0}\"", Realm)));
+                response.RequestMessage = request;
+                tcs.SetResult(response);
+                return tcs.Task;
+
+            }
+            else 
+            {
+                return base.SendAsync(request, cancellationToken);
+            }
+
+            
+        }
+
+        private static BasicCredentials ParseCredentials(AuthenticationHeaderValue authHeader)
+        {
+            try
+            {
+                var credentials = Encoding.ASCII.GetString(Convert.FromBase64String(authHeader.ToString().Substring(6))).Split(':');
+
+                return new BasicCredentials
+                {
+                    Username = credentials[0],
+                    Password = credentials[1]
+                };
+            }
+            catch { }
+
+            return new BasicCredentials();
+        }
+
+        internal struct BasicCredentials
+        {
+            public string Username { get; set; }
+            public string Password { get; set; }
+        }
+    }
+
+        public class ForwardedMessageHandler : DelegatingHandler
     {
         
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
