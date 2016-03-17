@@ -35,7 +35,7 @@ namespace ConferenceWebApi
             config.MessageHandlers.Add(new ErrorHandlerMessageHandler());
             config.MessageHandlers.Add(new DateStampHandler());
             config.MessageHandlers.Add(new BufferNonStreamedContentHandler());
-            config.MessageHandlers.Add(new BasicAuthenticationHandler());
+           // config.MessageHandlers.Add(new BasicAuthenticationHandler());
             config.MessageHandlers.Add(new ForwardedMessageHandler());
             config.EnableSystemDiagnosticsTracing();
         }
