@@ -11,7 +11,7 @@
       "get": {
         "operationId": "Home",
         "description": "This is a discovery resource that contains a description of all the resources directly accessible in the API.",
-        "produces": [ "text/plain" ],
+        "produces": [ "application/home+json" ],
         "responses": {
           "200": {
             "description": "OK",
@@ -91,37 +91,38 @@
           "200": {
             "description": "OK",
             "examples": {
-              "text/plain": "{",
-              "collection": {
-                "version": "1.0",
-                "links": [ ],
-                "items": [
-                  {
-                    "data": [
-                      {
-                        "name": "Day",
-                        "value": "1"
-                      }
-                    ],
-                    "links": [
-                      {
-                        "rel": "http://tavis.net/rels/sessions",
-                        "href": "http://conferenceapi.azurewebsites.net/sessions?dayno=1"
-                      },
-                      {
-                        "rel": "http://tavis.net/rels/speakers",
-                        "href": "http://conferenceapi.azurewebsites.net/speakers?dayno=1"
-                      },
-                      {
-                        "rel": "http://tavis.net/rels/topics",
-                        "href": "http://conferenceapi.azurewebsites.net/topics?dayno=1"
-                      }
-                    ]
+              "application/vnd.collection+json": {
+                "collection": {
+                  "version": "1.0",
+                  "links": [ ],
+                  "items": [
+                    {
+                      "data": [
+                        {
+                          "name": "Day",
+                          "value": "1"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "rel": "http://tavis.net/rels/sessions",
+                          "href": "http://conferenceapi.azurewebsites.net/sessions?dayno=1"
+                        },
+                        {
+                          "rel": "http://tavis.net/rels/speakers",
+                          "href": "http://conferenceapi.azurewebsites.net/speakers?dayno=1"
+                        },
+                        {
+                          "rel": "http://tavis.net/rels/topics",
+                          "href": "http://conferenceapi.azurewebsites.net/topics?dayno=1"
+                        }
+                      ]
+                    }
+                  ],
+                  "queries": [ ],
+                  "template": {
+                    "data": [ ]
                   }
-                ],
-                "queries": [ ],
-                "template": {
-                  "data": [ ]
                 }
               }
             }
