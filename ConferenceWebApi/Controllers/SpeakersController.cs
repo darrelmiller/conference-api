@@ -40,6 +40,7 @@ namespace ConferenceWebApi.Controllers
         [Route("byspeakername")]
         public IHttpActionResult Get(string speakername)
         {
+            
 
             var speakers = _dataService.SpeakerRepository.GetAll().Where(s => s.Name.Contains(speakername)).ToList();
             var count = speakers.Count();
