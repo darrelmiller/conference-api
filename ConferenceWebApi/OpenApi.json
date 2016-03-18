@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "v1",
-    "title": "Conference Api Manual"
+    "title": "Conference Api"
   },
   "schemes": [ "http", "https" ],
   "host" :  "example.org",
