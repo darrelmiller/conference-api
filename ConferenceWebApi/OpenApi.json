@@ -133,6 +133,8 @@
     "/session/{id}": {
       "get": {
         "operationId": "Get Session by Id",
+        "description": "Retreive a representation of a single session by Id",
+        "produces": [ "application/hal+json", "text/plain" ],
         "parameters": [
           {
             "name": "id",
@@ -172,6 +174,10 @@
       "get": {
 
         "operationId": "Get Sessions",
+        "description": "A list of sessions",
+        "produces": [
+          "application/vnd.collection+json"
+        ],
 
         "responses": {
           "200": {
@@ -202,6 +208,7 @@
     "/sessions/byspeakername": {
       "get": {
         "operationId": "Get Sessions by Speaker Name",
+        "description" :  "A list of sessions filtered by a speaker name",
         "produces": [
           "application/vnd.collection+json"
         ],
