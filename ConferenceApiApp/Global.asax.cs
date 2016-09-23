@@ -12,8 +12,15 @@ namespace ConferenceApiApp
     {
         protected void Application_Start()
         {
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-            GlobalConfiguration.Configure(SwaggerConfig.Register);
+
+            GlobalConfiguration.Configure(c =>
+            {
+                WebApiConfig.Register(c);
+                SwaggerConfig.Register(c);
+                WebApiConfig.RegisterRoutes(c);
+            }
+            );
+
         }
     }
 }

@@ -29,8 +29,9 @@ namespace ConferenceWebApi
                 AllClasses.FromLoadedAssemblies().Where(t => t.IsAssignableFrom(typeof(IHttpController))),
                 WithMappings.FromAllInterfaces);
             config.DependencyResolver = new UnityDependencyResolver(unityContainer);
-          
-            config.MapHttpAttributeRoutes();
+
+
+
             config.Services.Replace(typeof(IExceptionHandler),new GlobalErrorHandlerService());
             config.MessageHandlers.Add(new ErrorHandlerMessageHandler());
             config.MessageHandlers.Add(new DateStampHandler());
@@ -39,9 +40,15 @@ namespace ConferenceWebApi
             config.MessageHandlers.Add(new ForwardedMessageHandler());
             config.EnableSystemDiagnosticsTracing();
         }
+
+        public static void RegisterRoutes(HttpConfiguration config)
+        {
+            config.MapHttpAttributeRoutes();
+
+        }
     }
 
-    public class DateStampHandler : DelegatingHandler
+        public class DateStampHandler : DelegatingHandler
     {
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
