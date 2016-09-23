@@ -15,5 +15,20 @@ namespace ConferenceWebApi.Tools
         {
             return _Entities[id];
         }
+
+        public bool TryGet(int id, out T entity)
+        {
+            return _Entities.TryGetValue(id,out entity);
+        }
+
+        public  bool Exists(int id)
+        {
+            return _Entities.ContainsKey(id);
+        }
+
+        internal void Delete(int id)
+        {
+            _Entities.Remove(id);
+        }
     }
 }

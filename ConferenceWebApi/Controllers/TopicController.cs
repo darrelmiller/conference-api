@@ -27,13 +27,28 @@ namespace ConferenceWebApi.Controllers
         }
 
         [Route("{id}", Name = TopicLinkHelper.TopicByIdRoute)]
-        public HttpResponseMessage GetTopic(int id)
+        public IHttpActionResult GetTopic(int id)
         {
             var topicInfo = _dataService.TopicRepository.Get(id);
 
             return TopicLinkHelper.CreateResponse(topicInfo, Request);
         }
 
+        [Route("{id}")]
+        public async Task<IHttpActionResult> PutTopic(int id)
+        {
+            var topicInfo = _dataService.TopicRepository.Get(id);
+
+            var newTopic = await Request.Content.ReadAsStringAsync();
+            if (Request.Content.Headers.ContentType.MediaType == "application/json")
+            {
+                newTopic = (string)JValue.Parse(newTopic);
+            }
+
+            topicInfo.Name = newTopic;
+
+            return TopicLinkHelper.CreateResponse(topicInfo, Request);
+        }
 
         [Route("{id}/sessions", Name = SessionsLinkHelper.TopicSessionsRoute)]
         public IHttpActionResult GetSessionsByTopic(int id)

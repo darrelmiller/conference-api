@@ -9,5 +9,7 @@
         public int Timeslot { get; set; }
         public string TimeslotDescription { get; set; }
         public string Description { get; set; }
+        public int Rating { get; set; }
+        public int ResponseCount { get; set; }
     }
 }

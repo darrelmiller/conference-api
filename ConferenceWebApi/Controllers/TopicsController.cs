@@ -7,6 +7,9 @@ using ConferenceWebApi.Tools;
 using ConferenceWebPack;
 using CollectionJson;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Web.Http.Results;
+using Newtonsoft.Json.Linq;
 
 namespace ConferenceWebApi.Controllers
 {
@@ -28,6 +31,31 @@ namespace ConferenceWebApi.Controllers
             return TopicsLinkHelper.GetResponse(topics, Request);
         }
 
+        [Route("{id}")]
+        public IHttpActionResult Delete(int id)
+        {
+            if (!_dataService.TopicRepository.Exists(id)) return new Tools.NotFoundResult("Topic not found");
+
+            _dataService.TopicRepository.Delete(id);
+
+            return new OkResult(Request);
+        }
+
+        [Route("")]
+        public async Task<IHttpActionResult> Post()
+        {
+
+            var newTopic = await Request.Content.ReadAsStringAsync();
+            if (Request.Content.Headers.ContentType.MediaType == "application/json")
+            {
+                newTopic = (string)JValue.Parse(newTopic);
+            }
+
+            var topic = _dataService.TopicRepository.Create(new Topic() { Name = newTopic });
+            
+            return TopicLinkHelper.CreateResponse(topic, Request)
+                .WithCreatedLocation(TopicLinkHelper.CreateLink(Request, topic).Target);
+        }
 
 
         [Route("byday")]

@@ -1,6 +1,8 @@
-﻿using ConferenceWebApi.Tools;
+﻿using System;
+using ConferenceWebApi.Tools;
 using ConferenceWebPack;
 using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace ConferenceWebApi.DataModel
 {
@@ -18,8 +20,16 @@ namespace ConferenceWebApi.DataModel
                   
                     });
             }
-
         }
 
+        internal Topic Create(Topic topic)
+        {
+            if (topic.Id == 0)
+            {
+                topic.Id = _Entities.Keys.Max() + 1;  // Please don't ever do this in prod code.
+            }
+            _Entities.Add(topic.Id, topic);
+            return topic;
+        }
     }
 }

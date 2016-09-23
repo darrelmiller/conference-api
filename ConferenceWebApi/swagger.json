@@ -1,0 +1,547 @@
+﻿{
+  "swagger": "2.0",
+  "info": {
+    "description": "Sample hypermedia API designed by Darrel Miller running in an API App on App Service.",
+    "version": "1.1",
+    "title": "Big Conference API",
+    "contact": {}
+  },
+  "host": "microsoft-apiapp550a1bc9d1494c23ad0cbf144f469c36.azurewebsites.net",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+   "parameters" : {
+     "apimkey" : {
+            "name": "Ocp-Apim-Subscription-Key",
+            "in": "header",
+            "description": "subscription key in header",
+            "required": false,
+            "type": "string"
+          }
+    },
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "Home_Get",
+        "description": "OpenAPI (fka Swagger) document to describe API",
+        "produces": [ "application/json" ],
+        "parameters": [
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/Session/{sessionId}/Rating": {
+      "get": {
+        "description": "Get rating for a conference session by its id.",
+        "operationId": "Session_GetRatingBySessionid",
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Post your rating for this session",
+        "operationId": "Session_PostRatingById",
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-example": "123456"
+          },
+          {
+            "name": "IsSpeaker",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "PostingDate",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "name": "AdminKey",
+            "in": "header",
+            "description": "6 digit user id",
+            "required": false,
+            "type": "string",
+            "x-example": "1234567890"
+          },
+          {
+            "$ref" : "#/parameters/apimkey"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example" : 87
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/days": {
+      "get": {
+        "operationId": "Days_Get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "SessionFilter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "LevelFilter",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "DateFilter",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "$ref" : "#/parameters/apimkey"
+          },
+          {
+            "name": "AdminKey",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Session"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/session/{id}": {
+      "get": {
+        "operationId": "Session_GetById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Session"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a session",
+        "operationId": "Session_DeleteById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "UserId",
+            "in": "header",
+            "description": "6 digit user ID",
+            "required": false,
+            "type": "string",
+            "x-example": "123456"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/session/{id}/topics": {
+      "get": {
+        "operationId": "Session_GetTopicsBySessionById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "subscription-key",
+            "in": "query",
+            "description": "subscription key in url",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Session"
+            }
+          }
+        }
+      }
+    },
+    "/sessions": {
+      "get": {
+        "operationId": "Sessions_Get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Session"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sessions/byspeakerid": {
+      "get": {
+        "operationId": "Sessions_GetSessionsBySpeakerBySpeakerid",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "speakerId",
+            "in": "query",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Session"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sessions/byspeakername": {
+      "get": {
+        "operationId": "Sessions_GetSessionsBySpeakerNameBySpeakername",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "speakername",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Session"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/speakers": {
+      "get": {
+        "operationId": "Speakers_Get",
+        "parameters": [
+          {
+             "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/topic/{id}": {
+      "get": {
+        "operationId": "Topic_GetTopicById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/topic/{id}/sessions": {
+      "get": {
+        "operationId": "Topic_GetSessionsByTopicById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Format - int32.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Session"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/topics": {
+      "get": {
+        "operationId": "Topics_Get",
+        "parameters": [
+          {
+            "$ref" : "#/parameters/apimkey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add Topic",
+        "operationId": "Topics_Post",
+        "consumes": [ "application/json", "text/plain" ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": {
+              "type" :  "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Topic",
+        "operationId": "Topics_Put",
+        "consumes": [ "application/json", "text/plain" ],
+        "parameters": [
+          {
+            "name": "TopicId",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": {
+              "type" :  "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Topic",
+        "operationId": "Topics_Delete",
+        "parameters": [
+          {
+            "name": "Topic Id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Session": {
+      "type": "object",
+      "required": [
+        "presenter",
+        "sessionId"
+      ],
+      "properties": {
+        "presenter": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "sessionId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "description": "A session object"
+    }
+
+  }
+}

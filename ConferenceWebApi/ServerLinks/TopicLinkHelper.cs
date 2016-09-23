@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using ConferenceWebApi.Tools;
 using ConferenceWebPack;
 using Tavis;
+using System.Web.Http;
+using System.Web.Http.Results;
 
 namespace ConferenceWebApi.ServerLinks
 {
@@ -19,12 +21,15 @@ namespace ConferenceWebApi.ServerLinks
             return request.ResolveLink<TopicLink>(TopicByIdRoute, new { id = session.Id});
         }
 
-        public static HttpResponseMessage CreateResponse(Topic topicInfo, HttpRequestMessage request)
+        public static IHttpActionResult CreateResponse(Topic topicInfo, HttpRequestMessage request)
         {
-            var response = request.RespondOk();
-            response.Content = new StringContent(topicInfo.Name);
-            response.Headers.AddLinkHeader(SessionsLinkHelper.CreateLink(request, topicInfo));
-            response.Headers.AddLinkHeader(SpeakersLinkHelper.CreateLink(request, topicInfo));
+            var response = new OkResult(request)
+            .WithContent( new StringContent(topicInfo.Name))
+            .WithLinkHeaders(new List<ILink>
+                {
+                    SessionsLinkHelper.CreateLink(request, topicInfo),
+                    SpeakersLinkHelper.CreateLink(request, topicInfo)
+               });
 
             return response;
         }

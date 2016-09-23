@@ -116,7 +116,22 @@ namespace ConferenceWebApi.Tools
         }
     }
 
-   
+    public class CreatedLocationResult : BaseChainedResult
+    {
+        private Uri _location;
+
+        public CreatedLocationResult(IHttpActionResult actionResult, Uri location) : base(actionResult)
+        {
+            _location = location;
+        }
+
+        public override void ApplyAction(HttpResponseMessage response)
+        {
+            response.Headers.Location = _location;
+            response.StatusCode = HttpStatusCode.Created;
+        }
+    }
+
 
 
     public static class ActionResultExtensions
@@ -133,5 +148,11 @@ namespace ConferenceWebApi.Tools
         {
             return new LinkHeadersResult2(actionResult, linkHeaders);
         }
+        public static IHttpActionResult WithCreatedLocation(this IHttpActionResult actionResult, Uri location)
+        {
+            return new CreatedLocationResult(actionResult, location);
+        }
+
+        
     }
 }
