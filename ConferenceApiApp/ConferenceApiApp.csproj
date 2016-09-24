@@ -108,6 +108,8 @@
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
     <Content Include="apiapp.json" />
     <None Include="Properties\PublishProfiles\apim-conf - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ApimRocks-ConferenceAPI.pubxml" />
+    <None Include="Properties\PublishProfiles\bigconference.pubxml" />
     <None Include="Properties\PublishProfiles\Conference API App.pubxml" />
     <None Include="Properties\PublishProfiles\ConferenceApi - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ConferenceApi%28ConferenceRG%29.pubxml" />
