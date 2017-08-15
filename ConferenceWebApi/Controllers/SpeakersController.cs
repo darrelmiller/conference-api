@@ -23,44 +23,13 @@ namespace ConferenceWebApi.Controllers
         }
 
         [Route("", Name = SpeakersLinkHelper.SpeakersSearchRoute)]
-        public IHttpActionResult Get()
+        public IHttpActionResult Get(string speakerName = null, string dayno = null)
         {
             var speakers = _dataService.SpeakerRepository.GetAll();
             return SpeakersLinkHelper.CreateResponse(speakers, Request);
         }
      
-
-        [Route("byday")]
-        public IHttpActionResult Get(int dayno)
-        {
-            var speakers = _dataService.SessionRepository.GetSessionsByDay(dayno).Select(s => s.SpeakerId).Distinct().Where(sp=> sp != 0).Select(s => _dataService.SpeakerRepository.Get(s));
-            return SpeakersLinkHelper.CreateResponse(speakers, Request);
-        }
-
-        [Route("byspeakername")]
-        public IHttpActionResult Get(string speakername)
-        {
-            
-
-            var speakers = _dataService.SpeakerRepository.GetAll().Where(s => s.Name.Contains(speakername)).ToList();
-            var count = speakers.Count();
-            if (count > 1)
-            {
-                return SpeakersLinkHelper.CreateResponse(speakers, Request);
-
-            } else if (count == 1)
-            {
-                var speaker = speakers.First();
-                return new RedirectResult(SpeakerLinkHelper.CreateLink(Request, speaker).Target,Request);
-            }
-            else
-            {
-                return new NotFoundResult("Speaker not found " + speakername); 
-            }
-           
-        }
-
-       
+      
 
     }
 }

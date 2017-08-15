@@ -25,20 +25,10 @@ namespace ConferenceWebApi.Controllers
         }
 
         [Route("", Name = TopicsLinkHelper.TopicsSearchRoute)]
-        public IHttpActionResult Get()
+        public IHttpActionResult Get(string dayno = null)
         {
             var topics = _dataService.TopicRepository.GetAll();
             return TopicsLinkHelper.GetResponse(topics, Request);
-        }
-
-        [Route("{id}")]
-        public IHttpActionResult Delete(int id)
-        {
-            if (!_dataService.TopicRepository.Exists(id)) return new Tools.NotFoundResult("Topic not found");
-
-            _dataService.TopicRepository.Delete(id);
-
-            return new OkResult(Request);
         }
 
         [Route("")]
@@ -57,17 +47,6 @@ namespace ConferenceWebApi.Controllers
                 .WithCreatedLocation(TopicLinkHelper.CreateLink(Request, topic).Target);
         }
 
-
-        [Route("byday")]
-        public IHttpActionResult Get(int dayno)
-        {
-
-            var topics = _dataService.SessionRepository.GetSessionsByDay(dayno)
-                .SelectMany(s => _dataService.SessionTopicRepository.GetTopicsBySession(s.Id))
-                .Select(st => st.TopicId).Distinct().Select(s => _dataService.TopicRepository.Get(s));
-
-            return TopicsLinkHelper.GetResponse(topics, Request);
-        }
 
 
 

@@ -16,6 +16,7 @@ using ConferenceWebApi.DataModel;
 using Microsoft.Practices.Unity;
 using Tavis;
 using System.Net.Http.Headers;
+using System.Net.Http.Formatting;
 
 namespace ConferenceWebApi
 {
@@ -30,8 +31,6 @@ namespace ConferenceWebApi
                 WithMappings.FromAllInterfaces);
             config.DependencyResolver = new UnityDependencyResolver(unityContainer);
 
-
-
             config.Services.Replace(typeof(IExceptionHandler),new GlobalErrorHandlerService());
             config.MessageHandlers.Add(new ErrorHandlerMessageHandler());
             config.MessageHandlers.Add(new DateStampHandler());
@@ -39,6 +38,9 @@ namespace ConferenceWebApi
            // config.MessageHandlers.Add(new BasicAuthenticationHandler());
             config.MessageHandlers.Add(new ForwardedMessageHandler());
             config.EnableSystemDiagnosticsTracing();
+
+
+
         }
 
         public static void RegisterRoutes(HttpConfiguration config)

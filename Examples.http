@@ -1,0 +1,42 @@
+### GetSessions
+GET http://conferenceapi.azurewebsites.net/sessions
+
+### GET Session
+GET http://conferenceapi.azurewebsites.net/session/102
+Accept: application/hal+json
+
+### GET Session Topics
+GET http://conferenceapi.azurewebsites.net/session/102/topics
+
+### GetSpeakers
+GET http://conferenceapi.azurewebsites.net/speakers
+
+### GetSpeaker
+GET http://conferenceapi.azurewebsites.net/speaker/19 
+
+### GetSpeakerTopics
+GET http://conferenceapi.azurewebsites.net/speaker/19/topics 
+
+### GetSpeakerSessions
+GET http://conferenceapi.azurewebsites.net/speaker/19/sessions 
+
+
+### GetTopics
+GET http://conferenceapi.azurewebsites.net/topics
+
+### GetTopic
+GET http://conferenceapi.azurewebsites.net/topic/5 
+
+### GetTopicSessions
+GET http://conferenceapi.azurewebsites.net/topic/5/sessions 
+
+### GetTopicSpeakers
+GET http://conferenceapi.azurewebsites.net/topic/5/speakers 
+
+
+
+### SubmitFeedback
+POST http://conferenceapi.azurewebsites.net/session/102/feedback
+Content: text/plain
+
+The session was awesome
