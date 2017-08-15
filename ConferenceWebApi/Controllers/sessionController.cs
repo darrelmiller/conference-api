@@ -53,7 +53,7 @@ namespace ConferenceWebApi.Controllers
            return TopicsLinkHelper.GetResponse(topics, Request);
        }
 
-        [Route("{id}/rating", Name = "SessionRating")]
+        [Route("{id}/feedback", Name = "SessionRating")]
         public IHttpActionResult GetRating(int id)
         {
             if (!_dataService.SessionRepository.Exists(id)) return new Tools.NotFoundResult("Session not found");
@@ -65,6 +65,22 @@ namespace ConferenceWebApi.Controllers
                 .WithContent(new StringContent(session.Rating.ToString()));
 
             return response;
+        }
+
+
+        [Route("{id}/feedback")]
+        public async Task<IHttpActionResult> PostRating(int id)
+        {
+            var feedback = await Request.Content.ReadAsStringAsync();
+
+            var session = _dataService.SessionRepository.Get(id);
+
+            IHttpActionResult response =
+                new OkResult(Request)
+                .WithContent(new StringContent(feedback));
+
+            return response;
+
         }
 
         [Route("{id}/rating")]

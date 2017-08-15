@@ -13,6 +13,7 @@ using ConferenceWebPack;
 using Newtonsoft.Json.Linq;
 using Tavis;
 using Tavis.IANA;
+using System.Web.Http.Results;
 
 namespace ConferenceWebApi.Controllers
 {
@@ -49,6 +50,18 @@ namespace ConferenceWebApi.Controllers
 
             return TopicLinkHelper.CreateResponse(topicInfo, Request);
         }
+
+
+        [Route("{id}")]
+        public IHttpActionResult Delete(int id)
+        {
+            if (!_dataService.TopicRepository.Exists(id)) return new Tools.NotFoundResult("Topic not found");
+
+            _dataService.TopicRepository.Delete(id);
+
+            return new OkResult(Request);
+        }
+
 
         [Route("{id}/sessions", Name = SessionsLinkHelper.TopicSessionsRoute)]
         public IHttpActionResult GetSessionsByTopic(int id)

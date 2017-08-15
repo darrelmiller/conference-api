@@ -15,8 +15,10 @@ namespace ConferenceWebApi.Controllers
         
         public IHttpActionResult Get()
         {
+            var content = new StreamContent(this.GetType().Assembly.GetManifestResourceStream("ConferenceWebApi.OpenApi2.yaml"));
+            content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
             return new OkResult(Request)
-                .WithContent(new StreamContent(this.GetType().Assembly.GetManifestResourceStream("ConferenceWebApi.swagger.json")));
+                .WithContent(content);
         }
     }
 

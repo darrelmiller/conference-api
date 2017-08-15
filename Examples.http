@@ -1,0 +1,18 @@
+### GetSessions
+GET http://localhost:6293/sessions
+
+### GET Session
+GET http://localhost:6293/session/102
+Accept: application/hal+json
+
+### GetSpeakers
+GET http://localhost:6293/speakers
+
+### GetSpeaker
+GET http://localhost:6293/speaker/19 
+
+### GetTopics
+GET http://localhost:6293/topics
+
+### GetTopic
+GET http://localhost:6293/topic/5 
