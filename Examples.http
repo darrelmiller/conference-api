@@ -1,18 +1,42 @@
 ### GetSessions
-GET http://localhost:6293/sessions
+GET http://conferenceapi.azurewebsites.net/sessions
 
 ### GET Session
-GET http://localhost:6293/session/102
+GET http://conferenceapi.azurewebsites.net/session/102
 Accept: application/hal+json
 
+### GET Session Topics
+GET http://conferenceapi.azurewebsites.net/session/102/topics
+
 ### GetSpeakers
-GET http://localhost:6293/speakers
+GET http://conferenceapi.azurewebsites.net/speakers
 
 ### GetSpeaker
-GET http://localhost:6293/speaker/19 
+GET http://conferenceapi.azurewebsites.net/speaker/19 
+
+### GetSpeakerTopics
+GET http://conferenceapi.azurewebsites.net/speaker/19/topics 
+
+### GetSpeakerSessions
+GET http://conferenceapi.azurewebsites.net/speaker/19/sessions 
+
 
 ### GetTopics
-GET http://localhost:6293/topics
+GET http://conferenceapi.azurewebsites.net/topics
 
 ### GetTopic
-GET http://localhost:6293/topic/5 
+GET http://conferenceapi.azurewebsites.net/topic/5 
+
+### GetTopicSessions
+GET http://conferenceapi.azurewebsites.net/topic/5/sessions 
+
+### GetTopicSpeakers
+GET http://conferenceapi.azurewebsites.net/topic/5/speakers 
+
+
+
+### SubmitFeedback
+POST http://conferenceapi.azurewebsites.net/session/102/feedback
+Content: text/plain
+
+The session was awesome
